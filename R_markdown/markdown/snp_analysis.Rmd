@@ -1,0 +1,146 @@
+---
+title: "garch"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## S&P 500 Analysis
+
+Fit GARCH(1,1) to daily S&P 500 rtn
+
+```{r}
+
+library(tseries)
+
+setwd('~/Documents/VaR')
+
+prices <- read.csv('./data/table.csv')
+
+prices.SNP <- prices[,c('Date','Adj.Close')]
+
+```
+
+# Full data over 50 years of data
+# Take only 10 years of obs 
+
+```{r}
+
+prices.SNP <- prices.SNP[1:2500,c('Date','Adj.Close')]
+
+summary(prices.SNP)
+
+prices.SNP.rev <- rep(0,2500)
+
+for(i in seq(0,2499)){
+  prices.SNP.rev[i] <- prices.SNP[2500-i,'Adj.Close']
+}
+
+n <- length(prices.SNP.rev)
+rtn.SNP <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.SNP[i] <- log(prices.SNP.rev[i+1]/prices.SNP.rev[i]) * 100.
+}
+
+snp.garch <- garch(rtn.SNP,trace=FALSE)
+
+summary(snp.garch)
+
+plot(snp.garch)
+
+```
+
+```{r}
+
+library(evir)
+
+a <- sort(-rtn.SNP[rtn.SNP < 0.])
+
+emplot(a)
+
+qplot(a)
+
+meplot(a)
+
+b <- hill(a)
+
+
+
+```
+
+```{r}
+
+
+
+```
+
+```{r}
+
+
+
+findthresh(a, 100)  
+```
+
+```{r}
+gpd(a, findthresh(a, 100))
+```
+
+```{r}
+
+
+
+findthresh(a, 50)  
+```
+
+```{r}
+gpd(a, findthresh(a, 50))
+```
+
+## Model stock return with AR(1) x GARCH(1,1)
+
+Model AR(1)*GARCH(1,1)
+
+```{r}
+
+rtn.SNP.ar <- ar(rtn.SNP, order.max = 1, method = 'ols')
+
+rtn.SNP.ar
+
+plot(rtn.SNP.ar$resid,type = 'l')
+
+summary(rtn.SNP.ar$resid)
+
+
+rtn.SNP.ar.resid.garch <- garch(rtn.SNP.ar$resid[2:length(rtn.SNP.ar$resid)],trace=FALSE)
+
+rtn.SNP.ar.resid.garch
+
+plot(rtn.SNP.ar.resid.garch$residuals,type = 'l')
+
+```
+
+Model AR(5)*GARCH(1,1)
+
+```{r}
+
+rtn.SNP.ar1 <- ar(rtn.SNP, method = 'ols')
+
+rtn.SNP.ar1
+
+plot(rtn.SNP.ar1$resid,type = 'l')
+
+summary(rtn.SNP.ar1$resid)
+
+
+rtn.SNP.ar.resid1.garch <- garch(rtn.SNP.ar1$resid[19:length(rtn.SNP.ar1$resid)],order=c(1,1),trace=FALSE)
+
+rtn.SNP.ar.resid1.garch
+
+plot(rtn.SNP.ar.resid1.garch$residuals,type = 'l')
+
+```
+
+

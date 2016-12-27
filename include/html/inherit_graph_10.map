@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classVaR.html" title="VaR" alt="" coords="5,56,53,83"/>
+<area shape="rect" id="node2" href="$classExtremeValueVaR.html" title="ExtremeValueVaR" alt="" coords="107,5,238,32"/>
+<area shape="rect" id="node4" href="$classNoneParametricVaR.html" title="NoneParametricVaR" alt="" coords="101,56,244,83"/>
+<area shape="rect" id="node6" href="$classParametricVaR.html" title="ParametricVaR" alt="" coords="117,107,228,133"/>
+<area shape="rect" id="node3" href="$classPoTVaR.html" title="PoTVaR" alt="" coords="315,5,387,32"/>
+<area shape="rect" id="node5" href="$classHistoricalVaR.html" title="Compute VaR using historical method (histogram method) " alt="" coords="300,56,403,83"/>
+<area shape="rect" id="node7" href="$classGarchVaR.html" title="Compute GARCH(1,1) VaR. " alt="" coords="310,107,393,133"/>
+<area shape="rect" id="node8" href="$classRiskMetricsVaR.html" title="Compute Risk metrics VaR aka Exponential Weight Moving Average (EWMA) " alt="" coords="292,157,411,184"/>
+</map>

@@ -1,0 +1,130 @@
+\hypertarget{classVaRMonteCarloCompute}{}\section{Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$ Class Template Reference}
+\label{classVaRMonteCarloCompute}\index{Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$@{Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$}}
+
+
+Compute \hyperlink{classVaR}{VaR} using Monte Carlo.  
+
+
+
+
+{\ttfamily \#include $<$compute\+\_\+var.\+h$>$}
+
+
+
+Inheritance diagram for Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classVaRMonteCarloCompute__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classVaRMonteCarloCompute__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classMCEngine}{M\+C\+Engine}$<$ \hyperlink{classrng}{rng}, V $>$ \hyperlink{classVaRMonteCarloCompute_a7ab31736fcc0c8c0630232d522186250}{engine}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVaRMonteCarloCompute_a2362734a7d6eb5530984ace252361a6a}{Va\+R\+Monte\+Carlo\+Compute} (shared\+\_\+ptr$<$ T $>$ \&\+\_\+cr, const U \&\+\_\+model, const V \&\+\_\+process, \hyperlink{classrng}{rng} \&\+\_\+rng, const double \&\+\_\+n=1.e+05)
+\item 
+virtual \hyperlink{classVaRMonteCarloCompute_a372e6887ccaab471a23c49b3e7868fa5}{$\sim$\+Va\+R\+Monte\+Carlo\+Compute} ()
+\item 
+void \hyperlink{classVaRMonteCarloCompute_a3ef6b8ac6e54e0dc4cc8239926d8f236}{set\+Numberof\+Sim} (double \+\_\+n)
+\item 
+double \hyperlink{classVaRMonteCarloCompute_a43b5493187d834fa2ba1bdb53c353947}{compute\+VaR} (size\+\_\+t p=0)
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using Monte Carlo simulation from Gaussian distr. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classVaRMonteCarloCompute_a14ea83586172f23f8bb4a60babeb812f}{compute\+Va\+R\+Whole\+Path} (size\+\_\+t p=0)
+\begin{DoxyCompactList}\small\item\em compute \hyperlink{classVaR}{VaR} over whole path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class U, class V$>$\newline
+class Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$}
+
+Compute \hyperlink{classVaR}{VaR} using Monte Carlo. 
+
+compute \hyperlink{classVaR}{VaR} using sim returns and histogram method 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classVaRMonteCarloCompute_a7ab31736fcc0c8c0630232d522186250}{}\label{classVaRMonteCarloCompute_a7ab31736fcc0c8c0630232d522186250} 
+\index{Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}!engine@{engine}}
+\index{engine@{engine}!Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}}
+\subsubsection{\texorpdfstring{engine}{engine}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+typedef \hyperlink{classMCEngine}{M\+C\+Engine}$<$\hyperlink{classrng}{rng},V$>$ \hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute}$<$ T, U, V $>$\+::\hyperlink{classVaRMonteCarloCompute_a7ab31736fcc0c8c0630232d522186250}{engine}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVaRMonteCarloCompute_a2362734a7d6eb5530984ace252361a6a}{}\label{classVaRMonteCarloCompute_a2362734a7d6eb5530984ace252361a6a} 
+\index{Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}!Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}}
+\index{Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}!Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}}
+\subsubsection{\texorpdfstring{Va\+R\+Monte\+Carlo\+Compute()}{VaRMonteCarloCompute()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+\hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute}$<$ T, U, V $>$\+::\hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute} (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ T $>$ \&}]{\+\_\+cr,  }\item[{const U \&}]{\+\_\+model,  }\item[{const V \&}]{\+\_\+process,  }\item[{\hyperlink{classrng}{rng} \&}]{\+\_\+rng,  }\item[{const double \&}]{\+\_\+n = {\ttfamily 1.e+05} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classVaRMonteCarloCompute_a372e6887ccaab471a23c49b3e7868fa5}{}\label{classVaRMonteCarloCompute_a372e6887ccaab471a23c49b3e7868fa5} 
+\index{Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}!````~Va\+R\+Monte\+Carlo\+Compute@{$\sim$\+Va\+R\+Monte\+Carlo\+Compute}}
+\index{````~Va\+R\+Monte\+Carlo\+Compute@{$\sim$\+Va\+R\+Monte\+Carlo\+Compute}!Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}}
+\subsubsection{\texorpdfstring{$\sim$\+Va\+R\+Monte\+Carlo\+Compute()}{~VaRMonteCarloCompute()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+virtual \hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute}$<$ T, U, V $>$\+::$\sim$\hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVaRMonteCarloCompute_a43b5493187d834fa2ba1bdb53c353947}{}\label{classVaRMonteCarloCompute_a43b5493187d834fa2ba1bdb53c353947} 
+\index{Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}!compute\+VaR@{compute\+VaR}}
+\index{compute\+VaR@{compute\+VaR}!Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R()}{computeVaR()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+double \hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute}$<$ T, U, V $>$\+::compute\+VaR (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Compute \hyperlink{classVaR}{VaR} using Monte Carlo simulation from Gaussian distr. 
+
+
+
+Implements \hyperlink{classVaRCompute_a0465221010d248238fe1052958776984}{Va\+R\+Compute$<$ T, U $>$}.
+
+\hypertarget{classVaRMonteCarloCompute_a14ea83586172f23f8bb4a60babeb812f}{}\label{classVaRMonteCarloCompute_a14ea83586172f23f8bb4a60babeb812f} 
+\index{Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}!compute\+Va\+R\+Whole\+Path@{compute\+Va\+R\+Whole\+Path}}
+\index{compute\+Va\+R\+Whole\+Path@{compute\+Va\+R\+Whole\+Path}!Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R\+Whole\+Path()}{computeVaRWholePath()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+std\+::vector$<$double$>$ \hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute}$<$ T, U, V $>$\+::compute\+Va\+R\+Whole\+Path (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+compute \hyperlink{classVaR}{VaR} over whole path 
+
+
+
+Implements \hyperlink{classVaRCompute_ad5ec9feb42ea2f99f2c91e793d18fe1b}{Va\+R\+Compute$<$ T, U $>$}.
+
+\hypertarget{classVaRMonteCarloCompute_a3ef6b8ac6e54e0dc4cc8239926d8f236}{}\label{classVaRMonteCarloCompute_a3ef6b8ac6e54e0dc4cc8239926d8f236} 
+\index{Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}!set\+Numberof\+Sim@{set\+Numberof\+Sim}}
+\index{set\+Numberof\+Sim@{set\+Numberof\+Sim}!Va\+R\+Monte\+Carlo\+Compute@{Va\+R\+Monte\+Carlo\+Compute}}
+\subsubsection{\texorpdfstring{set\+Numberof\+Sim()}{setNumberofSim()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+void \hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute}$<$ T, U, V $>$\+::set\+Numberof\+Sim (\begin{DoxyParamCaption}\item[{double}]{\+\_\+n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{compute__var_8h}{compute\+\_\+var.\+h}\end{DoxyCompactItemize}

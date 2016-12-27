@@ -1,0 +1,88 @@
+\hypertarget{classFI}{}\section{FI Class Reference}
+\label{classFI}\index{FI@{FI}}
+
+
+{\ttfamily \#include $<$instrument.\+h$>$}
+
+
+
+Inheritance diagram for FI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classFI__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for FI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classFI__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFI_a8caa07473802c6c7dd10cc1c98af7397}{FI} (double \+\_\+duration, double \+\_\+convexity=0., \hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0}{duration\+Type} \+\_\+dt=\hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a22e2e72997ac4289587cadae38cc561e}{dc})
+\item 
+\hyperlink{classFI_a52951d4aeccbe628a59b65968713c85f}{FI} (\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&\+\_\+duration)
+\item 
+virtual \hyperlink{classFI_a856ac31d9840ae7cd9eeba9482832f8a}{$\sim$\+FI} ()
+\item 
+double \hyperlink{classFI_a99ad4380e8178d7fd304597622a2c05c}{operator()} (double rtn) const
+\begin{DoxyCompactList}\small\item\em Compute an approximation on P\&L of instrument following shock. \end{DoxyCompactList}\item 
+double \hyperlink{classFI_ab50033a007000c4b4c65a5a5bc08433d}{operator()} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&rtns) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFI_a8caa07473802c6c7dd10cc1c98af7397}{}\label{classFI_a8caa07473802c6c7dd10cc1c98af7397} 
+\index{FI@{FI}!FI@{FI}}
+\index{FI@{FI}!FI@{FI}}
+\subsubsection{\texorpdfstring{F\+I()}{FI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily F\+I\+::\+FI (\begin{DoxyParamCaption}\item[{double}]{\+\_\+duration,  }\item[{double}]{\+\_\+convexity = {\ttfamily 0.},  }\item[{\hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0}{duration\+Type}}]{\+\_\+dt = {\ttfamily \hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a22e2e72997ac4289587cadae38cc561e}{dc}} }\end{DoxyParamCaption})}
+
+\hypertarget{classFI_a52951d4aeccbe628a59b65968713c85f}{}\label{classFI_a52951d4aeccbe628a59b65968713c85f} 
+\index{FI@{FI}!FI@{FI}}
+\index{FI@{FI}!FI@{FI}}
+\subsubsection{\texorpdfstring{F\+I()}{FI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily F\+I\+::\+FI (\begin{DoxyParamCaption}\item[{\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{\+\_\+duration }\end{DoxyParamCaption})}
+
+\hypertarget{classFI_a856ac31d9840ae7cd9eeba9482832f8a}{}\label{classFI_a856ac31d9840ae7cd9eeba9482832f8a} 
+\index{FI@{FI}!````~FI@{$\sim$\+FI}}
+\index{````~FI@{$\sim$\+FI}!FI@{FI}}
+\subsubsection{\texorpdfstring{$\sim$\+F\+I()}{~FI()}}
+{\footnotesize\ttfamily virtual F\+I\+::$\sim$\+FI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFI_a99ad4380e8178d7fd304597622a2c05c}{}\label{classFI_a99ad4380e8178d7fd304597622a2c05c} 
+\index{FI@{FI}!operator()@{operator()}}
+\index{operator()@{operator()}!FI@{FI}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double F\+I\+::operator() (\begin{DoxyParamCaption}\item[{double}]{rtn }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute an approximation on P\&L of instrument following shock. 
+
+
+
+Implements \hyperlink{classInstrument_a33b6faccaeb494858dee5c547de897b6}{Instrument}.
+
+\hypertarget{classFI_ab50033a007000c4b4c65a5a5bc08433d}{}\label{classFI_ab50033a007000c4b4c65a5a5bc08433d} 
+\index{FI@{FI}!operator()@{operator()}}
+\index{operator()@{operator()}!FI@{FI}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double F\+I\+::operator() (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{rtns }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{instrument_8h}{instrument.\+h}\end{DoxyCompactItemize}

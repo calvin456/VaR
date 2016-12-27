@@ -1,0 +1,112 @@
+\hypertarget{classAR1xGARCH11}{}\section{A\+R1x\+G\+A\+R\+C\+H11 Class Reference}
+\label{classAR1xGARCH11}\index{A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}}
+
+
+model A\+R(1) x G\+A\+R\+C\+H(1,1) -\/ Fat tails  
+
+
+
+
+{\ttfamily \#include $<$path.\+h$>$}
+
+
+
+Inheritance diagram for A\+R1x\+G\+A\+R\+C\+H11\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classAR1xGARCH11__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+R1x\+G\+A\+R\+C\+H11\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classAR1xGARCH11__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAR1xGARCH11_a898a633f6b9355bf3ccc37ba474db360}{A\+R1x\+G\+A\+R\+C\+H11} (double \+\_\+mu=0., double \+\_\+correl=0.\+5, double \+\_\+alpha=0., double \+\_\+beta=.\+24, double \+\_\+gamma=.\+76)
+\item 
+virtual \hyperlink{classAR1xGARCH11_acac929ce4afd12e7b0361d2e19b74fe0}{$\sim$\+A\+R1x\+G\+A\+R\+C\+H11} ()
+\item 
+virtual double \hyperlink{classAR1xGARCH11_ac30812d6e8339c48abcd5c0ce8ea0081}{do\+One\+Sim} (const double \&u, const double \&Sigmat, const double \&Returnt, const double \&Returntminus1) const
+\item 
+virtual Eigen\+::\+Vector\+Xd \hyperlink{classAR1xGARCH11_ac97f026cefd0e8bca4bbc31100f945d7}{do\+Sim} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&u, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&Sigmat, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&Returnt) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+model A\+R(1) x G\+A\+R\+C\+H(1,1) -\/ Fat tails 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAR1xGARCH11_a898a633f6b9355bf3ccc37ba474db360}{}\label{classAR1xGARCH11_a898a633f6b9355bf3ccc37ba474db360} 
+\index{A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}!A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}}
+\index{A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}!A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}}
+\subsubsection{\texorpdfstring{A\+R1x\+G\+A\+R\+C\+H11()}{AR1xGARCH11()}}
+{\footnotesize\ttfamily A\+R1x\+G\+A\+R\+C\+H11\+::\+A\+R1x\+G\+A\+R\+C\+H11 (\begin{DoxyParamCaption}\item[{double}]{\+\_\+mu = {\ttfamily 0.},  }\item[{double}]{\+\_\+correl = {\ttfamily 0.5},  }\item[{double}]{\+\_\+alpha = {\ttfamily 0.},  }\item[{double}]{\+\_\+beta = {\ttfamily .24},  }\item[{double}]{\+\_\+gamma = {\ttfamily .76} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+mu} & average rtn \\
+\hline
+{\em \+\_\+correl} & $\phi$ acf previous period \\
+\hline
+{\em \+\_\+alpha} & $\alpha$ G\+A\+R\+CH process \\
+\hline
+{\em \+\_\+beta} & $\beta$ G\+A\+R\+CH process \\
+\hline
+{\em \+\_\+gamma} & $\gamma$ G\+A\+R\+CH process \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAR1xGARCH11_acac929ce4afd12e7b0361d2e19b74fe0}{}\label{classAR1xGARCH11_acac929ce4afd12e7b0361d2e19b74fe0} 
+\index{A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}!````~A\+R1x\+G\+A\+R\+C\+H11@{$\sim$\+A\+R1x\+G\+A\+R\+C\+H11}}
+\index{````~A\+R1x\+G\+A\+R\+C\+H11@{$\sim$\+A\+R1x\+G\+A\+R\+C\+H11}!A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}}
+\subsubsection{\texorpdfstring{$\sim$\+A\+R1x\+G\+A\+R\+C\+H11()}{~AR1xGARCH11()}}
+{\footnotesize\ttfamily virtual A\+R1x\+G\+A\+R\+C\+H11\+::$\sim$\+A\+R1x\+G\+A\+R\+C\+H11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAR1xGARCH11_ac30812d6e8339c48abcd5c0ce8ea0081}{}\label{classAR1xGARCH11_ac30812d6e8339c48abcd5c0ce8ea0081} 
+\index{A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}!do\+One\+Sim@{do\+One\+Sim}}
+\index{do\+One\+Sim@{do\+One\+Sim}!A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}}
+\subsubsection{\texorpdfstring{do\+One\+Sim()}{doOneSim()}}
+{\footnotesize\ttfamily virtual double A\+R1x\+G\+A\+R\+C\+H11\+::do\+One\+Sim (\begin{DoxyParamCaption}\item[{const double \&}]{u,  }\item[{const double \&}]{Sigmat,  }\item[{const double \&}]{Returnt,  }\item[{const double \&}]{Returntminus1 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Simulate return for next period under review 
+\begin{DoxyParams}{Parameters}
+{\em Returntminus1} & $r_{t-1}$ return previous period \\
+\hline
+{\em Sigmatminus1} & $\sigma_{t-1}$ vol previous period \\
+\hline
+{\em u} & innovation drawn sample distr. \\
+\hline
+{\em v} & innovation drawn sample distr. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classPath_a6e75e5a329c48cafecd03a355f90b694}{Path}.
+
+\hypertarget{classAR1xGARCH11_ac97f026cefd0e8bca4bbc31100f945d7}{}\label{classAR1xGARCH11_ac97f026cefd0e8bca4bbc31100f945d7} 
+\index{A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}!do\+Sim@{do\+Sim}}
+\index{do\+Sim@{do\+Sim}!A\+R1x\+G\+A\+R\+C\+H11@{A\+R1x\+G\+A\+R\+C\+H11}}
+\subsubsection{\texorpdfstring{do\+Sim()}{doSim()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Vector\+Xd A\+R1x\+G\+A\+R\+C\+H11\+::do\+Sim (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{u,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{Sigmat,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{Returnt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classPath_a8917612a585bce52dbd52b1b643a517a}{Path}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{path_8h}{path.\+h}\end{DoxyCompactItemize}

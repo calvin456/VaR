@@ -1,0 +1,5 @@
+<map id="ParametricVaR" name="ParametricVaR">
+<area shape="rect" id="node3" href="$classGarchVaR.html" title="Compute GARCH(1,1) VaR. " alt="" coords="5,461,116,612"/>
+<area shape="rect" id="node4" href="$classRiskMetricsVaR.html" title="Compute Risk metrics VaR aka Exponential Weight Moving Average (EWMA) " alt="" coords="141,461,287,612"/>
+<area shape="rect" id="node2" href="$classVaR.html" title="{VaR\n||+ VaR()\l+ ~VaR()\l+ VaR()\l+ getAlpha()\l+ setAlpha()\l+ operator()()\l+ operator()()\l+ operator()()\l}" alt="" coords="88,5,185,185"/>
+</map>

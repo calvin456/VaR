@@ -1,0 +1,125 @@
+\hypertarget{classcopulaRng}{}\section{copula\+Rng Class Reference}
+\label{classcopulaRng}\index{copula\+Rng@{copula\+Rng}}
+
+
+{\ttfamily \#include $<$rng.\+h$>$}
+
+
+
+Collaboration diagram for copula\+Rng\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classcopulaRng__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcopulaRng_a223e069676a02b38f8bb2cafa242cf54}{copula\+Rng} (unsigned int \+\_\+d, \hyperlink{classrng}{rng} \&\+\_\+rng\+\_\+)
+\item 
+\hyperlink{classcopulaRng_a2adb46d54717a4c76f9a46245ee3cacc}{$\sim$copula\+Rng} ()
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classcopulaRng_a1aac3848b57818708af45d7cb3bdfa9f}{get\+Gaussiancopula} (Eigen\+::\+Matrix\+Xd C)
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classcopulaRng_a6d06b353f8c4eec06084919c254a8a40}{get\+Studentcopula} (Eigen\+::\+Matrix\+Xd C, double v)
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classcopulaRng_a8da7d9a900602dfbb03fff3a627a8763}{get\+Claytoncopula} (double gamma)
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classcopulaRng_a7806378704438e24b852da445f999b08}{get\+Gumbelcopula} (double gamma)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simulate d variables via copula of choice
+
+Gaussian, Student, Clayton, Gumbel 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcopulaRng_a223e069676a02b38f8bb2cafa242cf54}{}\label{classcopulaRng_a223e069676a02b38f8bb2cafa242cf54} 
+\index{copula\+Rng@{copula\+Rng}!copula\+Rng@{copula\+Rng}}
+\index{copula\+Rng@{copula\+Rng}!copula\+Rng@{copula\+Rng}}
+\subsubsection{\texorpdfstring{copula\+Rng()}{copulaRng()}}
+{\footnotesize\ttfamily copula\+Rng\+::copula\+Rng (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+d,  }\item[{\hyperlink{classrng}{rng} \&}]{\+\_\+rng\+\_\+ }\end{DoxyParamCaption})}
+
+\hypertarget{classcopulaRng_a2adb46d54717a4c76f9a46245ee3cacc}{}\label{classcopulaRng_a2adb46d54717a4c76f9a46245ee3cacc} 
+\index{copula\+Rng@{copula\+Rng}!````~copula\+Rng@{$\sim$copula\+Rng}}
+\index{````~copula\+Rng@{$\sim$copula\+Rng}!copula\+Rng@{copula\+Rng}}
+\subsubsection{\texorpdfstring{$\sim$copula\+Rng()}{~copulaRng()}}
+{\footnotesize\ttfamily copula\+Rng\+::$\sim$copula\+Rng (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcopulaRng_a8da7d9a900602dfbb03fff3a627a8763}{}\label{classcopulaRng_a8da7d9a900602dfbb03fff3a627a8763} 
+\index{copula\+Rng@{copula\+Rng}!get\+Claytoncopula@{get\+Claytoncopula}}
+\index{get\+Claytoncopula@{get\+Claytoncopula}!copula\+Rng@{copula\+Rng}}
+\subsubsection{\texorpdfstring{get\+Claytoncopula()}{getClaytoncopula()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} copula\+Rng\+::get\+Claytoncopula (\begin{DoxyParamCaption}\item[{double}]{gamma }\end{DoxyParamCaption})}
+
+Clayon copula. More emphasis on the left tail of the distribution
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamma} & $\gamma$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of d-\/size draws from $U(0,1)$ 
+\end{DoxyReturn}
+\hypertarget{classcopulaRng_a1aac3848b57818708af45d7cb3bdfa9f}{}\label{classcopulaRng_a1aac3848b57818708af45d7cb3bdfa9f} 
+\index{copula\+Rng@{copula\+Rng}!get\+Gaussiancopula@{get\+Gaussiancopula}}
+\index{get\+Gaussiancopula@{get\+Gaussiancopula}!copula\+Rng@{copula\+Rng}}
+\subsubsection{\texorpdfstring{get\+Gaussiancopula()}{getGaussiancopula()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} copula\+Rng\+::get\+Gaussiancopula (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd}]{C }\end{DoxyParamCaption})}
+
+Gaussian copula
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+C} & correlation matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of d-\/size draws from $U(0,1)$ 
+\end{DoxyReturn}
+\hypertarget{classcopulaRng_a7806378704438e24b852da445f999b08}{}\label{classcopulaRng_a7806378704438e24b852da445f999b08} 
+\index{copula\+Rng@{copula\+Rng}!get\+Gumbelcopula@{get\+Gumbelcopula}}
+\index{get\+Gumbelcopula@{get\+Gumbelcopula}!copula\+Rng@{copula\+Rng}}
+\subsubsection{\texorpdfstring{get\+Gumbelcopula()}{getGumbelcopula()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} copula\+Rng\+::get\+Gumbelcopula (\begin{DoxyParamCaption}\item[{double}]{gamma }\end{DoxyParamCaption})}
+
+Gumbel copula. More emphasis on the right tail of the distribution
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamma} & $\gamma$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of d-\/size draws from $U(0,1)$ 
+\end{DoxyReturn}
+\hypertarget{classcopulaRng_a6d06b353f8c4eec06084919c254a8a40}{}\label{classcopulaRng_a6d06b353f8c4eec06084919c254a8a40} 
+\index{copula\+Rng@{copula\+Rng}!get\+Studentcopula@{get\+Studentcopula}}
+\index{get\+Studentcopula@{get\+Studentcopula}!copula\+Rng@{copula\+Rng}}
+\subsubsection{\texorpdfstring{get\+Studentcopula()}{getStudentcopula()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} copula\+Rng\+::get\+Studentcopula (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd}]{C,  }\item[{double}]{v }\end{DoxyParamCaption})}
+
+Student\textquotesingle{}s t copula
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+C} & correlation matrix \\
+\hline
+{\em v} & $\nu$ degree of freedom \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of d-\/size draws from $U(0,1)$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rng_8h}{rng.\+h}\end{DoxyCompactItemize}

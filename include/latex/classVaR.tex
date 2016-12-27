@@ -1,0 +1,121 @@
+\hypertarget{classVaR}{}\section{VaR Class Reference}
+\label{classVaR}\index{VaR@{VaR}}
+
+
+{\ttfamily \#include $<$var\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVaR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classVaR__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVaR_a7ee643c7cd27654b357d80718a830750}{VaR} (double \+\_\+alpha=.\+05)
+\item 
+virtual \hyperlink{classVaR_af1492f7ffa13239a77af0a2c647f8358}{$\sim$\+VaR} ()
+\item 
+\hyperlink{classVaR_a21cafaf403766ed1f5ba3d957357d789}{VaR} (const \hyperlink{classVaR}{VaR} \&other)
+\item 
+double \hyperlink{classVaR_aa2c6adc33bdf14b0908f4586254726c9}{get\+Alpha} () const
+\item 
+void \hyperlink{classVaR_a5834560649dcbe686a47eaba4f0359b9}{set\+Alpha} (double \+\_\+alpha)
+\item 
+virtual double \hyperlink{classVaR_a28e1a1be9e386ed4e8503e54db4033bd}{operator()} (double \+\_\+mean\+Return, double \+\_\+sigmatminus1, double \+\_\+returnt) const =0
+\item 
+virtual double \hyperlink{classVaR_a31cb62626488715a9133679feaba31e5}{operator()} (double \+\_\+mean\+Return, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const =0
+\item 
+virtual double \hyperlink{classVaR_a1bd868d9953bfaeb49f5bf7d16986631}{operator()} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class
+
+Define different Value at Risk (\hyperlink{classVaR}{VaR}) models 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVaR_a7ee643c7cd27654b357d80718a830750}{}\label{classVaR_a7ee643c7cd27654b357d80718a830750} 
+\index{VaR@{VaR}!VaR@{VaR}}
+\index{VaR@{VaR}!VaR@{VaR}}
+\subsubsection{\texorpdfstring{Va\+R()}{VaR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Va\+R\+::\+VaR (\begin{DoxyParamCaption}\item[{double}]{\+\_\+alpha = {\ttfamily .05} }\end{DoxyParamCaption})}
+
+\hypertarget{classVaR_af1492f7ffa13239a77af0a2c647f8358}{}\label{classVaR_af1492f7ffa13239a77af0a2c647f8358} 
+\index{VaR@{VaR}!````~VaR@{$\sim$\+VaR}}
+\index{````~VaR@{$\sim$\+VaR}!VaR@{VaR}}
+\subsubsection{\texorpdfstring{$\sim$\+Va\+R()}{~VaR()}}
+{\footnotesize\ttfamily virtual Va\+R\+::$\sim$\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\hypertarget{classVaR_a21cafaf403766ed1f5ba3d957357d789}{}\label{classVaR_a21cafaf403766ed1f5ba3d957357d789} 
+\index{VaR@{VaR}!VaR@{VaR}}
+\index{VaR@{VaR}!VaR@{VaR}}
+\subsubsection{\texorpdfstring{Va\+R()}{VaR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Va\+R\+::\+VaR (\begin{DoxyParamCaption}\item[{const \hyperlink{classVaR}{VaR} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVaR_aa2c6adc33bdf14b0908f4586254726c9}{}\label{classVaR_aa2c6adc33bdf14b0908f4586254726c9} 
+\index{VaR@{VaR}!get\+Alpha@{get\+Alpha}}
+\index{get\+Alpha@{get\+Alpha}!VaR@{VaR}}
+\subsubsection{\texorpdfstring{get\+Alpha()}{getAlpha()}}
+{\footnotesize\ttfamily double Va\+R\+::get\+Alpha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\hypertarget{classVaR_a28e1a1be9e386ed4e8503e54db4033bd}{}\label{classVaR_a28e1a1be9e386ed4e8503e54db4033bd} 
+\index{VaR@{VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!VaR@{VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{double}]{\+\_\+mean\+Return,  }\item[{double}]{\+\_\+sigmatminus1,  }\item[{double}]{\+\_\+returnt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classExtremeValueVaR_ad6d31417001a3ee1b75592806d21ae8b}{Extreme\+Value\+VaR}, \hyperlink{classNoneParametricVaR_ab22e4237802535880a932097aeaf003b}{None\+Parametric\+VaR}, \hyperlink{classGarchVaR_a6aec8c89e48d2b2f356669ed3300f456}{Garch\+VaR}, \hyperlink{classRiskMetricsVaR_a801fc34d2327f8fffc1315a5a9aa9df1}{Risk\+Metrics\+VaR}, and \hyperlink{classParametricVaR_a54589e13bb45da786d574656eb67b5fb}{Parametric\+VaR}.
+
+\hypertarget{classVaR_a31cb62626488715a9133679feaba31e5}{}\label{classVaR_a31cb62626488715a9133679feaba31e5} 
+\index{VaR@{VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!VaR@{VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{double}]{\+\_\+mean\+Return,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classExtremeValueVaR_a8dfe4d515f7e4d0260b3ac87c1a52b5f}{Extreme\+Value\+VaR}, \hyperlink{classHistoricalVaR_a472b04dc9a4c5989be0e7198bc9c4189}{Historical\+VaR}, \hyperlink{classNoneParametricVaR_a958aae1b9bc03a8ef87295df30db76f7}{None\+Parametric\+VaR}, \hyperlink{classGarchVaR_ab7e9583566b26a64017edbbfb63f3e89}{Garch\+VaR}, \hyperlink{classRiskMetricsVaR_ab83bde7047dc8e501b8e8ea115cf5e7b}{Risk\+Metrics\+VaR}, and \hyperlink{classParametricVaR_a5fda9d0e1033ff6e93dd112555ee5e0b}{Parametric\+VaR}.
+
+\hypertarget{classVaR_a1bd868d9953bfaeb49f5bf7d16986631}{}\label{classVaR_a1bd868d9953bfaeb49f5bf7d16986631} 
+\index{VaR@{VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!VaR@{VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual double Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classPoTVaR_a3360bbbeceae9bbd0c721e48586bf38c}{Po\+T\+VaR}, \hyperlink{classExtremeValueVaR_a3be021ee0faa2285bcb6be19815e3dc7}{Extreme\+Value\+VaR}, \hyperlink{classNoneParametricVaR_a181d6152dcbdc7ce323e5d4b672a14f8}{None\+Parametric\+VaR}, \hyperlink{classGarchVaR_ac6d01b6567a6d0629cd95be716677763}{Garch\+VaR}, \hyperlink{classRiskMetricsVaR_a3e79a82675a93c7467451146131a2ec5}{Risk\+Metrics\+VaR}, and \hyperlink{classParametricVaR_aa07f1d64aff5abf484835cd9105af9c9}{Parametric\+VaR}.
+
+\hypertarget{classVaR_a5834560649dcbe686a47eaba4f0359b9}{}\label{classVaR_a5834560649dcbe686a47eaba4f0359b9} 
+\index{VaR@{VaR}!set\+Alpha@{set\+Alpha}}
+\index{set\+Alpha@{set\+Alpha}!VaR@{VaR}}
+\subsubsection{\texorpdfstring{set\+Alpha()}{setAlpha()}}
+{\footnotesize\ttfamily void Va\+R\+::set\+Alpha (\begin{DoxyParamCaption}\item[{double}]{\+\_\+alpha }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{var__model_8h}{var\+\_\+model.\+h}\end{DoxyCompactItemize}

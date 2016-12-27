@@ -1,0 +1,319 @@
+---
+title: "mle_fx_rate"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## gev & pot estimate of parameters through mle
+xi
+beta
+
+```{r }
+library(evir)
+
+setwd('~/Documents/VaR')
+
+prices <- read.csv('./data/FXData.csv')
+
+```
+
+```{r }
+gdp.likelihood<-function(param,y){ #xi,sigma
+  
+  n<-length(y)
+  
+  logl <- 0.
+  if(param[1] != 0.){
+    logl <- -n * log(param[2]) - (1./param[1] + 1.) * sum(log(1. + param[1]/param[2] * y))
+   
+  }else{
+    logl  <- - n * log(param[2]) - 1./param[2] * sum(y)
+    
+  }
+  
+  return (-logl) 
+}
+
+var <- function(u,sigma,xi, ratio,alpha=.05 ){
+  
+  a = 1./ratio * alpha
+  
+  b = -xi
+  
+  return (u + sigma /xi * (a ^ b -1.))
+  
+}
+
+es <- function(u,sigma,xi, alpha=.05, ratio=.04){
+  
+  return ((var(u,sigma,xi, alpha, ratio) + (sigma - xi * u))/(1. - xi))
+  
+}
+
+
+```
+
+```{r }
+
+n <- dim(prices)[1]
+rtn.CHFEUR <- rep(0,n-1)
+  
+for(i in seq(n-1)){
+  rtn.CHFEUR[i] <- log(prices[i+1,'CHFEUR']/prices[i,'CHFEUR']) * 100.
+}
+
+rtn.DKKEUR <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.DKKEUR[i] <- log(prices[i+1,'DKKEUR']/prices[i,'DKKEUR']) *100.
+}
+
+rtn.CZKEUR <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.CZKEUR[i] <- log(prices[i+1,'CZKEUR']/prices[i,'CZKEUR']) *100.
+}
+
+rtn.BRLUSD <- rep(0,n-1)
+
+for(i in seq(1,n-1)){
+  rtn.BRLUSD[i] <- log(prices[i+1,'BRLUSD']/prices[i,'BRLUSD']) *100
+}
+
+rtn.BRLUSD <- rtn.BRLUSD[4:1328]
+
+```
+
+##CHFEUR
+left tail : -.47860192599364082 % 
+
+```{r }
+
+starting.values <- c(.1,1.) #xi,sigma
+
+b <- -rtn.CHFEUR[rtn.CHFEUR < 0.]
+
+p <- length(b)
+
+#return peak over threshold  left tail
+
+threshold <- .47860192599364082
+
+rtn.pot <- b - threshold
+rtn.pot <- rtn.pot[rtn.pot > 0.]
+
+q <- length(rtn.pot)
+
+ratio <- q/p
+
+#optim(par = starting.values, fn = gdp.likelihood, gr = NULL, y=rtn.pot, method = "CG")
+out <- optim(par = starting.values, fn = gdp.likelihood, y=rtn.pot , NULL, method = "BFGS", hessian = TRUE)
+
+out$par
+
+cat("VaR CHFEUR") 
+-var(threshold, out$par[2],out$par[1],q) 
+cat("ES CHFEUR") 
+-es(threshold, out$par[2],out$par[1],q) 
+
+```
+
+```{r }
+
+
+
+a <- sort(b)
+
+emplot(a)
+
+qplot(a)
+
+meplot(a)
+
+hill(a)
+
+threshold <- findthresh(a, 100)
+threshold
+
+out <- gpd(a, threshold)
+
+out$par.ests
+
+cat("VaR CHFEUR") 
+-var(threshold, out$par.ests[2],out$par.ests[1],q) 
+cat("ES CHFEUR") 
+-es(threshold, out$par.ests[2],out$par.ests[1],q) 
+
+```
+
+##DKKEUR
+left tail : -.0053741048769762045 %
+
+```{r }
+
+b <- -rtn.DKKEUR[rtn.DKKEUR < 0.]
+
+a <- sort(b)
+
+emplot(a)
+
+qplot(a)
+
+meplot(a)
+
+hill(a)
+
+threshold <- findthresh(a, 100)
+threshold
+
+out <- gpd(a, threshold)
+
+out$par.ests
+
+cat("VaR DKKEUR") 
+-var(threshold, out$par.ests[2],out$par.ests[1],q) 
+cat("ES DKKEUR") 
+-es(threshold, out$par.ests[2],out$par.ests[1],q) 
+
+```
+
+```{r }
+p <- length(b)
+
+#return peak over threshold  left tail
+
+threshold <- .036218032951884638
+
+rtn.pot <- b - threshold
+rtn.pot <- rtn.pot[rtn.pot > 0.]
+
+q <- length(rtn.pot)
+
+ratio <- q/p
+
+out <- optim(par = starting.values, fn = gdp.likelihood, y=rtn.pot , NULL, method = "BFGS", hessian = TRUE)
+
+out$par
+
+cat("VaR DKKEUR") 
+-var(threshold, out$par[2],out$par[1],q) 
+cat("ES DKKEUR") 
+-es(threshold, out$par[2],out$par[1],q) 
+
+```
+
+##CZKEUR
+left tail : -.54629350260517739 %
+
+```{r }
+
+b <- -rtn.CZKEUR[rtn.CZKEUR < 0.]
+
+a <- sort(b)
+
+emplot(a)
+
+qplot(a)
+
+meplot(a)
+
+hill(a)
+
+threshold <- findthresh(a, 400)
+threshold
+
+out <- gpd(a, threshold)
+
+out$par.ests
+
+cat("VaR CZKEUR") 
+-var(threshold, out$par.ests[2],out$par.ests[1],q) 
+cat("ES CZKEUR") 
+-es(threshold, out$par.ests[2],out$par.ests[1],q) 
+
+```
+
+```{r }
+p <- length(b)
+
+#return peak over threshold  left tail
+
+threshold <- .54629350260517739
+
+rtn.pot <- b - threshold
+rtn.pot <- rtn.pot[rtn.pot > 0.]
+
+q <- length(rtn.pot)
+
+ratio <- q/p
+
+out <- optim(par = starting.values, fn = gdp.likelihood, y=rtn.pot , NULL, method = "BFGS", hessian = TRUE)
+
+out$par
+
+cat("VaR CZKEUR") 
+-var(threshold, out$par[2],out$par[1],q) 
+cat("ES CZKEUR") 
+-es(threshold, out$par[2],out$par[1],q) 
+
+```
+
+##BRLUSD
+left tail : -1.9838342219664185 %
+
+```{r }
+
+b <- -rtn.BRLUSD[rtn.BRLUSD < 0.]
+
+a <- sort(b)
+
+emplot(a)
+
+qplot(a)
+
+meplot(a)
+
+hill(a)
+
+threshold <- findthresh(a, 100)
+threshold
+
+out <- gpd(a, threshold)
+
+out$par.ests
+
+cat("VaR BRLUSD") 
+-var(threshold, out$par.ests[2],out$par.ests[1],q) 
+cat("ES BRLUSD") 
+-es(threshold, out$par.ests[2],out$par.ests[1],q) 
+
+```
+
+```{r }
+p <- length(b)
+
+#return peak over threshold  left tail
+
+threshold <- 1.9838342219664185
+
+rtn.pot <- b - threshold
+rtn.pot <- rtn.pot[rtn.pot > 0.]
+
+q <- length(rtn.pot)
+
+ratio <- q/p
+
+out <- optim(par = starting.values, fn = gdp.likelihood, gr = NULL, y=rtn.pot,  method = "BFGS", hessian = TRUE)
+
+out$par
+
+cat("VaR BRLUSD") 
+-var(threshold, out$par[2],out$par[1],q) 
+cat("ES BRLUSD") 
+-es(threshold, out$par[2],out$par[1],q) 
+
+```
+

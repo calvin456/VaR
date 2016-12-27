@@ -1,0 +1,7 @@
+<map id="VaRCompute&lt; T, U &gt;" name="VaRCompute&lt; T, U &gt;">
+<area shape="rect" id="node2" href="$classVaRCopulaCompute.html" title="Compute VaR using Monte Carlo &amp; Copula. " alt="" coords="5,233,197,399"/>
+<area shape="rect" id="node3" href="$classVaRExtremeValueCompute.html" title="Compute VaR using extreme value &#45; Generalized Pareto. " alt="" coords="221,241,432,391"/>
+<area shape="rect" id="node4" href="$classVaRMonteCarloCompute.html" title="Compute VaR using Monte Carlo. " alt="" coords="457,241,653,391"/>
+<area shape="rect" id="node5" href="$classVaRnoneParamCompute.html" title="Compute VaR using none&#45;parametric model. " alt="" coords="677,241,872,391"/>
+<area shape="rect" id="node6" href="$classVaRParamCompute.html" title="Compute VaR using parametric mode. " alt="" coords="896,255,1085,377"/>
+</map>

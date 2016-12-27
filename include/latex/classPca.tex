@@ -1,0 +1,264 @@
+\hypertarget{classPca}{}\section{Pca Class Reference}
+\label{classPca}\index{Pca@{Pca}}
+
+
+{\ttfamily \#include $<$pca.\+h$>$}
+
+
+
+Collaboration diagram for Pca\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classPca__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classPca_a69bab38091166e75c71a20952c4c9ef4}{Calculate} (std\+::vector$<$ float $>$ \&x, const unsigned int \&\hyperlink{classPca_a1de7db7c35c005e7920dd95579ae820b}{nrows}, const unsigned int \&\hyperlink{classPca_ab3e3ef5de29c495ad8b8ad7ed0ae2bbe}{ncols}, const bool is\+\_\+corr=true, const bool \hyperlink{classPca_a756656415dc43a2a68f4394f719351b2}{is\+\_\+center}=true, const bool \hyperlink{classPca_acf41e5dccf22ba87069b3eb1bc586307}{is\+\_\+scale}=true)
+\begin{DoxyCompactList}\small\item\em Initializing values and performing P\+CA. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPca_a1de7db7c35c005e7920dd95579ae820b}{nrows} (void)
+\begin{DoxyCompactList}\small\item\em Return number of rows in initial matrix. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPca_ab3e3ef5de29c495ad8b8ad7ed0ae2bbe}{ncols} (void)
+\begin{DoxyCompactList}\small\item\em Return number of cols in initial matrix. \end{DoxyCompactList}\item 
+bool \hyperlink{classPca_a756656415dc43a2a68f4394f719351b2}{is\+\_\+center} (void)
+\begin{DoxyCompactList}\small\item\em If variables are centered. \end{DoxyCompactList}\item 
+bool \hyperlink{classPca_acf41e5dccf22ba87069b3eb1bc586307}{is\+\_\+scale} (void)
+\begin{DoxyCompactList}\small\item\em If variables are scaled. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classPca_aecaeb63b64fe48f9307ee89075ed6929}{method} (void)
+\begin{DoxyCompactList}\small\item\em Method for calculation of principal components. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \hyperlink{classPca_a846bfe6726f3c846a50ec045567d3861}{eliminated\+\_\+columns} (void)
+\begin{DoxyCompactList}\small\item\em Returns numbers of eliminated columns. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \hyperlink{classPca_a687a02cd667152bc5ce9de328519799b}{sd} (void)
+\begin{DoxyCompactList}\small\item\em Standard deviation of each principal component. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \hyperlink{classPca_a70f5508f41d2d61464fe8ce21f48dc89}{prop\+\_\+of\+\_\+var} (void)
+\begin{DoxyCompactList}\small\item\em Proportion of variance. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \hyperlink{classPca_a08407cc5449d7461b1b1b828c464e80a}{cum\+\_\+prop} (void)
+\begin{DoxyCompactList}\small\item\em Cumulative proportion. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPca_a6c1fbe858a4cde8aa34cab8c19c84941}{kaiser} (void)
+\begin{DoxyCompactList}\small\item\em Principal component by the Kaiser criterion. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPca_a0ff511b4a419122a8ac6db494289ae2a}{thresh95} (void)
+\begin{DoxyCompactList}\small\item\em 95\% threshold \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \hyperlink{classPca_a469f69a53d76c2f7ad26e28e969bd09c}{scores} (void)
+\begin{DoxyCompactList}\small\item\em Rotated values (scores) \end{DoxyCompactList}\item 
+\hyperlink{classPca_ac8f42fb6ce69fb1a3a85c99d6b49204c}{Pca} (void)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+\hyperlink{classPca_a900858e8760079d51bff8fd267f551ce}{$\sim$\+Pca} (void)
+\begin{DoxyCompactList}\small\item\em Class destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPca_ac8f42fb6ce69fb1a3a85c99d6b49204c}{}\label{classPca_ac8f42fb6ce69fb1a3a85c99d6b49204c} 
+\index{Pca@{Pca}!Pca@{Pca}}
+\index{Pca@{Pca}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{Pca()}{Pca()}}
+{\footnotesize\ttfamily Pca\+::\+Pca (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Class constructor. 
+
+\hypertarget{classPca_a900858e8760079d51bff8fd267f551ce}{}\label{classPca_a900858e8760079d51bff8fd267f551ce} 
+\index{Pca@{Pca}!````~Pca@{$\sim$\+Pca}}
+\index{````~Pca@{$\sim$\+Pca}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{$\sim$\+Pca()}{~Pca()}}
+{\footnotesize\ttfamily Pca\+::$\sim$\+Pca (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Class destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPca_a69bab38091166e75c71a20952c4c9ef4}{}\label{classPca_a69bab38091166e75c71a20952c4c9ef4} 
+\index{Pca@{Pca}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{Calculate()}{Calculate()}}
+{\footnotesize\ttfamily int Pca\+::\+Calculate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$ \&}]{x,  }\item[{const unsigned int \&}]{nrows,  }\item[{const unsigned int \&}]{ncols,  }\item[{const bool}]{is\+\_\+corr = {\ttfamily true},  }\item[{const bool}]{is\+\_\+center = {\ttfamily true},  }\item[{const bool}]{is\+\_\+scale = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Initializing values and performing P\+CA. 
+
+The main method for performin Principal Component Analysis 
+\begin{DoxyParams}{Parameters}
+{\em x} & Initial data matrix \\
+\hline
+{\em nrows} & Number of matrix rows \\
+\hline
+{\em ncols} & Number of matrix cols \\
+\hline
+{\em is\+\_\+corr} & Correlation matrix will be used instead of covariance matrix \\
+\hline
+{\em is\+\_\+center} & Whether the variables should be shifted to be zero centered \\
+\hline
+{\em is\+\_\+scale} & Whether the variables should be scaled to have unit variance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if everything is Ok -\/1 if there were some errors 
+\end{DoxyReturn}
+\hypertarget{classPca_a08407cc5449d7461b1b1b828c464e80a}{}\label{classPca_a08407cc5449d7461b1b1b828c464e80a} 
+\index{Pca@{Pca}!cum\+\_\+prop@{cum\+\_\+prop}}
+\index{cum\+\_\+prop@{cum\+\_\+prop}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{cum\+\_\+prop()}{cum\_prop()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ Pca\+::cum\+\_\+prop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Cumulative proportion. 
+
+\begin{DoxyReturn}{Returns}
+Vector of cumulative proportions for each components 
+\end{DoxyReturn}
+\hypertarget{classPca_a846bfe6726f3c846a50ec045567d3861}{}\label{classPca_a846bfe6726f3c846a50ec045567d3861} 
+\index{Pca@{Pca}!eliminated\+\_\+columns@{eliminated\+\_\+columns}}
+\index{eliminated\+\_\+columns@{eliminated\+\_\+columns}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{eliminated\+\_\+columns()}{eliminated\_columns()}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ Pca\+::eliminated\+\_\+columns (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns numbers of eliminated columns. 
+
+If standard deviation of a column is equal to 0, the column shoud be rejected, or P\+CA will fail. \begin{DoxyReturn}{Returns}
+Numbers of eliminated columns, empty vector otherwise 
+\end{DoxyReturn}
+\hypertarget{classPca_a756656415dc43a2a68f4394f719351b2}{}\label{classPca_a756656415dc43a2a68f4394f719351b2} 
+\index{Pca@{Pca}!is\+\_\+center@{is\+\_\+center}}
+\index{is\+\_\+center@{is\+\_\+center}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{is\+\_\+center()}{is\_center()}}
+{\footnotesize\ttfamily bool Pca\+::is\+\_\+center (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+If variables are centered. 
+
+\begin{DoxyReturn}{Returns}
+true -\/ variables are centered false -\/ otherwise 
+\end{DoxyReturn}
+\hypertarget{classPca_acf41e5dccf22ba87069b3eb1bc586307}{}\label{classPca_acf41e5dccf22ba87069b3eb1bc586307} 
+\index{Pca@{Pca}!is\+\_\+scale@{is\+\_\+scale}}
+\index{is\+\_\+scale@{is\+\_\+scale}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{is\+\_\+scale()}{is\_scale()}}
+{\footnotesize\ttfamily bool Pca\+::is\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+If variables are scaled. 
+
+\begin{DoxyReturn}{Returns}
+true -\/ variables are scaled false -\/ otherwise 
+\end{DoxyReturn}
+\hypertarget{classPca_a6c1fbe858a4cde8aa34cab8c19c84941}{}\label{classPca_a6c1fbe858a4cde8aa34cab8c19c84941} 
+\index{Pca@{Pca}!kaiser@{kaiser}}
+\index{kaiser@{kaiser}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{kaiser()}{kaiser()}}
+{\footnotesize\ttfamily unsigned int Pca\+::kaiser (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Principal component by the Kaiser criterion. 
+
+Number of the last component with eigenvalue greater than 1. \begin{DoxyReturn}{Returns}
+Number of the first components we should retain defined by the Kaiser criterion 
+\end{DoxyReturn}
+\hypertarget{classPca_aecaeb63b64fe48f9307ee89075ed6929}{}\label{classPca_aecaeb63b64fe48f9307ee89075ed6929} 
+\index{Pca@{Pca}!method@{method}}
+\index{method@{method}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{method()}{method()}}
+{\footnotesize\ttfamily std\+::string Pca\+::method (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Method for calculation of principal components. 
+
+There are different methods used. The most used is S\+VD. But in some cases it may be correlation or covariance matrices. If \begin{DoxyReturn}{Returns}
+\char`\"{}svd\char`\"{} -\/ P\+CA with singular value decomposition \char`\"{}cor\char`\"{} -\/ P\+CA with correlation matrix \char`\"{}cov\char`\"{} -\/ P\+CA with covariance matrix 
+\end{DoxyReturn}
+\hypertarget{classPca_ab3e3ef5de29c495ad8b8ad7ed0ae2bbe}{}\label{classPca_ab3e3ef5de29c495ad8b8ad7ed0ae2bbe} 
+\index{Pca@{Pca}!ncols@{ncols}}
+\index{ncols@{ncols}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{ncols()}{ncols()}}
+{\footnotesize\ttfamily unsigned int Pca\+::ncols (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return number of cols in initial matrix. 
+
+\begin{DoxyReturn}{Returns}
+Number of cols in initial matrix 
+\end{DoxyReturn}
+\hypertarget{classPca_a1de7db7c35c005e7920dd95579ae820b}{}\label{classPca_a1de7db7c35c005e7920dd95579ae820b} 
+\index{Pca@{Pca}!nrows@{nrows}}
+\index{nrows@{nrows}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{nrows()}{nrows()}}
+{\footnotesize\ttfamily unsigned int Pca\+::nrows (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return number of rows in initial matrix. 
+
+\begin{DoxyReturn}{Returns}
+Number of rows in initial matrix 
+\end{DoxyReturn}
+\hypertarget{classPca_a70f5508f41d2d61464fe8ce21f48dc89}{}\label{classPca_a70f5508f41d2d61464fe8ce21f48dc89} 
+\index{Pca@{Pca}!prop\+\_\+of\+\_\+var@{prop\+\_\+of\+\_\+var}}
+\index{prop\+\_\+of\+\_\+var@{prop\+\_\+of\+\_\+var}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{prop\+\_\+of\+\_\+var()}{prop\_of\_var()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ Pca\+::prop\+\_\+of\+\_\+var (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Proportion of variance. 
+
+\begin{DoxyReturn}{Returns}
+Vector of variances for each component 
+\end{DoxyReturn}
+\hypertarget{classPca_a469f69a53d76c2f7ad26e28e969bd09c}{}\label{classPca_a469f69a53d76c2f7ad26e28e969bd09c} 
+\index{Pca@{Pca}!scores@{scores}}
+\index{scores@{scores}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{scores()}{scores()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ Pca\+::scores (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Rotated values (scores) 
+
+Return calculated scores (coordinates in a new space) as vector. Matrix filled by rows. \begin{DoxyReturn}{Returns}
+Vector of scores 
+\end{DoxyReturn}
+\hypertarget{classPca_a687a02cd667152bc5ce9de328519799b}{}\label{classPca_a687a02cd667152bc5ce9de328519799b} 
+\index{Pca@{Pca}!sd@{sd}}
+\index{sd@{sd}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{sd()}{sd()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ Pca\+::sd (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Standard deviation of each principal component. 
+
+\begin{DoxyReturn}{Returns}
+Vector of standard deviation for each principal component\+: 1st element is sd for 1st PC, 2nd -\/ for 2nd PC and so on. 
+\end{DoxyReturn}
+\hypertarget{classPca_a0ff511b4a419122a8ac6db494289ae2a}{}\label{classPca_a0ff511b4a419122a8ac6db494289ae2a} 
+\index{Pca@{Pca}!thresh95@{thresh95}}
+\index{thresh95@{thresh95}!Pca@{Pca}}
+\subsubsection{\texorpdfstring{thresh95()}{thresh95()}}
+{\footnotesize\ttfamily unsigned int Pca\+::thresh95 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+95\% threshold 
+
+Retain only PC which cumulative proportion is less than 0.\+95 \begin{DoxyReturn}{Returns}
+Number of P\+Cs should be retain with the 95\% threshold criterion 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{pca_8h}{pca.\+h}\end{DoxyCompactItemize}

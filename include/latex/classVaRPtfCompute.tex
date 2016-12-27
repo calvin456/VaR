@@ -1,0 +1,180 @@
+\hypertarget{classVaRPtfCompute}{}\section{Va\+R\+Ptf\+Compute Class Reference}
+\label{classVaRPtfCompute}\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+
+
+Compute ptf\textquotesingle{}s \hyperlink{classVaR}{VaR} using parametric approach.  
+
+
+
+
+{\ttfamily \#include $<$ptf\+\_\+var.\+h$>$}
+
+
+
+Inheritance diagram for Va\+R\+Ptf\+Compute\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classVaRPtfCompute__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Va\+R\+Ptf\+Compute\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classVaRPtfCompute__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVaRPtfCompute_a9e9759706e5c6c69b6d838bb1f01b842}{Va\+R\+Ptf\+Compute} (const shared\+\_\+ptr$<$ \hyperlink{classPortfolio}{Portfolio} $>$ \&\+\_\+ptf, double \+\_\+alpha=.\+05)
+\item 
+virtual \hyperlink{classVaRPtfCompute_ae148a8c1e965084669cbfec4442b57d5}{$\sim$\+Va\+R\+Ptf\+Compute} ()
+\item 
+\hyperlink{classVaRPtfCompute_ab2ed8e78a76598f0d3aae10d94e93c1b}{Va\+R\+Ptf\+Compute} (const \hyperlink{classVaRPtfCompute}{Va\+R\+Ptf\+Compute} \&other)
+\item 
+double \hyperlink{classVaRPtfCompute_a27523a81a27880b98660dbfca1b41873}{get\+Ptf\+VaR} () const
+\begin{DoxyCompactList}\small\item\em Compute dollar ptf\textquotesingle{}s \hyperlink{classVaR}{VaR}. \end{DoxyCompactList}\item 
+double \hyperlink{classVaRPtfCompute_a21a920a3cd05000dbb4aa504ee0f7bc1}{compute\+Incremental\+VaR} (double amount) const
+\begin{DoxyCompactList}\small\item\em Measure the change in \hyperlink{classVaR}{VaR} if new position is added to the ptf. \end{DoxyCompactList}\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classVaRPtfCompute_ae7a1cb2765156b3c7eff7571b5cb8943}{compute\+Marginal\+VaR} () const
+\begin{DoxyCompactList}\small\item\em Measure the change in ptf \hyperlink{classVaR}{VaR} resulting adding add \$ to a component. \end{DoxyCompactList}\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classVaRPtfCompute_ae25fc1528e8902c7039574b6e6eef1f0}{compute\+Component\+VaR} () const
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classVaRPtfCompute_a80964859df50e96558c08445020505cf}{compute\+Individual\+VaR} () const
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} of each single position. \end{DoxyCompactList}\item 
+void \hyperlink{classVaRPtfCompute_ac15972e18d15a25490f9b1ea5a86b021}{set\+Alpha} (double \+\_\+alpha)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classPortfolio}{Portfolio} $>$ \hyperlink{classVaRPtfCompute_a67c2129848686adc86d76dfa95089116}{ptf}
+\item 
+double \hyperlink{classVaRPtfCompute_aa56625fe3b4517b29343d23a6fe5ecad}{alpha}
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classVaRPtfCompute_a6463d2c66463890a7e8e720f2865021a}{beta}
+\item 
+size\+\_\+t \hyperlink{classVaRPtfCompute_a8461d45e60e76c7205f7f98e1c44ccc6}{nb\+Assets}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Compute ptf\textquotesingle{}s \hyperlink{classVaR}{VaR} using parametric approach. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVaRPtfCompute_a9e9759706e5c6c69b6d838bb1f01b842}{}\label{classVaRPtfCompute_a9e9759706e5c6c69b6d838bb1f01b842} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{Va\+R\+Ptf\+Compute()}{VaRPtfCompute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Va\+R\+Ptf\+Compute\+::\+Va\+R\+Ptf\+Compute (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \hyperlink{classPortfolio}{Portfolio} $>$ \&}]{\+\_\+ptf,  }\item[{double}]{\+\_\+alpha = {\ttfamily .05} }\end{DoxyParamCaption})}
+
+\hypertarget{classVaRPtfCompute_ae148a8c1e965084669cbfec4442b57d5}{}\label{classVaRPtfCompute_ae148a8c1e965084669cbfec4442b57d5} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!````~Va\+R\+Ptf\+Compute@{$\sim$\+Va\+R\+Ptf\+Compute}}
+\index{````~Va\+R\+Ptf\+Compute@{$\sim$\+Va\+R\+Ptf\+Compute}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{$\sim$\+Va\+R\+Ptf\+Compute()}{~VaRPtfCompute()}}
+{\footnotesize\ttfamily virtual Va\+R\+Ptf\+Compute\+::$\sim$\+Va\+R\+Ptf\+Compute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\hypertarget{classVaRPtfCompute_ab2ed8e78a76598f0d3aae10d94e93c1b}{}\label{classVaRPtfCompute_ab2ed8e78a76598f0d3aae10d94e93c1b} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{Va\+R\+Ptf\+Compute()}{VaRPtfCompute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Va\+R\+Ptf\+Compute\+::\+Va\+R\+Ptf\+Compute (\begin{DoxyParamCaption}\item[{const \hyperlink{classVaRPtfCompute}{Va\+R\+Ptf\+Compute} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVaRPtfCompute_ae25fc1528e8902c7039574b6e6eef1f0}{}\label{classVaRPtfCompute_ae25fc1528e8902c7039574b6e6eef1f0} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!compute\+Component\+VaR@{compute\+Component\+VaR}}
+\index{compute\+Component\+VaR@{compute\+Component\+VaR}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Component\+Va\+R()}{computeComponentVaR()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Va\+R\+Ptf\+Compute\+::compute\+Component\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+component \hyperlink{classVaR}{VaR} = ... = Ptf\+Var $\ast$ beta\mbox{[}i\mbox{]} $\ast$ weights\mbox{[}i\mbox{]}
+
+sum of component \hyperlink{classVaR}{VaR} = ptf \hyperlink{classVaR}{VaR} \hypertarget{classVaRPtfCompute_a21a920a3cd05000dbb4aa504ee0f7bc1}{}\label{classVaRPtfCompute_a21a920a3cd05000dbb4aa504ee0f7bc1} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!compute\+Incremental\+VaR@{compute\+Incremental\+VaR}}
+\index{compute\+Incremental\+VaR@{compute\+Incremental\+VaR}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Incremental\+Va\+R()}{computeIncrementalVaR()}}
+{\footnotesize\ttfamily double Va\+R\+Ptf\+Compute\+::compute\+Incremental\+VaR (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption}) const}
+
+
+
+Measure the change in \hyperlink{classVaR}{VaR} if new position is added to the ptf. 
+
+Use approximation for incremental \hyperlink{classVaR}{VaR}
+
+\hyperlink{classVaR}{VaR}(P0 + amount) -\/ \hyperlink{classVaR}{Va\+R(\+P0)} =$\sim$ (delta\+VaR)\textquotesingle{} $\ast$ amount \hypertarget{classVaRPtfCompute_a80964859df50e96558c08445020505cf}{}\label{classVaRPtfCompute_a80964859df50e96558c08445020505cf} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!compute\+Individual\+VaR@{compute\+Individual\+VaR}}
+\index{compute\+Individual\+VaR@{compute\+Individual\+VaR}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Individual\+Va\+R()}{computeIndividualVaR()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Va\+R\+Ptf\+Compute\+::compute\+Individual\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Compute \hyperlink{classVaR}{VaR} of each single position. 
+
+\hypertarget{classVaRPtfCompute_ae7a1cb2765156b3c7eff7571b5cb8943}{}\label{classVaRPtfCompute_ae7a1cb2765156b3c7eff7571b5cb8943} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!compute\+Marginal\+VaR@{compute\+Marginal\+VaR}}
+\index{compute\+Marginal\+VaR@{compute\+Marginal\+VaR}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Marginal\+Va\+R()}{computeMarginalVaR()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Va\+R\+Ptf\+Compute\+::compute\+Marginal\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Measure the change in ptf \hyperlink{classVaR}{VaR} resulting adding add \$ to a component. 
+
+delta Va\+R/ delta x\mbox{[}i\mbox{]} = ... = Va\+Rp/P $\ast$ beta\mbox{[}i\mbox{]} \hypertarget{classVaRPtfCompute_a27523a81a27880b98660dbfca1b41873}{}\label{classVaRPtfCompute_a27523a81a27880b98660dbfca1b41873} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!get\+Ptf\+VaR@{get\+Ptf\+VaR}}
+\index{get\+Ptf\+VaR@{get\+Ptf\+VaR}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{get\+Ptf\+Va\+R()}{getPtfVaR()}}
+{\footnotesize\ttfamily double Va\+R\+Ptf\+Compute\+::get\+Ptf\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Compute dollar ptf\textquotesingle{}s \hyperlink{classVaR}{VaR}. 
+
+\$ Va\+Rp = alpha $\ast$ s\+Devp $\ast$ P0 = alpha $\ast$ sqrt(x\textquotesingle{} $\ast$ Cov $\ast$ x)
+
+Computing ptf \hyperlink{classVaR}{VaR} in such way enables to derive analytical solution for i\+VaR, m\+VaR, c\+VaR. \hypertarget{classVaRPtfCompute_ac15972e18d15a25490f9b1ea5a86b021}{}\label{classVaRPtfCompute_ac15972e18d15a25490f9b1ea5a86b021} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!set\+Alpha@{set\+Alpha}}
+\index{set\+Alpha@{set\+Alpha}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{set\+Alpha()}{setAlpha()}}
+{\footnotesize\ttfamily void Va\+R\+Ptf\+Compute\+::set\+Alpha (\begin{DoxyParamCaption}\item[{double}]{\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classVaRPtfCompute_aa56625fe3b4517b29343d23a6fe5ecad}{}\label{classVaRPtfCompute_aa56625fe3b4517b29343d23a6fe5ecad} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!alpha@{alpha}}
+\index{alpha@{alpha}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily double Va\+R\+Ptf\+Compute\+::alpha\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classVaRPtfCompute_a6463d2c66463890a7e8e720f2865021a}{}\label{classVaRPtfCompute_a6463d2c66463890a7e8e720f2865021a} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!beta@{beta}}
+\index{beta@{beta}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{beta}{beta}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Va\+R\+Ptf\+Compute\+::beta\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classVaRPtfCompute_a8461d45e60e76c7205f7f98e1c44ccc6}{}\label{classVaRPtfCompute_a8461d45e60e76c7205f7f98e1c44ccc6} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!nb\+Assets@{nb\+Assets}}
+\index{nb\+Assets@{nb\+Assets}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{nb\+Assets}{nbAssets}}
+{\footnotesize\ttfamily size\+\_\+t Va\+R\+Ptf\+Compute\+::nb\+Assets\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classVaRPtfCompute_a67c2129848686adc86d76dfa95089116}{}\label{classVaRPtfCompute_a67c2129848686adc86d76dfa95089116} 
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!ptf@{ptf}}
+\index{ptf@{ptf}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\subsubsection{\texorpdfstring{ptf}{ptf}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\hyperlink{classPortfolio}{Portfolio}$>$ Va\+R\+Ptf\+Compute\+::ptf\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ptf__var_8h}{ptf\+\_\+var.\+h}\end{DoxyCompactItemize}

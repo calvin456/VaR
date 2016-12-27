@@ -1,0 +1,9 @@
+<map id="VaR" name="VaR">
+<area shape="rect" id="node2" href="$classExtremeValueVaR.html" title="{ExtremeValueVaR\n||+ ExtremeValueVaR()\l+ ~ExtremeValueVaR()\l+ ExtremeValueVaR()\l+ operator()()\l+ operator()()\l+ operator()()\l}" alt="" coords="5,248,164,399"/>
+<area shape="rect" id="node4" href="$classNoneParametricVaR.html" title="{NoneParametricVaR\n||+ NoneParametricVaR()\l+ ~NoneParametricVaR()\l+ NoneParametricVaR()\l+ operator()()\l+ operator()()\l+ operator()()\l}" alt="" coords="189,248,359,399"/>
+<area shape="rect" id="node6" href="$classParametricVaR.html" title="{ParametricVaR\n|# logNormal\l|+ ParametricVaR()\l+ ~ParametricVaR()\l+ ParametricVaR()\l+ operator()()\l+ operator()()\l+ operator()()\l+ NormalVaR()\l+ LogNormalVaR()\l}" alt="" coords="383,233,522,413"/>
+<area shape="rect" id="node3" href="$classPoTVaR.html" title="{PoTVaR\n||+ PoTVaR()\l+ ~PoTVaR()\l+ PoTVaR()\l+ operator()()\l+ operator()()\l+ expectedShortfall()\l+ expectedShortfall()\l}" alt="" coords="13,461,156,627"/>
+<area shape="rect" id="node5" href="$classHistoricalVaR.html" title="Compute VaR using historical method (histogram method) " alt="" coords="209,483,339,605"/>
+<area shape="rect" id="node7" href="$classGarchVaR.html" title="Compute GARCH(1,1) VaR. " alt="" coords="380,469,491,619"/>
+<area shape="rect" id="node8" href="$classRiskMetricsVaR.html" title="Compute Risk metrics VaR aka Exponential Weight Moving Average (EWMA) " alt="" coords="515,469,662,619"/>
+</map>

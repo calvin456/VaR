@@ -1,0 +1,127 @@
+\hypertarget{classPoTVaR}{}\section{Po\+T\+VaR Class Reference}
+\label{classPoTVaR}\index{Po\+T\+VaR@{Po\+T\+VaR}}
+
+
+{\ttfamily \#include $<$var\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for Po\+T\+VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classPoTVaR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Po\+T\+VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classPoTVaR__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPoTVaR_a09f126a81fbd344ba9b095a1837bbb78}{Po\+T\+VaR} (double \+\_\+u, double \+\_\+beta, double \+\_\+xi, double \+\_\+alpha=.\+05)
+\item 
+virtual \hyperlink{classPoTVaR_a1c80207f1679f5702f537ecea239d971}{$\sim$\+Po\+T\+VaR} ()
+\item 
+\hyperlink{classPoTVaR_a6a8b98090713854bd1e19fb20c2603c5}{Po\+T\+VaR} (const \hyperlink{classPoTVaR}{Po\+T\+VaR} \&other)
+\item 
+double \hyperlink{classPoTVaR_a7ee10c78ebe9cc0961e4344734860c97}{operator()} (const double \&ratio) const
+\item 
+double \hyperlink{classPoTVaR_a3360bbbeceae9bbd0c721e48586bf38c}{operator()} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const
+\begin{DoxyCompactList}\small\item\em Compute ratio of exceedance and \hyperlink{classVaR}{VaR}. \end{DoxyCompactList}\item 
+double \hyperlink{classPoTVaR_a2a133206a1cec2c101cb68402c3c4041}{expected\+Shortfall} (const double \&ratio) const
+\item 
+double \hyperlink{classPoTVaR_ad89b58b1c90111b1af8568a16e8d6b96}{expected\+Shortfall} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const
+\begin{DoxyCompactList}\small\item\em Compute ratio of exceedance and ES. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Peak over Threshold (P\+OT)
+
+Use generalized Pareto distribution 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPoTVaR_a09f126a81fbd344ba9b095a1837bbb78}{}\label{classPoTVaR_a09f126a81fbd344ba9b095a1837bbb78} 
+\index{Po\+T\+VaR@{Po\+T\+VaR}!Po\+T\+VaR@{Po\+T\+VaR}}
+\index{Po\+T\+VaR@{Po\+T\+VaR}!Po\+T\+VaR@{Po\+T\+VaR}}
+\subsubsection{\texorpdfstring{Po\+T\+Va\+R()}{PoTVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Po\+T\+Va\+R\+::\+Po\+T\+VaR (\begin{DoxyParamCaption}\item[{double}]{\+\_\+u,  }\item[{double}]{\+\_\+beta,  }\item[{double}]{\+\_\+xi,  }\item[{double}]{\+\_\+alpha = {\ttfamily .05} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & threshold \\
+\hline
+{\em beta} & scale parameter \\
+\hline
+{\em xi} & $\xi$ should be $>$ 0 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPoTVaR_a1c80207f1679f5702f537ecea239d971}{}\label{classPoTVaR_a1c80207f1679f5702f537ecea239d971} 
+\index{Po\+T\+VaR@{Po\+T\+VaR}!````~Po\+T\+VaR@{$\sim$\+Po\+T\+VaR}}
+\index{````~Po\+T\+VaR@{$\sim$\+Po\+T\+VaR}!Po\+T\+VaR@{Po\+T\+VaR}}
+\subsubsection{\texorpdfstring{$\sim$\+Po\+T\+Va\+R()}{~PoTVaR()}}
+{\footnotesize\ttfamily virtual Po\+T\+Va\+R\+::$\sim$\+Po\+T\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\hypertarget{classPoTVaR_a6a8b98090713854bd1e19fb20c2603c5}{}\label{classPoTVaR_a6a8b98090713854bd1e19fb20c2603c5} 
+\index{Po\+T\+VaR@{Po\+T\+VaR}!Po\+T\+VaR@{Po\+T\+VaR}}
+\index{Po\+T\+VaR@{Po\+T\+VaR}!Po\+T\+VaR@{Po\+T\+VaR}}
+\subsubsection{\texorpdfstring{Po\+T\+Va\+R()}{PoTVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Po\+T\+Va\+R\+::\+Po\+T\+VaR (\begin{DoxyParamCaption}\item[{const \hyperlink{classPoTVaR}{Po\+T\+VaR} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPoTVaR_a2a133206a1cec2c101cb68402c3c4041}{}\label{classPoTVaR_a2a133206a1cec2c101cb68402c3c4041} 
+\index{Po\+T\+VaR@{Po\+T\+VaR}!expected\+Shortfall@{expected\+Shortfall}}
+\index{expected\+Shortfall@{expected\+Shortfall}!Po\+T\+VaR@{Po\+T\+VaR}}
+\subsubsection{\texorpdfstring{expected\+Shortfall()}{expectedShortfall()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Po\+T\+Va\+R\+::expected\+Shortfall (\begin{DoxyParamCaption}\item[{const double \&}]{ratio }\end{DoxyParamCaption}) const}
+
+\hypertarget{classPoTVaR_ad89b58b1c90111b1af8568a16e8d6b96}{}\label{classPoTVaR_ad89b58b1c90111b1af8568a16e8d6b96} 
+\index{Po\+T\+VaR@{Po\+T\+VaR}!expected\+Shortfall@{expected\+Shortfall}}
+\index{expected\+Shortfall@{expected\+Shortfall}!Po\+T\+VaR@{Po\+T\+VaR}}
+\subsubsection{\texorpdfstring{expected\+Shortfall()}{expectedShortfall()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Po\+T\+Va\+R\+::expected\+Shortfall (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const}
+
+
+
+Compute ratio of exceedance and ES. 
+
+\hypertarget{classPoTVaR_a7ee10c78ebe9cc0961e4344734860c97}{}\label{classPoTVaR_a7ee10c78ebe9cc0961e4344734860c97} 
+\index{Po\+T\+VaR@{Po\+T\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Po\+T\+VaR@{Po\+T\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Po\+T\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{const double \&}]{ratio }\end{DoxyParamCaption}) const}
+
+Compute \hyperlink{classVaR}{VaR} 
+\begin{DoxyParams}{Parameters}
+{\em ratio} & \# of obs in excess over threshold \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPoTVaR_a3360bbbeceae9bbd0c721e48586bf38c}{}\label{classPoTVaR_a3360bbbeceae9bbd0c721e48586bf38c} 
+\index{Po\+T\+VaR@{Po\+T\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Po\+T\+VaR@{Po\+T\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Po\+T\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute ratio of exceedance and \hyperlink{classVaR}{VaR}. 
+
+
+
+Implements \hyperlink{classExtremeValueVaR_a3be021ee0faa2285bcb6be19815e3dc7}{Extreme\+Value\+VaR}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{var__model_8h}{var\+\_\+model.\+h}\end{DoxyCompactItemize}

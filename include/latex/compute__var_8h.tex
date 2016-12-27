@@ -1,0 +1,63 @@
+\hypertarget{compute__var_8h}{}\section{compute\+\_\+var.\+h File Reference}
+\label{compute__var_8h}\index{compute\+\_\+var.\+h@{compute\+\_\+var.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$boost/math/distributions/students\+\_\+t.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}var\+\_\+bridge.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}compute\+\_\+returns\+\_\+eigen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bootstrap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mc\+\_\+engine.\+h\char`\"{}}\newline
+Include dependency graph for compute\+\_\+var.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{compute__var_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classVaRCompute}{Va\+R\+Compute$<$ T, U $>$}
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR}. \end{DoxyCompactList}\item 
+class \hyperlink{classVaRParamCompute}{Va\+R\+Param\+Compute$<$ T, U $>$}
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using parametric mode. \end{DoxyCompactList}\item 
+class \hyperlink{classVaRnoneParamCompute}{Va\+Rnone\+Param\+Compute$<$ T, U $>$}
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using none-\/parametric model. \end{DoxyCompactList}\item 
+class \hyperlink{classVaRExtremeValueCompute}{Va\+R\+Extreme\+Value\+Compute$<$ T, U $>$}
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using extreme value -\/ Generalized Pareto. \end{DoxyCompactList}\item 
+class \hyperlink{classVaRMonteCarloCompute}{Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$}
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using Monte Carlo. \end{DoxyCompactList}\item 
+class \hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute$<$ T, U, V $>$}
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using Monte Carlo \& Copula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{compute__var_8h_a7883aa469d42b647ea8d05cc55bee5e4}{C\+O\+M\+P\+U\+T\+E\+\_\+\+V\+A\+R\+S\+\_\+H}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\double \hyperlink{compute__var_8h_a234a5fecdca4cd11d05764549ce46d19}{Expected\+Shortfall} (T \&\+\_\+var, double alpha=.\+05, size\+\_\+t computation\+Point=10, size\+\_\+t p=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{compute__var_8h_a7883aa469d42b647ea8d05cc55bee5e4}{}\label{compute__var_8h_a7883aa469d42b647ea8d05cc55bee5e4} 
+\index{compute\+\_\+var.\+h@{compute\+\_\+var.\+h}!C\+O\+M\+P\+U\+T\+E\+\_\+\+V\+A\+R\+S\+\_\+H@{C\+O\+M\+P\+U\+T\+E\+\_\+\+V\+A\+R\+S\+\_\+H}}
+\index{C\+O\+M\+P\+U\+T\+E\+\_\+\+V\+A\+R\+S\+\_\+H@{C\+O\+M\+P\+U\+T\+E\+\_\+\+V\+A\+R\+S\+\_\+H}!compute\+\_\+var.\+h@{compute\+\_\+var.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+M\+P\+U\+T\+E\+\_\+\+V\+A\+R\+S\+\_\+H}{COMPUTE\_VARS\_H}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+U\+T\+E\+\_\+\+V\+A\+R\+S\+\_\+H}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{compute__var_8h_a234a5fecdca4cd11d05764549ce46d19}{}\label{compute__var_8h_a234a5fecdca4cd11d05764549ce46d19} 
+\index{compute\+\_\+var.\+h@{compute\+\_\+var.\+h}!Expected\+Shortfall@{Expected\+Shortfall}}
+\index{Expected\+Shortfall@{Expected\+Shortfall}!compute\+\_\+var.\+h@{compute\+\_\+var.\+h}}
+\subsubsection{\texorpdfstring{Expected\+Shortfall()}{ExpectedShortfall()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double Expected\+Shortfall (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+var,  }\item[{double}]{alpha = {\ttfamily .05},  }\item[{size\+\_\+t}]{computation\+Point = {\ttfamily 10},  }\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Compute Expected Shortfall aka Conditional \hyperlink{classVaR}{VaR} (C\+VaR)
+
+Compute mean of Va\+Rs starting from alpha 

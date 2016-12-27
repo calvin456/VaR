@@ -1,0 +1,232 @@
+\hypertarget{classMCEngine}{}\section{M\+C\+Engine$<$ T, U $>$ Class Template Reference}
+\label{classMCEngine}\index{M\+C\+Engine$<$ T, U $>$@{M\+C\+Engine$<$ T, U $>$}}
+
+
+Student\textquotesingle{}s t-\/distr.  
+
+
+
+
+{\ttfamily \#include $<$mc\+\_\+engine.\+h$>$}
+
+
+
+Inheritance diagram for M\+C\+Engine$<$ T, U $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classMCEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for M\+C\+Engine$<$ T, U $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classMCEngine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ U $>$ \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMCEngine_a2021419bc32829220a41a42e0b7ddca3}{M\+C\+Engine} (T \&\+\_\+rng, const U \&\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Constructor 2x overloads. \end{DoxyCompactList}\item 
+\hyperlink{classMCEngine_a1d6bcdacaa99b8f75a89c9b2c344bd0d}{M\+C\+Engine} (T \&\+\_\+rng, const \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \&\+\_\+paths, const Eigen\+::\+Matrix\+Xd \&\+\_\+A, \hyperlink{mc__engine_8h_aac1fa89c4c60883790b2adb885048486}{mat\+Type} \+\_\+mt)
+\begin{DoxyCompactList}\small\item\em multiple assets \end{DoxyCompactList}\item 
+\hyperlink{classMCEngine_a51e0bc14bc95f352654e7caaad78ecfb}{M\+C\+Engine} (T \&\+\_\+rng, const \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \&\+\_\+paths)
+\begin{DoxyCompactList}\small\item\em multiple assets w/o correl matrix \end{DoxyCompactList}\item 
+\hyperlink{classMCEngine_a2341fbbbe2e92f91e4672757a1f8fea3}{M\+C\+Engine} (const \hyperlink{classMCEngine}{M\+C\+Engine} \&other)
+\item 
+virtual \hyperlink{classMCEngine_a9e6d34c928e8a7c7fd3cf25efc18a56a}{$\sim$\+M\+C\+Engine} ()
+\item 
+void \hyperlink{classMCEngine_a28f2f449e07eb22e0ae9caadfc919a3e}{set\+Values} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&rtns, const double vol)
+\item 
+void \hyperlink{classMCEngine_ab95a4a68842966a18f2bc8ef74dabf1f}{set\+Values} (const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&rtns, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&vol)
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classMCEngine_a2e84a3728e2fcea5999c472077ddeb14}{Do\+Simulation} (size\+\_\+t p=0, double n=1.e+05, \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process} up=\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian})
+\item 
+\hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \hyperlink{classMCEngine_a15873abff351cca971b1154f7ffe40b5}{Do\+Multi\+Simulation} (double n=1.e+05, \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process} up=\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mc__engine_8h_aac1fa89c4c60883790b2adb885048486}{mat\+Type} \hyperlink{classMCEngine_a66aed856c87b6ad40107b50e229da831}{mt}
+\item 
+T \hyperlink{classMCEngine_ae365d3f22ff95cdd7efbd9b555e81a3b}{inner\+Gen}
+\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classMCEngine_a916324fa45d5e3288e5792fc769c1ded}{A}
+\item 
+\hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \hyperlink{classMCEngine_a138035de4a3c8e088c437da6d6079ded}{paths\+\_\+}
+\item 
+size\+\_\+t \hyperlink{classMCEngine_a56d5cb47b251de9dd585af4ce6f32c18}{m}
+\item 
+\hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \hyperlink{classMCEngine_a74547ec91afe270f4b0efc13048852dc}{Returnstminus1}
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classMCEngine_afbebad3416f7c4eb6527497d19366f82}{sigmastminus1}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class U$>$\newline
+class M\+C\+Engine$<$ T, U $>$}
+
+Student\textquotesingle{}s t-\/distr. 
+
+Simulate return through Monte-\/\+Carlo T rng, U path 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{}\label{classMCEngine_a977f1048508a1467c496c2c47231d1d3} 
+\index{M\+C\+Engine@{M\+C\+Engine}!paths@{paths}}
+\index{paths@{paths}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{paths}{paths}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+typedef std\+::vector$<$U$>$ \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::\hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMCEngine_a2021419bc32829220a41a42e0b7ddca3}{}\label{classMCEngine_a2021419bc32829220a41a42e0b7ddca3} 
+\index{M\+C\+Engine@{M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\index{M\+C\+Engine@{M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{M\+C\+Engine()}{MCEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::\hyperlink{classMCEngine}{M\+C\+Engine} (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+rng,  }\item[{const U \&}]{\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor 2x overloads. 
+
+\hypertarget{classMCEngine_a1d6bcdacaa99b8f75a89c9b2c344bd0d}{}\label{classMCEngine_a1d6bcdacaa99b8f75a89c9b2c344bd0d} 
+\index{M\+C\+Engine@{M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\index{M\+C\+Engine@{M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{M\+C\+Engine()}{MCEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::\hyperlink{classMCEngine}{M\+C\+Engine} (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+rng,  }\item[{const \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \&}]{\+\_\+paths,  }\item[{const Eigen\+::\+Matrix\+Xd \&}]{\+\_\+A,  }\item[{\hyperlink{mc__engine_8h_aac1fa89c4c60883790b2adb885048486}{mat\+Type}}]{\+\_\+mt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+multiple assets 
+
+\hypertarget{classMCEngine_a51e0bc14bc95f352654e7caaad78ecfb}{}\label{classMCEngine_a51e0bc14bc95f352654e7caaad78ecfb} 
+\index{M\+C\+Engine@{M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\index{M\+C\+Engine@{M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{M\+C\+Engine()}{MCEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::\hyperlink{classMCEngine}{M\+C\+Engine} (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+rng,  }\item[{const \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \&}]{\+\_\+paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+multiple assets w/o correl matrix 
+
+\hypertarget{classMCEngine_a2341fbbbe2e92f91e4672757a1f8fea3}{}\label{classMCEngine_a2341fbbbe2e92f91e4672757a1f8fea3} 
+\index{M\+C\+Engine@{M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\index{M\+C\+Engine@{M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{M\+C\+Engine()}{MCEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::\hyperlink{classMCEngine}{M\+C\+Engine} (\begin{DoxyParamCaption}\item[{const \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classMCEngine_a9e6d34c928e8a7c7fd3cf25efc18a56a}{}\label{classMCEngine_a9e6d34c928e8a7c7fd3cf25efc18a56a} 
+\index{M\+C\+Engine@{M\+C\+Engine}!````~M\+C\+Engine@{$\sim$\+M\+C\+Engine}}
+\index{````~M\+C\+Engine@{$\sim$\+M\+C\+Engine}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{$\sim$\+M\+C\+Engine()}{~MCEngine()}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+virtual \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::$\sim$\hyperlink{classMCEngine}{M\+C\+Engine} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMCEngine_a15873abff351cca971b1154f7ffe40b5}{}\label{classMCEngine_a15873abff351cca971b1154f7ffe40b5} 
+\index{M\+C\+Engine@{M\+C\+Engine}!Do\+Multi\+Simulation@{Do\+Multi\+Simulation}}
+\index{Do\+Multi\+Simulation@{Do\+Multi\+Simulation}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{Do\+Multi\+Simulation()}{DoMultiSimulation()}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::Do\+Multi\+Simulation (\begin{DoxyParamCaption}\item[{double}]{n = {\ttfamily 1.e+05},  }\item[{\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process}}]{up = {\ttfamily \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+multiple indep rtn with Cholesky decomposition to produce correl rtns
+
+mutliple indep rtn with principal component \hypertarget{classMCEngine_a2e84a3728e2fcea5999c472077ddeb14}{}\label{classMCEngine_a2e84a3728e2fcea5999c472077ddeb14} 
+\index{M\+C\+Engine@{M\+C\+Engine}!Do\+Simulation@{Do\+Simulation}}
+\index{Do\+Simulation@{Do\+Simulation}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{Do\+Simulation()}{DoSimulation()}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::Do\+Simulation (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0},  }\item[{double}]{n = {\ttfamily 1.e+05},  }\item[{\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process}}]{up = {\ttfamily \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classMCEngine_a28f2f449e07eb22e0ae9caadfc919a3e}{}\label{classMCEngine_a28f2f449e07eb22e0ae9caadfc919a3e} 
+\index{M\+C\+Engine@{M\+C\+Engine}!set\+Values@{set\+Values}}
+\index{set\+Values@{set\+Values}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{set\+Values()}{setValues()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+void \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::set\+Values (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{rtns,  }\item[{const double}]{vol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classMCEngine_ab95a4a68842966a18f2bc8ef74dabf1f}{}\label{classMCEngine_ab95a4a68842966a18f2bc8ef74dabf1f} 
+\index{M\+C\+Engine@{M\+C\+Engine}!set\+Values@{set\+Values}}
+\index{set\+Values@{set\+Values}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{set\+Values()}{setValues()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+void \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::set\+Values (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&}]{rtns,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{vol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classMCEngine_a916324fa45d5e3288e5792fc769c1ded}{}\label{classMCEngine_a916324fa45d5e3288e5792fc769c1ded} 
+\index{M\+C\+Engine@{M\+C\+Engine}!A@{A}}
+\index{A@{A}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+Eigen\+::\+Matrix\+Xd \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::A\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classMCEngine_ae365d3f22ff95cdd7efbd9b555e81a3b}{}\label{classMCEngine_ae365d3f22ff95cdd7efbd9b555e81a3b} 
+\index{M\+C\+Engine@{M\+C\+Engine}!inner\+Gen@{inner\+Gen}}
+\index{inner\+Gen@{inner\+Gen}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{inner\+Gen}{innerGen}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+T \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::inner\+Gen\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classMCEngine_a56d5cb47b251de9dd585af4ce6f32c18}{}\label{classMCEngine_a56d5cb47b251de9dd585af4ce6f32c18} 
+\index{M\+C\+Engine@{M\+C\+Engine}!m@{m}}
+\index{m@{m}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+size\+\_\+t \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::m\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classMCEngine_a66aed856c87b6ad40107b50e229da831}{}\label{classMCEngine_a66aed856c87b6ad40107b50e229da831} 
+\index{M\+C\+Engine@{M\+C\+Engine}!mt@{mt}}
+\index{mt@{mt}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{mt}{mt}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{mc__engine_8h_aac1fa89c4c60883790b2adb885048486}{mat\+Type} \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::mt\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classMCEngine_a138035de4a3c8e088c437da6d6079ded}{}\label{classMCEngine_a138035de4a3c8e088c437da6d6079ded} 
+\index{M\+C\+Engine@{M\+C\+Engine}!paths\+\_\+@{paths\+\_\+}}
+\index{paths\+\_\+@{paths\+\_\+}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{paths\+\_\+}{paths\_}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::paths\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classMCEngine_a74547ec91afe270f4b0efc13048852dc}{}\label{classMCEngine_a74547ec91afe270f4b0efc13048852dc} 
+\index{M\+C\+Engine@{M\+C\+Engine}!Returnstminus1@{Returnstminus1}}
+\index{Returnstminus1@{Returnstminus1}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{Returnstminus1}{Returnstminus1}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::Returnstminus1\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classMCEngine_afbebad3416f7c4eb6527497d19366f82}{}\label{classMCEngine_afbebad3416f7c4eb6527497d19366f82} 
+\index{M\+C\+Engine@{M\+C\+Engine}!sigmastminus1@{sigmastminus1}}
+\index{sigmastminus1@{sigmastminus1}!M\+C\+Engine@{M\+C\+Engine}}
+\subsubsection{\texorpdfstring{sigmastminus1}{sigmastminus1}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classMCEngine}{M\+C\+Engine}$<$ T, U $>$\+::sigmastminus1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mc__engine_8h}{mc\+\_\+engine.\+h}\end{DoxyCompactItemize}

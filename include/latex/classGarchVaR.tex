@@ -1,0 +1,109 @@
+\hypertarget{classGarchVaR}{}\section{Garch\+VaR Class Reference}
+\label{classGarchVaR}\index{Garch\+VaR@{Garch\+VaR}}
+
+
+Compute G\+A\+R\+C\+H(1,1) \hyperlink{classVaR}{VaR}.  
+
+
+
+
+{\ttfamily \#include $<$var\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for Garch\+VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classGarchVaR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Garch\+VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classGarchVaR__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGarchVaR_a90617aa33c7b190422bc3cfda282167b}{Garch\+VaR} (double \+\_\+alpha=.\+05, double \+\_\+a=0., double \+\_\+b=.\+74, double \+\_\+c=.\+26, bool \+\_\+log\+Normal=false)
+\item 
+virtual \hyperlink{classGarchVaR_aa95d7d35fad664439c72013528b6f7e1}{$\sim$\+Garch\+VaR} ()
+\item 
+\hyperlink{classGarchVaR_a5a8f06045676f3e8776bf49f08bea635}{Garch\+VaR} (const \hyperlink{classGarchVaR}{Garch\+VaR} \&other)
+\item 
+double \hyperlink{classGarchVaR_a6aec8c89e48d2b2f356669ed3300f456}{operator()} (double \+\_\+mean\+Return, double \+\_\+sigmatminus1, double \+\_\+returntminus1) const
+\item 
+double \hyperlink{classGarchVaR_ab7e9583566b26a64017edbbfb63f3e89}{operator()} (double \+\_\+mean\+Return, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const
+\item 
+double \hyperlink{classGarchVaR_ac6d01b6567a6d0629cd95be716677763}{operator()} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Compute G\+A\+R\+C\+H(1,1) \hyperlink{classVaR}{VaR}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGarchVaR_a90617aa33c7b190422bc3cfda282167b}{}\label{classGarchVaR_a90617aa33c7b190422bc3cfda282167b} 
+\index{Garch\+VaR@{Garch\+VaR}!Garch\+VaR@{Garch\+VaR}}
+\index{Garch\+VaR@{Garch\+VaR}!Garch\+VaR@{Garch\+VaR}}
+\subsubsection{\texorpdfstring{Garch\+Va\+R()}{GarchVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Garch\+Va\+R\+::\+Garch\+VaR (\begin{DoxyParamCaption}\item[{double}]{\+\_\+alpha = {\ttfamily .05},  }\item[{double}]{\+\_\+a = {\ttfamily 0.},  }\item[{double}]{\+\_\+b = {\ttfamily .74},  }\item[{double}]{\+\_\+c = {\ttfamily .26},  }\item[{bool}]{\+\_\+log\+Normal = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\hypertarget{classGarchVaR_aa95d7d35fad664439c72013528b6f7e1}{}\label{classGarchVaR_aa95d7d35fad664439c72013528b6f7e1} 
+\index{Garch\+VaR@{Garch\+VaR}!````~Garch\+VaR@{$\sim$\+Garch\+VaR}}
+\index{````~Garch\+VaR@{$\sim$\+Garch\+VaR}!Garch\+VaR@{Garch\+VaR}}
+\subsubsection{\texorpdfstring{$\sim$\+Garch\+Va\+R()}{~GarchVaR()}}
+{\footnotesize\ttfamily virtual Garch\+Va\+R\+::$\sim$\+Garch\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\hypertarget{classGarchVaR_a5a8f06045676f3e8776bf49f08bea635}{}\label{classGarchVaR_a5a8f06045676f3e8776bf49f08bea635} 
+\index{Garch\+VaR@{Garch\+VaR}!Garch\+VaR@{Garch\+VaR}}
+\index{Garch\+VaR@{Garch\+VaR}!Garch\+VaR@{Garch\+VaR}}
+\subsubsection{\texorpdfstring{Garch\+Va\+R()}{GarchVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Garch\+Va\+R\+::\+Garch\+VaR (\begin{DoxyParamCaption}\item[{const \hyperlink{classGarchVaR}{Garch\+VaR} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGarchVaR_a6aec8c89e48d2b2f356669ed3300f456}{}\label{classGarchVaR_a6aec8c89e48d2b2f356669ed3300f456} 
+\index{Garch\+VaR@{Garch\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Garch\+VaR@{Garch\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily double Garch\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{double}]{\+\_\+mean\+Return,  }\item[{double}]{\+\_\+sigmatminus1,  }\item[{double}]{\+\_\+returntminus1 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classParametricVaR_a54589e13bb45da786d574656eb67b5fb}{Parametric\+VaR}.
+
+\hypertarget{classGarchVaR_ab7e9583566b26a64017edbbfb63f3e89}{}\label{classGarchVaR_ab7e9583566b26a64017edbbfb63f3e89} 
+\index{Garch\+VaR@{Garch\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Garch\+VaR@{Garch\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily double Garch\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{double}]{\+\_\+mean\+Return,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classParametricVaR_a5fda9d0e1033ff6e93dd112555ee5e0b}{Parametric\+VaR}.
+
+\hypertarget{classGarchVaR_ac6d01b6567a6d0629cd95be716677763}{}\label{classGarchVaR_ac6d01b6567a6d0629cd95be716677763} 
+\index{Garch\+VaR@{Garch\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Garch\+VaR@{Garch\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily double Garch\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classParametricVaR_aa07f1d64aff5abf484835cd9105af9c9}{Parametric\+VaR}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{var__model_8h}{var\+\_\+model.\+h}\end{DoxyCompactItemize}

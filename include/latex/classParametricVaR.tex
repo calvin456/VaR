@@ -1,0 +1,142 @@
+\hypertarget{classParametricVaR}{}\section{Parametric\+VaR Class Reference}
+\label{classParametricVaR}\index{Parametric\+VaR@{Parametric\+VaR}}
+
+
+{\ttfamily \#include $<$var\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for Parametric\+VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classParametricVaR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Parametric\+VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classParametricVaR__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classParametricVaR_a679d72495a95d6c1be912118101a95e1}{Parametric\+VaR} (double \+\_\+alpha=.\+05, bool \+\_\+log\+Normal=false)
+\item 
+virtual \hyperlink{classParametricVaR_a9345f4d02e6f1facb29922d2c4be504c}{$\sim$\+Parametric\+VaR} ()
+\item 
+\hyperlink{classParametricVaR_aa028595da1c747f5c1887eb07157139a}{Parametric\+VaR} (const \hyperlink{classParametricVaR}{Parametric\+VaR} \&other)
+\item 
+virtual double \hyperlink{classParametricVaR_a54589e13bb45da786d574656eb67b5fb}{operator()} (double \+\_\+mean\+Return, double \+\_\+sigmatminus1, double \+\_\+returnt) const =0
+\item 
+virtual double \hyperlink{classParametricVaR_a5fda9d0e1033ff6e93dd112555ee5e0b}{operator()} (double \+\_\+mean\+Return, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const =0
+\item 
+virtual double \hyperlink{classParametricVaR_aa07f1d64aff5abf484835cd9105af9c9}{operator()} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const =0
+\item 
+double \hyperlink{classParametricVaR_afdcc1e8748cff0a19d731f7a22c1d0c9}{Normal\+VaR} (double u, double sigma) const
+\item 
+double \hyperlink{classParametricVaR_aa26635a0fe04bd06580c50855360128a}{Log\+Normal\+VaR} (double u, double sigma) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classParametricVaR_a6e1dd396274079af9e1fc21068213866}{log\+Normal}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classParametricVaR_a679d72495a95d6c1be912118101a95e1}{}\label{classParametricVaR_a679d72495a95d6c1be912118101a95e1} 
+\index{Parametric\+VaR@{Parametric\+VaR}!Parametric\+VaR@{Parametric\+VaR}}
+\index{Parametric\+VaR@{Parametric\+VaR}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{Parametric\+Va\+R()}{ParametricVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Parametric\+Va\+R\+::\+Parametric\+VaR (\begin{DoxyParamCaption}\item[{double}]{\+\_\+alpha = {\ttfamily .05},  }\item[{bool}]{\+\_\+log\+Normal = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\hypertarget{classParametricVaR_a9345f4d02e6f1facb29922d2c4be504c}{}\label{classParametricVaR_a9345f4d02e6f1facb29922d2c4be504c} 
+\index{Parametric\+VaR@{Parametric\+VaR}!````~Parametric\+VaR@{$\sim$\+Parametric\+VaR}}
+\index{````~Parametric\+VaR@{$\sim$\+Parametric\+VaR}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{$\sim$\+Parametric\+Va\+R()}{~ParametricVaR()}}
+{\footnotesize\ttfamily virtual Parametric\+Va\+R\+::$\sim$\+Parametric\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\hypertarget{classParametricVaR_aa028595da1c747f5c1887eb07157139a}{}\label{classParametricVaR_aa028595da1c747f5c1887eb07157139a} 
+\index{Parametric\+VaR@{Parametric\+VaR}!Parametric\+VaR@{Parametric\+VaR}}
+\index{Parametric\+VaR@{Parametric\+VaR}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{Parametric\+Va\+R()}{ParametricVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Parametric\+Va\+R\+::\+Parametric\+VaR (\begin{DoxyParamCaption}\item[{const \hyperlink{classParametricVaR}{Parametric\+VaR} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classParametricVaR_aa26635a0fe04bd06580c50855360128a}{}\label{classParametricVaR_aa26635a0fe04bd06580c50855360128a} 
+\index{Parametric\+VaR@{Parametric\+VaR}!Log\+Normal\+VaR@{Log\+Normal\+VaR}}
+\index{Log\+Normal\+VaR@{Log\+Normal\+VaR}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{Log\+Normal\+Va\+R()}{LogNormalVaR()}}
+{\footnotesize\ttfamily double Parametric\+Va\+R\+::\+Log\+Normal\+VaR (\begin{DoxyParamCaption}\item[{double}]{u,  }\item[{double}]{sigma }\end{DoxyParamCaption}) const}
+
+\hypertarget{classParametricVaR_afdcc1e8748cff0a19d731f7a22c1d0c9}{}\label{classParametricVaR_afdcc1e8748cff0a19d731f7a22c1d0c9} 
+\index{Parametric\+VaR@{Parametric\+VaR}!Normal\+VaR@{Normal\+VaR}}
+\index{Normal\+VaR@{Normal\+VaR}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{Normal\+Va\+R()}{NormalVaR()}}
+{\footnotesize\ttfamily double Parametric\+Va\+R\+::\+Normal\+VaR (\begin{DoxyParamCaption}\item[{double}]{u,  }\item[{double}]{sigma }\end{DoxyParamCaption}) const}
+
+\hypertarget{classParametricVaR_a54589e13bb45da786d574656eb67b5fb}{}\label{classParametricVaR_a54589e13bb45da786d574656eb67b5fb} 
+\index{Parametric\+VaR@{Parametric\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double Parametric\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{double}]{\+\_\+mean\+Return,  }\item[{double}]{\+\_\+sigmatminus1,  }\item[{double}]{\+\_\+returnt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{classVaR_a28e1a1be9e386ed4e8503e54db4033bd}{VaR}.
+
+
+
+Implemented in \hyperlink{classGarchVaR_a6aec8c89e48d2b2f356669ed3300f456}{Garch\+VaR}, and \hyperlink{classRiskMetricsVaR_a801fc34d2327f8fffc1315a5a9aa9df1}{Risk\+Metrics\+VaR}.
+
+\hypertarget{classParametricVaR_a5fda9d0e1033ff6e93dd112555ee5e0b}{}\label{classParametricVaR_a5fda9d0e1033ff6e93dd112555ee5e0b} 
+\index{Parametric\+VaR@{Parametric\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double Parametric\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{double}]{\+\_\+mean\+Return,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{classVaR_a31cb62626488715a9133679feaba31e5}{VaR}.
+
+
+
+Implemented in \hyperlink{classGarchVaR_ab7e9583566b26a64017edbbfb63f3e89}{Garch\+VaR}, and \hyperlink{classRiskMetricsVaR_ab83bde7047dc8e501b8e8ea115cf5e7b}{Risk\+Metrics\+VaR}.
+
+\hypertarget{classParametricVaR_aa07f1d64aff5abf484835cd9105af9c9}{}\label{classParametricVaR_aa07f1d64aff5abf484835cd9105af9c9} 
+\index{Parametric\+VaR@{Parametric\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual double Parametric\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{classVaR_a1bd868d9953bfaeb49f5bf7d16986631}{VaR}.
+
+
+
+Implemented in \hyperlink{classGarchVaR_ac6d01b6567a6d0629cd95be716677763}{Garch\+VaR}, and \hyperlink{classRiskMetricsVaR_a3e79a82675a93c7467451146131a2ec5}{Risk\+Metrics\+VaR}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classParametricVaR_a6e1dd396274079af9e1fc21068213866}{}\label{classParametricVaR_a6e1dd396274079af9e1fc21068213866} 
+\index{Parametric\+VaR@{Parametric\+VaR}!log\+Normal@{log\+Normal}}
+\index{log\+Normal@{log\+Normal}!Parametric\+VaR@{Parametric\+VaR}}
+\subsubsection{\texorpdfstring{log\+Normal}{logNormal}}
+{\footnotesize\ttfamily bool Parametric\+Va\+R\+::log\+Normal\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{var__model_8h}{var\+\_\+model.\+h}\end{DoxyCompactItemize}

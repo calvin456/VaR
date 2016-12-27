@@ -1,0 +1,107 @@
+\hypertarget{rng_8h}{}\section{rng.\+h File Reference}
+\label{rng_8h}\index{rng.\+h@{rng.\+h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include \char`\"{}generate\+\_\+rm\+\_\+from\+\_\+distr.\+h\char`\"{}}\newline
+Include dependency graph for rng.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rng_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{rng_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classrng}{rng}
+\begin{DoxyCompactList}\small\item\em Mersenne-\/\+Twister pseudo random number generator. \end{DoxyCompactList}\item 
+class \hyperlink{classcopulaRng}{copula\+Rng}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ double $>$ \hyperlink{rng_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type} \{ \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}, 
+\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25a0247320c476fffeaa81ffa7836e08dee}{t}, 
+\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25afe89e549598595d66f5ca571a5a6ada8}{Clayton}, 
+\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25acf22cd57c7a1dace32ecbae16eb7c96f}{Gumbel}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\double \hyperlink{rng_8h_a059320434f6585ef6ad7ff808d83ab15}{get\+One\+Stable\+Dist} (T \&\+\_\+rng\+\_\+, double alpha, double beta, double gamma=1., double delta=0.)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{rng_8h_a1eb6a9306ef406d7975f3cbf2e247777}{}\label{rng_8h_a1eb6a9306ef406d7975f3cbf2e247777} 
+\index{rng.\+h@{rng.\+h}!Vec@{Vec}}
+\index{Vec@{Vec}!rng.\+h@{rng.\+h}}
+\subsubsection{\texorpdfstring{Vec}{Vec}}
+{\footnotesize\ttfamily typedef std\+::vector$<$double$>$ \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{}\label{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25} 
+\index{rng.\+h@{rng.\+h}!copula\+Type@{copula\+Type}}
+\index{copula\+Type@{copula\+Type}!rng.\+h@{rng.\+h}}
+\subsubsection{\texorpdfstring{copula\+Type}{copulaType}}
+{\footnotesize\ttfamily enum \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Clayton} & lower tail \\
+\hline
+{\em Gumbel} & upper tail \\
+\hline
+\end{DoxyParams}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gauss@{Gauss}!rng.\+h@{rng.\+h}}\index{rng.\+h@{rng.\+h}!Gauss@{Gauss}}}\hypertarget{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{}\label{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220} 
+Gauss&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{t@{t}!rng.\+h@{rng.\+h}}\index{rng.\+h@{rng.\+h}!t@{t}}}\hypertarget{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25a0247320c476fffeaa81ffa7836e08dee}{}\label{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25a0247320c476fffeaa81ffa7836e08dee} 
+t&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clayton@{Clayton}!rng.\+h@{rng.\+h}}\index{rng.\+h@{rng.\+h}!Clayton@{Clayton}}}\hypertarget{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25afe89e549598595d66f5ca571a5a6ada8}{}\label{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25afe89e549598595d66f5ca571a5a6ada8} 
+Clayton&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gumbel@{Gumbel}!rng.\+h@{rng.\+h}}\index{rng.\+h@{rng.\+h}!Gumbel@{Gumbel}}}\hypertarget{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25acf22cd57c7a1dace32ecbae16eb7c96f}{}\label{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25acf22cd57c7a1dace32ecbae16eb7c96f} 
+Gumbel&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\hypertarget{rng_8h_a059320434f6585ef6ad7ff808d83ab15}{}\label{rng_8h_a059320434f6585ef6ad7ff808d83ab15} 
+\index{rng.\+h@{rng.\+h}!get\+One\+Stable\+Dist@{get\+One\+Stable\+Dist}}
+\index{get\+One\+Stable\+Dist@{get\+One\+Stable\+Dist}!rng.\+h@{rng.\+h}}
+\subsubsection{\texorpdfstring{get\+One\+Stable\+Dist()}{getOneStableDist()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double get\+One\+Stable\+Dist (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+rng\+\_\+,  }\item[{double}]{alpha,  }\item[{double}]{beta,  }\item[{double}]{gamma = {\ttfamily 1.},  }\item[{double}]{delta = {\ttfamily 0.} }\end{DoxyParamCaption})}
+
+Simulate one stable distr value
+
+The stable distribution family is also sometimes referred to as the Lévy alpha-\/stable distribution. 

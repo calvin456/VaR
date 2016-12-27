@@ -1,0 +1,86 @@
+\hypertarget{var__model_8h}{}\section{var\+\_\+model.\+h File Reference}
+\label{var__model_8h}\index{var\+\_\+model.\+h@{var\+\_\+model.\+h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$boost/math/distributions/normal.\+hpp$>$}\newline
+Include dependency graph for var\+\_\+model.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{var__model_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{var__model_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classVaR}{VaR}
+\item 
+class \hyperlink{classParametricVaR}{Parametric\+VaR}
+\item 
+class \hyperlink{classRiskMetricsVaR}{Risk\+Metrics\+VaR}
+\begin{DoxyCompactList}\small\item\em Compute Risk metrics \hyperlink{classVaR}{VaR} aka Exponential Weight Moving Average (E\+W\+MA) \end{DoxyCompactList}\item 
+class \hyperlink{classGarchVaR}{Garch\+VaR}
+\begin{DoxyCompactList}\small\item\em Compute G\+A\+R\+C\+H(1,1) \hyperlink{classVaR}{VaR}. \end{DoxyCompactList}\item 
+class \hyperlink{classNoneParametricVaR}{None\+Parametric\+VaR}
+\item 
+class \hyperlink{classHistoricalVaR}{Historical\+VaR}
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using historical method (histogram method) \end{DoxyCompactList}\item 
+class \hyperlink{classExtremeValueVaR}{Extreme\+Value\+VaR}
+\item 
+class \hyperlink{classPoTVaR}{Po\+T\+VaR}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ double $>$ \hyperlink{var__model_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921de}{Weighting\+Scheme} \{ \hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921deab7e4e0120a041dbe6528b050c04269e0}{none}, 
+\hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921dea1e262d3f82d0ddece3f1e889f39f2e54}{hybrid}, 
+\hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921dea1c7200d36e58b0ddaa908c35ff828b21}{hw}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{var__model_8h_a1eb6a9306ef406d7975f3cbf2e247777}{}\label{var__model_8h_a1eb6a9306ef406d7975f3cbf2e247777} 
+\index{var\+\_\+model.\+h@{var\+\_\+model.\+h}!Vec@{Vec}}
+\index{Vec@{Vec}!var\+\_\+model.\+h@{var\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{Vec}{Vec}}
+{\footnotesize\ttfamily typedef std\+::vector$<$double$>$ \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{var__model_8h_a05de9d7b6ad30cf17cd8f840666921de}{}\label{var__model_8h_a05de9d7b6ad30cf17cd8f840666921de} 
+\index{var\+\_\+model.\+h@{var\+\_\+model.\+h}!Weighting\+Scheme@{Weighting\+Scheme}}
+\index{Weighting\+Scheme@{Weighting\+Scheme}!var\+\_\+model.\+h@{var\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{Weighting\+Scheme}{WeightingScheme}}
+{\footnotesize\ttfamily enum \hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921de}{Weighting\+Scheme}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!var\+\_\+model.\+h@{var\+\_\+model.\+h}}\index{var\+\_\+model.\+h@{var\+\_\+model.\+h}!none@{none}}}\hypertarget{var__model_8h_a05de9d7b6ad30cf17cd8f840666921deab7e4e0120a041dbe6528b050c04269e0}{}\label{var__model_8h_a05de9d7b6ad30cf17cd8f840666921deab7e4e0120a041dbe6528b050c04269e0} 
+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hybrid@{hybrid}!var\+\_\+model.\+h@{var\+\_\+model.\+h}}\index{var\+\_\+model.\+h@{var\+\_\+model.\+h}!hybrid@{hybrid}}}\hypertarget{var__model_8h_a05de9d7b6ad30cf17cd8f840666921dea1e262d3f82d0ddece3f1e889f39f2e54}{}\label{var__model_8h_a05de9d7b6ad30cf17cd8f840666921dea1e262d3f82d0ddece3f1e889f39f2e54} 
+hybrid&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hw@{hw}!var\+\_\+model.\+h@{var\+\_\+model.\+h}}\index{var\+\_\+model.\+h@{var\+\_\+model.\+h}!hw@{hw}}}\hypertarget{var__model_8h_a05de9d7b6ad30cf17cd8f840666921dea1c7200d36e58b0ddaa908c35ff828b21}{}\label{var__model_8h_a05de9d7b6ad30cf17cd8f840666921dea1c7200d36e58b0ddaa908c35ff828b21} 
+hw&\\
+\hline
+
+\end{DoxyEnumFields}

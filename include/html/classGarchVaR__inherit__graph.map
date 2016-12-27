@@ -1,0 +1,4 @@
+<map id="GarchVaR" name="GarchVaR">
+<area shape="rect" id="node2" href="$classParametricVaR.html" title="{ParametricVaR\n|# logNormal\l|+ ParametricVaR()\l+ ~ParametricVaR()\l+ ParametricVaR()\l+ operator()()\l+ operator()()\l+ operator()()\l+ NormalVaR()\l+ LogNormalVaR()\l}" alt="" coords="5,233,144,413"/>
+<area shape="rect" id="node3" href="$classVaR.html" title="{VaR\n||+ VaR()\l+ ~VaR()\l+ VaR()\l+ getAlpha()\l+ setAlpha()\l+ operator()()\l+ operator()()\l+ operator()()\l}" alt="" coords="26,5,123,185"/>
+</map>

@@ -1,0 +1,15 @@
+\form#0:$ \hat{R}= \hat{A} A^{-1} R$
+\form#1:$X = LL^T$
+\form#2:$C = AA^T$
+\form#3:$ \hat{C} = \hat{A} \hat{A} ^{T}$
+\form#4:$alpha$
+\form#5:$beta$
+\form#6:$\phi$
+\form#7:$\alpha$
+\form#8:$\beta$
+\form#9:$\gamma$
+\form#10:$r_{t-1}$
+\form#11:$\sigma_{t-1}$
+\form#12:$U(0,1)$
+\form#13:$\nu$
+\form#14:$\xi$

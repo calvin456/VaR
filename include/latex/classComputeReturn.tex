@@ -1,0 +1,310 @@
+\hypertarget{classComputeReturn}{}\section{Compute\+Return Class Reference}
+\label{classComputeReturn}\index{Compute\+Return@{Compute\+Return}}
+
+
+{\ttfamily \#include $<$compute\+\_\+returns\+\_\+eigen.\+h$>$}
+
+
+
+Collaboration diagram for Compute\+Return\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classComputeReturn__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classComputeReturn_a5ddfc65ef8a500beffff33cc3f416271}{Compute\+Return} (unsigned int \+\_\+period=1, unsigned int \+\_\+k=252)
+\item 
+\hyperlink{classComputeReturn_a8431159bc745ac489ae4c813bd34e540}{Compute\+Return} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&\+\_\+prices, unsigned int \+\_\+period=1, unsigned int \+\_\+k=252, bool \+\_\+log\+Rtns=false)
+\item 
+\hyperlink{classComputeReturn_a2e58c2c7e9d0f2735ceb9fdcdf0dcdde}{Compute\+Return} (const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&\+\_\+prices, unsigned int \+\_\+period=1, unsigned int \+\_\+k=252, bool \+\_\+log\+Rtns=false)
+\item 
+\hyperlink{classComputeReturn_aa737a4b9280f349201191db08e95ce9a}{Compute\+Return} (const \hyperlink{classComputeReturn}{Compute\+Return} \&other)
+\begin{DoxyCompactList}\small\item\em copy constructor implementation \end{DoxyCompactList}\item 
+\hyperlink{classComputeReturn_adf0a518447b70fd8990c2e06be3edb1b}{$\sim$\+Compute\+Return} ()
+\item 
+void \hyperlink{classComputeReturn_a3a6c9c21aa99b02dc6f2efd2b32091b8}{arithmetric\+Returns} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&\+\_\+prices)
+\begin{DoxyCompactList}\small\item\em compute arithmetic rtns \end{DoxyCompactList}\item 
+void \hyperlink{classComputeReturn_a6c7c54511bec213c7359e041ec469e78}{geometric\+Returns} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&\+\_\+prices)
+\begin{DoxyCompactList}\small\item\em compute geometric rtns ie. log return \end{DoxyCompactList}\item 
+void \hyperlink{classComputeReturn_a8c26c2417285e0d00204ac97b16ea05b}{arithmetric\+Returns} (const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&\+\_\+prices)
+\item 
+void \hyperlink{classComputeReturn_a2d55b2a2037f25e9a7a617af91b56272}{geometric\+Returns} (const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&\+\_\+prices)
+\item 
+void \hyperlink{classComputeReturn_a4d0b2d72a0fab11c03eb3e09f089a4b9}{correl\+Reweighted\+Rtns} (const Eigen\+::\+Matrix\+Xd \&Chat)
+\begin{DoxyCompactList}\small\item\em Compute adjusted return $ \hat{R}= \hat{A} A^{-1} R$. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classComputeReturn_aef7572244a63c71bc4da1467cea38da2}{compute\+PC} ()
+\begin{DoxyCompactList}\small\item\em Compute P\+CA Principal Component Analysis. \end{DoxyCompactList}\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classComputeReturn_a9e5d3161d117ea54508c5b4847bec4c2}{get\+Rolling\+Mean} (size\+\_\+t p) const
+\begin{DoxyCompactList}\small\item\em Compute rolling mean rtn, and std dev according to period ie day, week, month and window. \end{DoxyCompactList}\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classComputeReturn_a3da2b36268c86dd0ea45439c7a2aa6f2}{get\+Rolling\+Std\+Dev} (size\+\_\+t p) const
+\begin{DoxyCompactList}\small\item\em Compute rolling mean rtn, and std dev according to period ie day, week, month and window. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classComputeReturn_a5a47d689a1f989932511663b6ec59aa6}{get\+Period} () const
+\item 
+unsigned int \hyperlink{classComputeReturn_a8b65977d4a7f929db92cf33c05428707}{get\+Window} () const
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classComputeReturn_a9876c0984f83ab96da90e883270171bb}{get\+Returns} (size\+\_\+t p) const
+\item 
+\hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \hyperlink{classComputeReturn_aa5389b3d2e175250e3569c996b5c7f00}{get\+Returns} () const
+\item 
+double \hyperlink{classComputeReturn_ab83426d16e1c870e18278db3d6b4deeb}{get\+Mean\+Return} (size\+\_\+t p=0) const
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classComputeReturn_a4ea1191d38980ccebc6603e4f4fb7dce}{get\+Mean\+Returns} () const
+\item 
+double \hyperlink{classComputeReturn_a7aac48c9abb168e956412bf9d509cb35}{get\+Std\+Dev} (size\+\_\+t p=0) const
+\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classComputeReturn_a3d312fabfda99b5405e7aeab2af2fc8c}{get\+Var\+Cov} () const
+\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classComputeReturn_a16b185325ca2cb87991b6db59aa63de8}{get\+Correl\+Mat} ()
+\item 
+void \hyperlink{classComputeReturn_a6250a32e8ac308d3642bb81154ceb785}{set\+Period} (unsigned int \+\_\+period)
+\item 
+void \hyperlink{classComputeReturn_ae4ae713d72c4015860a8e562dfd51e75}{set\+Window} (unsigned int \+\_\+k)
+\item 
+void \hyperlink{classComputeReturn_ae0594e2da22ca9c96a4ce4f3eebc41eb}{set\+Returns} (const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&\+\_\+m\+Asset\+Returns)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classComputeReturn_a80678bbba59305a392d001260fb2d32b}{\+\_\+arithmetric\+Returns} (size\+\_\+t j=0)
+\begin{DoxyCompactList}\small\item\em compute arithmetic rtns \end{DoxyCompactList}\item 
+void \hyperlink{classComputeReturn_a9738eae9cbcbe4d75a86335d95adc758}{\+\_\+geometric\+Returns} (size\+\_\+t j=0)
+\begin{DoxyCompactList}\small\item\em compute geometric rtns ie. log return \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Compute returns, mean, std dev
+
+Assume daily return 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classComputeReturn_a5ddfc65ef8a500beffff33cc3f416271}{}\label{classComputeReturn_a5ddfc65ef8a500beffff33cc3f416271} 
+\index{Compute\+Return@{Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\index{Compute\+Return@{Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{Compute\+Return()}{ComputeReturn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Compute\+Return\+::\+Compute\+Return (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+period = {\ttfamily 1},  }\item[{unsigned int}]{\+\_\+k = {\ttfamily 252} }\end{DoxyParamCaption})}
+
+constructor 2X overloads 
+\begin{DoxyParams}{Parameters}
+{\em period} & one day. 252 trading days (US trading calendar) \\
+\hline
+{\em k} & rolling period. 1 year \\
+\hline
+\end{DoxyParams}
+\hypertarget{classComputeReturn_a8431159bc745ac489ae4c813bd34e540}{}\label{classComputeReturn_a8431159bc745ac489ae4c813bd34e540} 
+\index{Compute\+Return@{Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\index{Compute\+Return@{Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{Compute\+Return()}{ComputeReturn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Compute\+Return\+::\+Compute\+Return (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{\+\_\+prices,  }\item[{unsigned int}]{\+\_\+period = {\ttfamily 1},  }\item[{unsigned int}]{\+\_\+k = {\ttfamily 252},  }\item[{bool}]{\+\_\+log\+Rtns = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\hypertarget{classComputeReturn_a2e58c2c7e9d0f2735ceb9fdcdf0dcdde}{}\label{classComputeReturn_a2e58c2c7e9d0f2735ceb9fdcdf0dcdde} 
+\index{Compute\+Return@{Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\index{Compute\+Return@{Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{Compute\+Return()}{ComputeReturn()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Compute\+Return\+::\+Compute\+Return (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&}]{\+\_\+prices,  }\item[{unsigned int}]{\+\_\+period = {\ttfamily 1},  }\item[{unsigned int}]{\+\_\+k = {\ttfamily 252},  }\item[{bool}]{\+\_\+log\+Rtns = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\hypertarget{classComputeReturn_aa737a4b9280f349201191db08e95ce9a}{}\label{classComputeReturn_aa737a4b9280f349201191db08e95ce9a} 
+\index{Compute\+Return@{Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\index{Compute\+Return@{Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{Compute\+Return()}{ComputeReturn()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Compute\+Return\+::\+Compute\+Return (\begin{DoxyParamCaption}\item[{const \hyperlink{classComputeReturn}{Compute\+Return} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+copy constructor implementation 
+
+\hypertarget{classComputeReturn_adf0a518447b70fd8990c2e06be3edb1b}{}\label{classComputeReturn_adf0a518447b70fd8990c2e06be3edb1b} 
+\index{Compute\+Return@{Compute\+Return}!````~Compute\+Return@{$\sim$\+Compute\+Return}}
+\index{````~Compute\+Return@{$\sim$\+Compute\+Return}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{$\sim$\+Compute\+Return()}{~ComputeReturn()}}
+{\footnotesize\ttfamily Compute\+Return\+::$\sim$\+Compute\+Return (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classComputeReturn_a80678bbba59305a392d001260fb2d32b}{}\label{classComputeReturn_a80678bbba59305a392d001260fb2d32b} 
+\index{Compute\+Return@{Compute\+Return}!\+\_\+arithmetric\+Returns@{\+\_\+arithmetric\+Returns}}
+\index{\+\_\+arithmetric\+Returns@{\+\_\+arithmetric\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{\+\_\+arithmetric\+Returns()}{\_arithmetricReturns()}}
+{\footnotesize\ttfamily void Compute\+Return\+::\+\_\+arithmetric\+Returns (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{j = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+compute arithmetic rtns 
+
+\hypertarget{classComputeReturn_a9738eae9cbcbe4d75a86335d95adc758}{}\label{classComputeReturn_a9738eae9cbcbe4d75a86335d95adc758} 
+\index{Compute\+Return@{Compute\+Return}!\+\_\+geometric\+Returns@{\+\_\+geometric\+Returns}}
+\index{\+\_\+geometric\+Returns@{\+\_\+geometric\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{\+\_\+geometric\+Returns()}{\_geometricReturns()}}
+{\footnotesize\ttfamily void Compute\+Return\+::\+\_\+geometric\+Returns (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{j = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+compute geometric rtns ie. log return 
+
+\hypertarget{classComputeReturn_a3a6c9c21aa99b02dc6f2efd2b32091b8}{}\label{classComputeReturn_a3a6c9c21aa99b02dc6f2efd2b32091b8} 
+\index{Compute\+Return@{Compute\+Return}!arithmetric\+Returns@{arithmetric\+Returns}}
+\index{arithmetric\+Returns@{arithmetric\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{arithmetric\+Returns()}{arithmetricReturns()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Compute\+Return\+::arithmetric\+Returns (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{\+\_\+prices }\end{DoxyParamCaption})}
+
+
+
+compute arithmetic rtns 
+
+\hypertarget{classComputeReturn_a8c26c2417285e0d00204ac97b16ea05b}{}\label{classComputeReturn_a8c26c2417285e0d00204ac97b16ea05b} 
+\index{Compute\+Return@{Compute\+Return}!arithmetric\+Returns@{arithmetric\+Returns}}
+\index{arithmetric\+Returns@{arithmetric\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{arithmetric\+Returns()}{arithmetricReturns()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Compute\+Return\+::arithmetric\+Returns (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&}]{\+\_\+prices }\end{DoxyParamCaption})}
+
+\hypertarget{classComputeReturn_aef7572244a63c71bc4da1467cea38da2}{}\label{classComputeReturn_aef7572244a63c71bc4da1467cea38da2} 
+\index{Compute\+Return@{Compute\+Return}!compute\+PC@{compute\+PC}}
+\index{compute\+PC@{compute\+PC}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{compute\+P\+C()}{computePC()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Compute\+Return\+::compute\+PC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compute P\+CA Principal Component Analysis. 
+
+Principal Component up to 99\% \hypertarget{classComputeReturn_a4d0b2d72a0fab11c03eb3e09f089a4b9}{}\label{classComputeReturn_a4d0b2d72a0fab11c03eb3e09f089a4b9} 
+\index{Compute\+Return@{Compute\+Return}!correl\+Reweighted\+Rtns@{correl\+Reweighted\+Rtns}}
+\index{correl\+Reweighted\+Rtns@{correl\+Reweighted\+Rtns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{correl\+Reweighted\+Rtns()}{correlReweightedRtns()}}
+{\footnotesize\ttfamily void Compute\+Return\+::correl\+Reweighted\+Rtns (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{Chat }\end{DoxyParamCaption})}
+
+
+
+Compute adjusted return $ \hat{R}= \hat{A} A^{-1} R$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Chat} & = Bumped original correl matrix for several asset pairs\\
+\hline
+\end{DoxyParams}
+C, Chat correlation matrices
+
+Use Cholesky decomposition $X = LL^T$
+
+ie.
+
+$C = AA^T$
+
+$ \hat{C} = \hat{A} \hat{A} ^{T}$ \hypertarget{classComputeReturn_a6c7c54511bec213c7359e041ec469e78}{}\label{classComputeReturn_a6c7c54511bec213c7359e041ec469e78} 
+\index{Compute\+Return@{Compute\+Return}!geometric\+Returns@{geometric\+Returns}}
+\index{geometric\+Returns@{geometric\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{geometric\+Returns()}{geometricReturns()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Compute\+Return\+::geometric\+Returns (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{\+\_\+prices }\end{DoxyParamCaption})}
+
+
+
+compute geometric rtns ie. log return 
+
+\hypertarget{classComputeReturn_a2d55b2a2037f25e9a7a617af91b56272}{}\label{classComputeReturn_a2d55b2a2037f25e9a7a617af91b56272} 
+\index{Compute\+Return@{Compute\+Return}!geometric\+Returns@{geometric\+Returns}}
+\index{geometric\+Returns@{geometric\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{geometric\+Returns()}{geometricReturns()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Compute\+Return\+::geometric\+Returns (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&}]{\+\_\+prices }\end{DoxyParamCaption})}
+
+\hypertarget{classComputeReturn_a16b185325ca2cb87991b6db59aa63de8}{}\label{classComputeReturn_a16b185325ca2cb87991b6db59aa63de8} 
+\index{Compute\+Return@{Compute\+Return}!get\+Correl\+Mat@{get\+Correl\+Mat}}
+\index{get\+Correl\+Mat@{get\+Correl\+Mat}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Correl\+Mat()}{getCorrelMat()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Compute\+Return\+::get\+Correl\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classComputeReturn_ab83426d16e1c870e18278db3d6b4deeb}{}\label{classComputeReturn_ab83426d16e1c870e18278db3d6b4deeb} 
+\index{Compute\+Return@{Compute\+Return}!get\+Mean\+Return@{get\+Mean\+Return}}
+\index{get\+Mean\+Return@{get\+Mean\+Return}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Mean\+Return()}{getMeanReturn()}}
+{\footnotesize\ttfamily double Compute\+Return\+::get\+Mean\+Return (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+\hypertarget{classComputeReturn_a4ea1191d38980ccebc6603e4f4fb7dce}{}\label{classComputeReturn_a4ea1191d38980ccebc6603e4f4fb7dce} 
+\index{Compute\+Return@{Compute\+Return}!get\+Mean\+Returns@{get\+Mean\+Returns}}
+\index{get\+Mean\+Returns@{get\+Mean\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Mean\+Returns()}{getMeanReturns()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Compute\+Return\+::get\+Mean\+Returns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classComputeReturn_a5a47d689a1f989932511663b6ec59aa6}{}\label{classComputeReturn_a5a47d689a1f989932511663b6ec59aa6} 
+\index{Compute\+Return@{Compute\+Return}!get\+Period@{get\+Period}}
+\index{get\+Period@{get\+Period}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Period()}{getPeriod()}}
+{\footnotesize\ttfamily unsigned int Compute\+Return\+::get\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classComputeReturn_a9876c0984f83ab96da90e883270171bb}{}\label{classComputeReturn_a9876c0984f83ab96da90e883270171bb} 
+\index{Compute\+Return@{Compute\+Return}!get\+Returns@{get\+Returns}}
+\index{get\+Returns@{get\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Returns()}{getReturns()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Compute\+Return\+::get\+Returns (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p }\end{DoxyParamCaption}) const}
+
+\hypertarget{classComputeReturn_aa5389b3d2e175250e3569c996b5c7f00}{}\label{classComputeReturn_aa5389b3d2e175250e3569c996b5c7f00} 
+\index{Compute\+Return@{Compute\+Return}!get\+Returns@{get\+Returns}}
+\index{get\+Returns@{get\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Returns()}{getReturns()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} Compute\+Return\+::get\+Returns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classComputeReturn_a9e5d3161d117ea54508c5b4847bec4c2}{}\label{classComputeReturn_a9e5d3161d117ea54508c5b4847bec4c2} 
+\index{Compute\+Return@{Compute\+Return}!get\+Rolling\+Mean@{get\+Rolling\+Mean}}
+\index{get\+Rolling\+Mean@{get\+Rolling\+Mean}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Rolling\+Mean()}{getRollingMean()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Compute\+Return\+::get\+Rolling\+Mean (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Compute rolling mean rtn, and std dev according to period ie day, week, month and window. 
+
+\hypertarget{classComputeReturn_a3da2b36268c86dd0ea45439c7a2aa6f2}{}\label{classComputeReturn_a3da2b36268c86dd0ea45439c7a2aa6f2} 
+\index{Compute\+Return@{Compute\+Return}!get\+Rolling\+Std\+Dev@{get\+Rolling\+Std\+Dev}}
+\index{get\+Rolling\+Std\+Dev@{get\+Rolling\+Std\+Dev}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Rolling\+Std\+Dev()}{getRollingStdDev()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Compute\+Return\+::get\+Rolling\+Std\+Dev (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Compute rolling mean rtn, and std dev according to period ie day, week, month and window. 
+
+\hypertarget{classComputeReturn_a7aac48c9abb168e956412bf9d509cb35}{}\label{classComputeReturn_a7aac48c9abb168e956412bf9d509cb35} 
+\index{Compute\+Return@{Compute\+Return}!get\+Std\+Dev@{get\+Std\+Dev}}
+\index{get\+Std\+Dev@{get\+Std\+Dev}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Std\+Dev()}{getStdDev()}}
+{\footnotesize\ttfamily double Compute\+Return\+::get\+Std\+Dev (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+\hypertarget{classComputeReturn_a3d312fabfda99b5405e7aeab2af2fc8c}{}\label{classComputeReturn_a3d312fabfda99b5405e7aeab2af2fc8c} 
+\index{Compute\+Return@{Compute\+Return}!get\+Var\+Cov@{get\+Var\+Cov}}
+\index{get\+Var\+Cov@{get\+Var\+Cov}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Var\+Cov()}{getVarCov()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Compute\+Return\+::get\+Var\+Cov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classComputeReturn_a8b65977d4a7f929db92cf33c05428707}{}\label{classComputeReturn_a8b65977d4a7f929db92cf33c05428707} 
+\index{Compute\+Return@{Compute\+Return}!get\+Window@{get\+Window}}
+\index{get\+Window@{get\+Window}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
+{\footnotesize\ttfamily unsigned int Compute\+Return\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classComputeReturn_a6250a32e8ac308d3642bb81154ceb785}{}\label{classComputeReturn_a6250a32e8ac308d3642bb81154ceb785} 
+\index{Compute\+Return@{Compute\+Return}!set\+Period@{set\+Period}}
+\index{set\+Period@{set\+Period}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{set\+Period()}{setPeriod()}}
+{\footnotesize\ttfamily void Compute\+Return\+::set\+Period (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+period }\end{DoxyParamCaption})}
+
+\hypertarget{classComputeReturn_ae0594e2da22ca9c96a4ce4f3eebc41eb}{}\label{classComputeReturn_ae0594e2da22ca9c96a4ce4f3eebc41eb} 
+\index{Compute\+Return@{Compute\+Return}!set\+Returns@{set\+Returns}}
+\index{set\+Returns@{set\+Returns}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{set\+Returns()}{setReturns()}}
+{\footnotesize\ttfamily void Compute\+Return\+::set\+Returns (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&}]{\+\_\+m\+Asset\+Returns }\end{DoxyParamCaption})}
+
+\hypertarget{classComputeReturn_ae4ae713d72c4015860a8e562dfd51e75}{}\label{classComputeReturn_ae4ae713d72c4015860a8e562dfd51e75} 
+\index{Compute\+Return@{Compute\+Return}!set\+Window@{set\+Window}}
+\index{set\+Window@{set\+Window}!Compute\+Return@{Compute\+Return}}
+\subsubsection{\texorpdfstring{set\+Window()}{setWindow()}}
+{\footnotesize\ttfamily void Compute\+Return\+::set\+Window (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+k }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{compute__returns__eigen_8h}{compute\+\_\+returns\+\_\+eigen.\+h}\end{DoxyCompactItemize}

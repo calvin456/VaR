@@ -1,0 +1,118 @@
+\hypertarget{classVaRPtfMCCompute}{}\section{Va\+R\+Ptf\+M\+C\+Compute$<$ T, V $>$ Class Template Reference}
+\label{classVaRPtfMCCompute}\index{Va\+R\+Ptf\+M\+C\+Compute$<$ T, V $>$@{Va\+R\+Ptf\+M\+C\+Compute$<$ T, V $>$}}
+
+
+Compute \hyperlink{classVaR}{VaR} of a portfolio through Monte Carlo simulation.  
+
+
+
+
+{\ttfamily \#include $<$ptf\+\_\+var.\+h$>$}
+
+
+
+Inheritance diagram for Va\+R\+Ptf\+M\+C\+Compute$<$ T, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classVaRPtfMCCompute__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Va\+R\+Ptf\+M\+C\+Compute$<$ T, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classVaRPtfMCCompute__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classMCEngine}{M\+C\+Engine}$<$ \hyperlink{classrng}{rng}, V $>$ \hyperlink{classVaRPtfMCCompute_a77b17bb3264e1b7e90485290d84f9ed0}{engine}
+\item 
+typedef std\+::vector$<$ V $>$ \hyperlink{classVaRPtfMCCompute_a019d051e785efc490f2428be67bfb752}{processes}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVaRPtfMCCompute_aa3549f10b2f7e51c4fc213cf1c58268c}{Va\+R\+Ptf\+M\+C\+Compute} (const shared\+\_\+ptr$<$ \hyperlink{classPortfolio}{Portfolio} $>$ \&\+\_\+ptf, T \&\+\_\+model, const \hyperlink{classVaRPtfMCCompute_a019d051e785efc490f2428be67bfb752}{processes} \&\+\_\+processes\+\_\+, \hyperlink{classrng}{rng} \&\+\_\+rng\+\_\+, double \+\_\+alpha=.\+05)
+\item 
+virtual \hyperlink{classVaRPtfMCCompute_a2172aaa668de0fff6c40b2a60ddd51d9}{$\sim$\+Va\+R\+Ptf\+M\+C\+Compute} ()
+\item 
+double \hyperlink{classVaRPtfMCCompute_acd3f40602de413a00691acfb3b315982}{compute\+VaR} ()
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classVaRPtfMCCompute_a0ad1f3807e5d4df9a6f1212f754fa2cc}{compute\+Va\+R\+Whole\+Path} ()
+\begin{DoxyCompactList}\small\item\em compute \hyperlink{classVaR}{VaR} over whole path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class V$>$\newline
+class Va\+R\+Ptf\+M\+C\+Compute$<$ T, V $>$}
+
+Compute \hyperlink{classVaR}{VaR} of a portfolio through Monte Carlo simulation. 
+
+Simulate each component separately 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classVaRPtfMCCompute_a77b17bb3264e1b7e90485290d84f9ed0}{}\label{classVaRPtfMCCompute_a77b17bb3264e1b7e90485290d84f9ed0} 
+\index{Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}!engine@{engine}}
+\index{engine@{engine}!Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}}
+\subsubsection{\texorpdfstring{engine}{engine}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+typedef \hyperlink{classMCEngine}{M\+C\+Engine}$<$\hyperlink{classrng}{rng},V$>$ \hyperlink{classVaRPtfMCCompute}{Va\+R\+Ptf\+M\+C\+Compute}$<$ T, V $>$\+::\hyperlink{classVaRPtfMCCompute_a77b17bb3264e1b7e90485290d84f9ed0}{engine}}
+
+\hypertarget{classVaRPtfMCCompute_a019d051e785efc490f2428be67bfb752}{}\label{classVaRPtfMCCompute_a019d051e785efc490f2428be67bfb752} 
+\index{Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}!processes@{processes}}
+\index{processes@{processes}!Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}}
+\subsubsection{\texorpdfstring{processes}{processes}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+typedef std\+::vector$<$V$>$ \hyperlink{classVaRPtfMCCompute}{Va\+R\+Ptf\+M\+C\+Compute}$<$ T, V $>$\+::\hyperlink{classVaRPtfMCCompute_a019d051e785efc490f2428be67bfb752}{processes}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVaRPtfMCCompute_aa3549f10b2f7e51c4fc213cf1c58268c}{}\label{classVaRPtfMCCompute_aa3549f10b2f7e51c4fc213cf1c58268c} 
+\index{Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}!Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}}
+\index{Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}!Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}}
+\subsubsection{\texorpdfstring{Va\+R\+Ptf\+M\+C\+Compute()}{VaRPtfMCCompute()}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\hyperlink{classVaRPtfMCCompute}{Va\+R\+Ptf\+M\+C\+Compute}$<$ T, V $>$\+::\hyperlink{classVaRPtfMCCompute}{Va\+R\+Ptf\+M\+C\+Compute} (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \hyperlink{classPortfolio}{Portfolio} $>$ \&}]{\+\_\+ptf,  }\item[{T \&}]{\+\_\+model,  }\item[{const \hyperlink{classVaRPtfMCCompute_a019d051e785efc490f2428be67bfb752}{processes} \&}]{\+\_\+processes\+\_\+,  }\item[{\hyperlink{classrng}{rng} \&}]{\+\_\+rng\+\_\+,  }\item[{double}]{\+\_\+alpha = {\ttfamily .05} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classVaRPtfMCCompute_a2172aaa668de0fff6c40b2a60ddd51d9}{}\label{classVaRPtfMCCompute_a2172aaa668de0fff6c40b2a60ddd51d9} 
+\index{Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}!````~Va\+R\+Ptf\+M\+C\+Compute@{$\sim$\+Va\+R\+Ptf\+M\+C\+Compute}}
+\index{````~Va\+R\+Ptf\+M\+C\+Compute@{$\sim$\+Va\+R\+Ptf\+M\+C\+Compute}!Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}}
+\subsubsection{\texorpdfstring{$\sim$\+Va\+R\+Ptf\+M\+C\+Compute()}{~VaRPtfMCCompute()}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+virtual \hyperlink{classVaRPtfMCCompute}{Va\+R\+Ptf\+M\+C\+Compute}$<$ T, V $>$\+::$\sim$\hyperlink{classVaRPtfMCCompute}{Va\+R\+Ptf\+M\+C\+Compute} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVaRPtfMCCompute_acd3f40602de413a00691acfb3b315982}{}\label{classVaRPtfMCCompute_acd3f40602de413a00691acfb3b315982} 
+\index{Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}!compute\+VaR@{compute\+VaR}}
+\index{compute\+VaR@{compute\+VaR}!Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R()}{computeVaR()}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+double \hyperlink{classVaRPtfMCCompute}{Va\+R\+Ptf\+M\+C\+Compute}$<$ T, V $>$\+::compute\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classVaRPtfMCCompute_a0ad1f3807e5d4df9a6f1212f754fa2cc}{}\label{classVaRPtfMCCompute_a0ad1f3807e5d4df9a6f1212f754fa2cc} 
+\index{Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}!compute\+Va\+R\+Whole\+Path@{compute\+Va\+R\+Whole\+Path}}
+\index{compute\+Va\+R\+Whole\+Path@{compute\+Va\+R\+Whole\+Path}!Va\+R\+Ptf\+M\+C\+Compute@{Va\+R\+Ptf\+M\+C\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R\+Whole\+Path()}{computeVaRWholePath()}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classVaRPtfMCCompute}{Va\+R\+Ptf\+M\+C\+Compute}$<$ T, V $>$\+::compute\+Va\+R\+Whole\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+compute \hyperlink{classVaR}{VaR} over whole path 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ptf__var_8h}{ptf\+\_\+var.\+h}\end{DoxyCompactItemize}

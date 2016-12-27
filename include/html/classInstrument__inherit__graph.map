@@ -1,0 +1,6 @@
+<map id="Instrument" name="Instrument">
+<area shape="rect" id="node2" href="$classDeltaOne.html" title="Sensitivity one for one. FX, index, commodity prices. " alt="" coords="5,189,111,296"/>
+<area shape="rect" id="node3" href="$classDerivatives.html" title="{Derivatives\n||+ Derivatives()\l+ ~Derivatives()\l+ operator()()\l}" alt="" coords="135,189,251,296"/>
+<area shape="rect" id="node4" href="$classEquity.html" title="{Equity\n||+ Equity()\l+ ~Equity()\l+ operator()()\l}" alt="" coords="275,189,372,296"/>
+<area shape="rect" id="node5" href="$classFI.html" title="{FI\n||+ FI()\l+ FI()\l+ ~FI()\l+ operator()()\l+ operator()()\l}" alt="" coords="396,175,493,311"/>
+</map>

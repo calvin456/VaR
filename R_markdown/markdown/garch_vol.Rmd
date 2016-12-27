@@ -1,0 +1,61 @@
+---
+title: "garch_fx_rate"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r }
+library(tseries)
+
+setwd('~/Documents/VaR')
+
+prices <- read.csv('./data/FXData.csv')
+```
+
+
+```{r }
+n <- dim(prices)[1]
+rtn.CHFEUR <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.CHFEUR[i] <- log(prices[i+1,'CHFEUR']/prices[i,'CHFEUR']) * 100.
+}
+
+rtn.DKKEUR <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.DKKEUR[i] <- log(prices[i+1,'DKKEUR']/prices[i,'DKKEUR']) *100.
+}
+
+rtn.CZKEUR <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.CZKEUR[i] <- log(prices[i+1,'CZKEUR']/prices[i,'CZKEUR']) *100.
+}
+
+rtn.BRLUSD <- rep(0,n-1)
+
+for(i in seq(1,n-1)){
+  rtn.BRLUSD[i] <- log(prices[i+1,'BRLUSD']/prices[i,'BRLUSD']) *100
+}
+
+rtn.BRLUSD <- rtn.BRLUSD[4:1328]
+
+```
+
+```{r }
+
+garch(rtn.CHFEUR,trace=FALSE)
+
+garch(rtn.DKKEUR,trace=FALSE)
+
+garch(rtn.CZKEUR,trace=FALSE)
+
+garch(rtn.BRLUSD,trace=FALSE)
+
+```

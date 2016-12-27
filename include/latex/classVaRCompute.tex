@@ -1,0 +1,150 @@
+\hypertarget{classVaRCompute}{}\section{Va\+R\+Compute$<$ T, U $>$ Class Template Reference}
+\label{classVaRCompute}\index{Va\+R\+Compute$<$ T, U $>$@{Va\+R\+Compute$<$ T, U $>$}}
+
+
+Compute \hyperlink{classVaR}{VaR}.  
+
+
+
+
+{\ttfamily \#include $<$compute\+\_\+var.\+h$>$}
+
+
+
+Inheritance diagram for Va\+R\+Compute$<$ T, U $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVaRCompute__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Va\+R\+Compute$<$ T, U $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classVaRCompute__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVaRCompute_ac4fd50c6cb5cdc8ecd9964f1c317853a}{Va\+R\+Compute} (shared\+\_\+ptr$<$ T $>$ \&\+\_\+cr, const U \&\+\_\+model)
+\item 
+virtual \hyperlink{classVaRCompute_a18b310b3562cadd560a70e2614a0e09c}{$\sim$\+Va\+R\+Compute} ()
+\item 
+void \hyperlink{classVaRCompute_a9a58944ea61c92f90befb024d12fe80c}{set\+Alpha} (double alpha)
+\item 
+void \hyperlink{classVaRCompute_a071d01ccfd965e5a02d2ce4f3eee5db2}{set\+Period} (unsigned int period)
+\item 
+virtual double \hyperlink{classVaRCompute_a0465221010d248238fe1052958776984}{compute\+VaR} (size\+\_\+t p=0)=0
+\begin{DoxyCompactList}\small\item\em compute \hyperlink{classVaR}{VaR} using whole path 1x overload \end{DoxyCompactList}\item 
+double \hyperlink{classVaRCompute_a26618931d3370340944295ae5d882db5}{compute\+VaR} (double \+\_\+alpha, unsigned int \+\_\+period, unsigned \+\_\+k, size\+\_\+t p=0)
+\item 
+virtual std\+::vector$<$ double $>$ \hyperlink{classVaRCompute_ad5ec9feb42ea2f99f2c91e793d18fe1b}{compute\+Va\+R\+Whole\+Path} (size\+\_\+t p=0)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ T $>$ \hyperlink{classVaRCompute_a44d8fd1ac0cd7c920e1fc255f11a92ee}{compute\+Return}
+\item 
+U \hyperlink{classVaRCompute_a2de1fc8b4d4df387d0495981bde72564}{model}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class U$>$\newline
+class Va\+R\+Compute$<$ T, U $>$}
+
+Compute \hyperlink{classVaR}{VaR}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVaRCompute_ac4fd50c6cb5cdc8ecd9964f1c317853a}{}\label{classVaRCompute_ac4fd50c6cb5cdc8ecd9964f1c317853a} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!Va\+R\+Compute@{Va\+R\+Compute}}
+\index{Va\+R\+Compute@{Va\+R\+Compute}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{Va\+R\+Compute()}{VaRCompute()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::\hyperlink{classVaRCompute}{Va\+R\+Compute} (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ T $>$ \&}]{\+\_\+cr,  }\item[{const U \&}]{\+\_\+model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classVaRCompute_a18b310b3562cadd560a70e2614a0e09c}{}\label{classVaRCompute_a18b310b3562cadd560a70e2614a0e09c} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!````~Va\+R\+Compute@{$\sim$\+Va\+R\+Compute}}
+\index{````~Va\+R\+Compute@{$\sim$\+Va\+R\+Compute}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{$\sim$\+Va\+R\+Compute()}{~VaRCompute()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+virtual \hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::$\sim$\hyperlink{classVaRCompute}{Va\+R\+Compute} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVaRCompute_a0465221010d248238fe1052958776984}{}\label{classVaRCompute_a0465221010d248238fe1052958776984} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!compute\+VaR@{compute\+VaR}}
+\index{compute\+VaR@{compute\+VaR}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R()}{computeVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+virtual double \hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::compute\+VaR (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+compute \hyperlink{classVaR}{VaR} using whole path 1x overload 
+
+
+
+Implemented in \hyperlink{classVaRCopulaCompute_a5f2a4f1eab16cd600683309d49800e89}{Va\+R\+Copula\+Compute$<$ T, U, V $>$}, \hyperlink{classVaRMonteCarloCompute_a43b5493187d834fa2ba1bdb53c353947}{Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$}, \hyperlink{classVaRExtremeValueCompute_aa0a5cedce7a1a0dc0298f5b59add0e2c}{Va\+R\+Extreme\+Value\+Compute$<$ T, U $>$}, \hyperlink{classVaRnoneParamCompute_a171ea43cd1a1a9a38cf415c22e06898a}{Va\+Rnone\+Param\+Compute$<$ T, U $>$}, and \hyperlink{classVaRParamCompute_a0dcd8d0204328a73526aeb3859b3e159}{Va\+R\+Param\+Compute$<$ T, U $>$}.
+
+\hypertarget{classVaRCompute_a26618931d3370340944295ae5d882db5}{}\label{classVaRCompute_a26618931d3370340944295ae5d882db5} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!compute\+VaR@{compute\+VaR}}
+\index{compute\+VaR@{compute\+VaR}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R()}{computeVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+double \hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::compute\+VaR (\begin{DoxyParamCaption}\item[{double}]{\+\_\+alpha,  }\item[{unsigned int}]{\+\_\+period,  }\item[{unsigned}]{\+\_\+k,  }\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classVaRCompute_ad5ec9feb42ea2f99f2c91e793d18fe1b}{}\label{classVaRCompute_ad5ec9feb42ea2f99f2c91e793d18fe1b} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!compute\+Va\+R\+Whole\+Path@{compute\+Va\+R\+Whole\+Path}}
+\index{compute\+Va\+R\+Whole\+Path@{compute\+Va\+R\+Whole\+Path}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R\+Whole\+Path()}{computeVaRWholePath()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+virtual std\+::vector$<$double$>$ \hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::compute\+Va\+R\+Whole\+Path (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classVaRCopulaCompute_a6c2501fcfd848a07a91859f2bcdc6516}{Va\+R\+Copula\+Compute$<$ T, U, V $>$}, \hyperlink{classVaRMonteCarloCompute_a14ea83586172f23f8bb4a60babeb812f}{Va\+R\+Monte\+Carlo\+Compute$<$ T, U, V $>$}, \hyperlink{classVaRExtremeValueCompute_ad3b7ec9abcd6f6b27c89cf77e0099d18}{Va\+R\+Extreme\+Value\+Compute$<$ T, U $>$}, \hyperlink{classVaRnoneParamCompute_a7ddfb62c4e1e9890542818c75c51798e}{Va\+Rnone\+Param\+Compute$<$ T, U $>$}, and \hyperlink{classVaRParamCompute_abc97057d7e35d8dc98fb3a560be67d0d}{Va\+R\+Param\+Compute$<$ T, U $>$}.
+
+\hypertarget{classVaRCompute_a9a58944ea61c92f90befb024d12fe80c}{}\label{classVaRCompute_a9a58944ea61c92f90befb024d12fe80c} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!set\+Alpha@{set\+Alpha}}
+\index{set\+Alpha@{set\+Alpha}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{set\+Alpha()}{setAlpha()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+void \hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::set\+Alpha (\begin{DoxyParamCaption}\item[{double}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classVaRCompute_a071d01ccfd965e5a02d2ce4f3eee5db2}{}\label{classVaRCompute_a071d01ccfd965e5a02d2ce4f3eee5db2} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!set\+Period@{set\+Period}}
+\index{set\+Period@{set\+Period}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{set\+Period()}{setPeriod()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+void \hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::set\+Period (\begin{DoxyParamCaption}\item[{unsigned int}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classVaRCompute_a44d8fd1ac0cd7c920e1fc255f11a92ee}{}\label{classVaRCompute_a44d8fd1ac0cd7c920e1fc255f11a92ee} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!compute\+Return@{compute\+Return}}
+\index{compute\+Return@{compute\+Return}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Return}{computeReturn}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+shared\+\_\+ptr$<$T$>$ \hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::compute\+Return\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classVaRCompute_a2de1fc8b4d4df387d0495981bde72564}{}\label{classVaRCompute_a2de1fc8b4d4df387d0495981bde72564} 
+\index{Va\+R\+Compute@{Va\+R\+Compute}!model@{model}}
+\index{model@{model}!Va\+R\+Compute@{Va\+R\+Compute}}
+\subsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+U \hyperlink{classVaRCompute}{Va\+R\+Compute}$<$ T, U $>$\+::model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{compute__var_8h}{compute\+\_\+var.\+h}\end{DoxyCompactItemize}

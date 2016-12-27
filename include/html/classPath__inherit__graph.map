@@ -1,0 +1,5 @@
+<map id="Path" name="Path">
+<area shape="rect" id="node2" href="$classAR1xGARCH11.html" title="model AR(1) x GARCH(1,1) &#45; Fat tails " alt="" coords="5,175,152,296"/>
+<area shape="rect" id="node3" href="$classGARCH11.html" title="model GARCH(1,1) " alt="" coords="177,182,282,289"/>
+<area shape="rect" id="node4" href="$classPath1x1.html" title="{Path1x1\n||+ Path1x1()\l+ ~Path1x1()\l+ doOneSim()\l+ doSim()\l}" alt="" coords="306,175,409,296"/>
+</map>

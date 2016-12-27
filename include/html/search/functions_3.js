@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['calculate',['Calculate',['../classPca.html#a69bab38091166e75c71a20952c4c9ef4',1,'Pca']]],
+  ['compute',['compute',['../classBootstrap.html#a2b25d49ce7f6e289974a0d6b3a019581',1,'Bootstrap']]],
+  ['computebootstrapvar',['computeBootstrapVaR',['../classVaRnoneParamCompute.html#ad1c8f84e6efd21924d24258bc5ac3933',1,'VaRnoneParamCompute']]],
+  ['computecomponentptfrtn',['ComputeComponentPtfRtn',['../classPortfolio.html#a2824877890ad51d9261935002a6d25c0',1,'Portfolio']]],
+  ['computecomponentvar',['computeComponentVaR',['../classVaRPtfCompute.html#ae25fc1528e8902c7039574b6e6eef1f0',1,'VaRPtfCompute']]],
+  ['computees',['computeES',['../classVaRExtremeValueCompute.html#afa071fb24b112d282847f8ad6732060f',1,'VaRExtremeValueCompute']]],
+  ['computeincrementalvar',['computeIncrementalVaR',['../classVaRPtfCompute.html#a21a920a3cd05000dbb4aa504ee0f7bc1',1,'VaRPtfCompute']]],
+  ['computeindividualvar',['computeIndividualVaR',['../classVaRPtfCompute.html#a80964859df50e96558c08445020505cf',1,'VaRPtfCompute']]],
+  ['computemarginalvar',['computeMarginalVaR',['../classVaRPtfCompute.html#ae7a1cb2765156b3c7eff7571b5cb8943',1,'VaRPtfCompute']]],
+  ['computemeanptfrtn',['computeMeanPtfRtn',['../classPortfolio.html#ad2732b083b90ecd08e5bf26fb38a1834',1,'Portfolio']]],
+  ['computepc',['computePC',['../classComputeReturn.html#aef7572244a63c71bc4da1467cea38da2',1,'ComputeReturn']]],
+  ['computereturn',['ComputeReturn',['../classComputeReturn.html#a5ddfc65ef8a500beffff33cc3f416271',1,'ComputeReturn::ComputeReturn(unsigned int _period=1, unsigned int _k=252)'],['../classComputeReturn.html#a8431159bc745ac489ae4c813bd34e540',1,'ComputeReturn::ComputeReturn(const Vec &amp;_prices, unsigned int _period=1, unsigned int _k=252, bool _logRtns=false)'],['../classComputeReturn.html#a2e58c2c7e9d0f2735ceb9fdcdf0dcdde',1,'ComputeReturn::ComputeReturn(const Mat &amp;_prices, unsigned int _period=1, unsigned int _k=252, bool _logRtns=false)'],['../classComputeReturn.html#aa737a4b9280f349201191db08e95ce9a',1,'ComputeReturn::ComputeReturn(const ComputeReturn &amp;other)']]],
+  ['computeriskreturn',['computeRiskReturn',['../compute__returns__eigen_8h.html#a92b8e9d793ed8f375ed688fe0d6c76c7',1,'compute_returns_eigen.h']]],
+  ['computerptfsdev',['computerPtfSdev',['../classPortfolio.html#aeaba88f92093501fb98c60c83b600529',1,'Portfolio']]],
+  ['computertn',['computeRtn',['../classPortfolio.html#aa00669a3d5caece170ee8b28c0c67a2d',1,'Portfolio']]],
+  ['computevar',['computeVaR',['../classVaRCompute.html#a0465221010d248238fe1052958776984',1,'VaRCompute::computeVaR(size_t p=0)=0'],['../classVaRCompute.html#a26618931d3370340944295ae5d882db5',1,'VaRCompute::computeVaR(double _alpha, unsigned int _period, unsigned _k, size_t p=0)'],['../classVaRParamCompute.html#a0dcd8d0204328a73526aeb3859b3e159',1,'VaRParamCompute::computeVaR()'],['../classVaRnoneParamCompute.html#a171ea43cd1a1a9a38cf415c22e06898a',1,'VaRnoneParamCompute::computeVaR()'],['../classVaRExtremeValueCompute.html#aa0a5cedce7a1a0dc0298f5b59add0e2c',1,'VaRExtremeValueCompute::computeVaR()'],['../classVaRMonteCarloCompute.html#a43b5493187d834fa2ba1bdb53c353947',1,'VaRMonteCarloCompute::computeVaR()'],['../classVaRCopulaCompute.html#a5f2a4f1eab16cd600683309d49800e89',1,'VaRCopulaCompute::computeVaR()'],['../classVaRPtfMCCompute.html#acd3f40602de413a00691acfb3b315982',1,'VaRPtfMCCompute::computeVaR()']]],
+  ['computevarcov',['computeVarCov',['../classPortfolio.html#a56baf8410ef9a0c450e5fa558ac4254f',1,'Portfolio']]],
+  ['computevarwholepath',['computeVaRWholePath',['../classVaRCompute.html#ad5ec9feb42ea2f99f2c91e793d18fe1b',1,'VaRCompute::computeVaRWholePath()'],['../classVaRParamCompute.html#abc97057d7e35d8dc98fb3a560be67d0d',1,'VaRParamCompute::computeVaRWholePath()'],['../classVaRnoneParamCompute.html#a7ddfb62c4e1e9890542818c75c51798e',1,'VaRnoneParamCompute::computeVaRWholePath()'],['../classVaRExtremeValueCompute.html#ad3b7ec9abcd6f6b27c89cf77e0099d18',1,'VaRExtremeValueCompute::computeVaRWholePath()'],['../classVaRMonteCarloCompute.html#a14ea83586172f23f8bb4a60babeb812f',1,'VaRMonteCarloCompute::computeVaRWholePath()'],['../classVaRCopulaCompute.html#a6c2501fcfd848a07a91859f2bcdc6516',1,'VaRCopulaCompute::computeVaRWholePath()'],['../classVaRPtfMCCompute.html#a0ad1f3807e5d4df9a6f1212f754fa2cc',1,'VaRPtfMCCompute::computeVaRWholePath()']]],
+  ['copulaengine',['CopulaEngine',['../classCopulaEngine.html#af3eb5649a8e86dd99de690cac3e843f1',1,'CopulaEngine::CopulaEngine(T &amp;_rng_, const paths &amp;_paths, const Eigen::MatrixXd _C)'],['../classCopulaEngine.html#a26fa5d1a9a5cb3fe2f406a63049fe4e9',1,'CopulaEngine::CopulaEngine(T &amp;_rng_, const paths &amp;_paths)'],['../classCopulaEngine.html#a2f0ff634cdaaa44f21f2ccd3c583d918',1,'CopulaEngine::CopulaEngine(const CopulaEngine &amp;other)']]],
+  ['copularng',['copulaRng',['../classcopulaRng.html#a223e069676a02b38f8bb2cafa242cf54',1,'copulaRng']]],
+  ['correlreweightedrtns',['correlReweightedRtns',['../classComputeReturn.html#a4d0b2d72a0fab11c03eb3e09f089a4b9',1,'ComputeReturn']]],
+  ['cum_5fprop',['cum_prop',['../classPca.html#a08407cc5449d7461b1b1b828c464e80a',1,'Pca']]]
+];

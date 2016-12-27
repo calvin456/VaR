@@ -1,0 +1,338 @@
+---
+title: "ar_garch_idx"
+output: html_document
+---
+
+## DJIA,GSPC,NDX,GDAXI,FCHI,SSEC,SENSEX Analysis
+
+
+
+```{r}
+
+library(tseries) # Estimate of GARCH through Gaussian (normal)
+library(fGarch) # Use for estimation of GARCH model using Student's t distr 
+
+setwd('~/Documents/VaR')
+
+prices <- read.csv('./data/StockIndexData.csv')
+
+
+
+```
+
+## DJIA
+
+```{r}
+
+prices.DJIA <- prices[,c('DJIA')]
+
+summary(prices.DJIA)
+
+n <- length(prices.DJIA)
+rtn.DJIA <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.DJIA[i] <- log(prices.DJIA[i+1]/prices.DJIA[i]) * 100.
+}
+
+```
+
+## Model stock return with AR(1) x GARCH(1,1)
+
+Model AR(1)*GARCH(1,1)
+
+```{r}
+
+rtn.DJIA.ar <- ar(rtn.DJIA, order.max = 1, method = 'ols')
+
+rtn.DJIA.ar
+
+plot(rtn.DJIA.ar$resid,type = 'l')
+
+summary(rtn.DJIA.ar$resid)
+
+
+rtn.DJIA.ar.resid.garch <- garch(rtn.DJIA.ar$resid[2:length(rtn.DJIA.ar$resid)],trace=FALSE)
+
+rtn.DJIA.ar.resid.garch
+
+plot(rtn.DJIA.ar.resid.garch$residuals,type = 'l')
+
+```
+
+## GSPC
+
+```{r}
+
+prices.GSPC <- prices[,c('GSPC')]
+
+summary(prices.GSPC)
+
+n <- length(prices.GSPC)
+rtn.GSPC <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.GSPC[i] <- log(prices.GSPC[i+1]/prices.GSPC[i]) * 100.
+}
+
+```
+
+## Model stock return with AR(1) x GARCH(1,1)
+
+Model AR(1)*GARCH(1,1)
+
+```{r}
+
+rtn.GSPC.ar <- ar(rtn.GSPC, order.max = 1, method = 'ols')
+
+rtn.GSPC.ar
+
+plot(rtn.GSPC.ar$resid,type = 'l')
+
+summary(rtn.GSPC.ar$resid)
+
+
+rtn.GSPC.ar.resid.garch <- garch(rtn.GSPC.ar$resid[2:length(rtn.GSPC.ar$resid)],trace=FALSE)
+
+rtn.GSPC.ar.resid.garch
+
+plot(rtn.GSPC.ar.resid.garch$residuals,type = 'l')
+
+```
+
+## NDX
+
+```{r}
+
+prices.NDX <- prices[,c('NDX')]
+
+summary(prices.NDX)
+
+n <- length(prices.NDX)
+rtn.NDX <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.NDX[i] <- log(prices.NDX[i+1]/prices.NDX[i]) * 100.
+}
+
+rtn.NDX <- rtn.NDX[!is.na(rtn.NDX)]
+
+```
+
+## Model stock return with AR(1) x GARCH(1,1)
+
+Model AR(1)*GARCH(1,1)
+
+```{r}
+
+rtn.NDX.ar <- ar(rtn.NDX, order.max = 1, method = 'ols')
+
+rtn.NDX.ar
+
+plot(rtn.NDX.ar$resid,type = 'l')
+
+summary(rtn.NDX.ar$resid)
+
+
+rtn.NDX.ar.resid.garch <- garch(rtn.NDX.ar$resid[2:length(rtn.NDX.ar$resid)],trace=FALSE)
+
+rtn.NDX.ar.resid.garch
+
+plot(rtn.NDX.ar.resid.garch$residuals,type = 'l')
+
+```
+
+## GDAXI
+
+```{r}
+
+prices.GDAXI <- prices[,c('GDAXI')]
+
+summary(prices.GDAXI)
+
+n <- length(prices.GDAXI)
+rtn.GDAXI <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.GDAXI[i] <- log(prices.GDAXI[i+1]/prices.GDAXI[i]) * 100.
+}
+
+rtn.GDAXI <- rtn.GDAXI[!is.na(rtn.GDAXI)]
+
+```
+
+## Model stock return with AR(1) x GARCH(1,1)
+
+Model AR(1)*GARCH(1,1)
+
+```{r}
+
+rtn.GDAXI.ar <- ar(rtn.GDAXI, order.max = 1, method = 'ols')
+
+rtn.GDAXI.ar
+
+plot(rtn.GDAXI.ar$resid,type = 'l')
+
+summary(rtn.GDAXI.ar$resid)
+
+
+rtn.GDAXI.ar.resid.garch <- garch(rtn.GDAXI.ar$resid[2:length(rtn.GDAXI.ar$resid)],trace=FALSE)
+
+rtn.GDAXI.ar.resid.garch
+
+plot(rtn.GDAXI.ar.resid.garch$residuals,type = 'l')
+
+```
+
+## FCHI
+
+```{r}
+
+prices.FCHI <- prices[,c('FCHI')]
+
+summary(prices.FCHI)
+
+n <- length(prices.FCHI)
+rtn.FCHI <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.FCHI[i] <- log(prices.FCHI[i+1]/prices.FCHI[i]) * 100.
+}
+
+rtn.FCHI <- rtn.FCHI[!is.na(rtn.FCHI)]
+
+```
+
+## Model stock return with AR(1) x GARCH(1,1)
+
+Model AR(1)*GARCH(1,1)
+
+```{r}
+
+rtn.FCHI.ar <- ar(rtn.FCHI, order.max = 1, method = 'ols')
+
+rtn.FCHI.ar
+
+plot(rtn.FCHI.ar$resid,type = 'l')
+
+summary(rtn.FCHI.ar$resid)
+
+
+rtn.FCHI.ar.resid.garch <- garch(rtn.FCHI.ar$resid[2:length(rtn.FCHI.ar$resid)],trace=FALSE)
+
+rtn.FCHI.ar.resid.garch
+
+plot(rtn.FCHI.ar.resid.garch$residuals,type = 'l')
+
+```
+
+## SSEC
+
+```{r}
+
+prices.SSEC <- prices[,c('SSEC')]
+
+summary(prices.SSEC)
+
+n <- length(prices.SSEC)
+rtn.SSEC <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.SSEC[i] <- log(prices.SSEC[i+1]/prices.SSEC[i]) * 100.
+}
+
+rtn.SSEC <- rtn.SSEC[!is.na(rtn.SSEC)]
+
+```
+
+## Model stock return with AR(1) x GARCH(1,1)
+
+Model AR(1)*GARCH(1,1)
+
+```{r}
+
+rtn.SSEC.ar <- ar(rtn.SSEC, order.max = 1, method = 'ols')
+
+rtn.SSEC.ar
+
+plot(rtn.SSEC.ar$resid,type = 'l')
+
+summary(rtn.SSEC.ar$resid)
+
+rtn.SSEC.ar.resid.garch <- garch(rtn.SSEC.ar$resid[2:length(rtn.SSEC.ar$resid)],trace=FALSE)
+
+rtn.SSEC.ar.resid.garch
+
+plot(rtn.SSEC.ar.resid.garch$residuals,type = 'l')
+
+```
+
+##Model AR(1)*t-GARCH(1,1)
+
+```{r}
+
+gfit.fg <- garchFit(data=rtn.SSEC.ar$resid[2:length(rtn.SSEC.ar$resid)], cond.dist="std")
+coef(gfit.fg)
+gfit.fg
+
+plot(gfit.fg@residuals, type="l")
+
+```
+
+
+
+## SENSEX
+
+```{r}
+
+prices.SENSEX <- prices[,c('SENSEX')]
+
+summary(prices.SENSEX)
+
+n <- length(prices.SENSEX)
+rtn.SENSEX <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.SENSEX[i] <- log(prices.SENSEX[i+1]/prices.SENSEX[i]) * 100.
+}
+
+rtn.SENSEX <- rtn.SENSEX[!is.na(rtn.SENSEX)]
+
+```
+
+## Model stock return with AR(1) x GARCH(1,1)
+
+Model AR(1)*GARCH(1,1)
+
+```{r}
+
+rtn.SENSEX.ar <- ar(rtn.SENSEX, order.max = 1, method = 'ols')
+
+rtn.SENSEX.ar
+
+plot(rtn.SENSEX.ar$resid,type = 'l')
+
+summary(rtn.SENSEX.ar$resid)
+
+
+rtn.SENSEX.ar.resid.garch <- garch(rtn.SENSEX.ar$resid[2:length(rtn.SENSEX.ar$resid)],trace=FALSE)
+
+rtn.SENSEX.ar.resid.garch
+
+plot(rtn.SENSEX.ar.resid.garch$residuals,type = 'l')
+
+```
+
+
+
+##Model AR(1)*t-GARCH(1,1)
+
+```{r}
+
+gfit.fg <- garchFit(data=rtn.SENSEX.ar$resid[2:length(rtn.SENSEX.ar$resid)], cond.dist="std")
+coef(gfit.fg)
+gfit.fg
+
+plot(gfit.fg@residuals, type="l")
+
+```

@@ -1,0 +1,84 @@
+\hypertarget{classHistoricalVaR}{}\section{Historical\+VaR Class Reference}
+\label{classHistoricalVaR}\index{Historical\+VaR@{Historical\+VaR}}
+
+
+Compute \hyperlink{classVaR}{VaR} using historical method (histogram method)  
+
+
+
+
+{\ttfamily \#include $<$var\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for Historical\+VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classHistoricalVaR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Historical\+VaR\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classHistoricalVaR__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHistoricalVaR_a2f98a84f410ee519c1d08cb3a4e5110f}{Historical\+VaR} (double \+\_\+alpha=.\+05, double \+\_\+lambda=.\+98, \hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921de}{Weighting\+Scheme} \+\_\+ws=\hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921deab7e4e0120a041dbe6528b050c04269e0}{none})
+\item 
+virtual \hyperlink{classHistoricalVaR_ac0b1889d5ba5e3a3efb0d23eaff525a5}{$\sim$\+Historical\+VaR} ()
+\item 
+\hyperlink{classHistoricalVaR_a75f77512a689c5f4826421e354f3053d}{Historical\+VaR} (const \hyperlink{classHistoricalVaR}{Historical\+VaR} \&other)
+\item 
+double \hyperlink{classHistoricalVaR_a472b04dc9a4c5989be0e7198bc9c4189}{operator()} (double \+\_\+sigmatminus1, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&returns) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Compute \hyperlink{classVaR}{VaR} using historical method (histogram method) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classHistoricalVaR_a2f98a84f410ee519c1d08cb3a4e5110f}{}\label{classHistoricalVaR_a2f98a84f410ee519c1d08cb3a4e5110f} 
+\index{Historical\+VaR@{Historical\+VaR}!Historical\+VaR@{Historical\+VaR}}
+\index{Historical\+VaR@{Historical\+VaR}!Historical\+VaR@{Historical\+VaR}}
+\subsubsection{\texorpdfstring{Historical\+Va\+R()}{HistoricalVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Historical\+Va\+R\+::\+Historical\+VaR (\begin{DoxyParamCaption}\item[{double}]{\+\_\+alpha = {\ttfamily .05},  }\item[{double}]{\+\_\+lambda = {\ttfamily .98},  }\item[{\hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921de}{Weighting\+Scheme}}]{\+\_\+ws = {\ttfamily \hyperlink{var__model_8h_a05de9d7b6ad30cf17cd8f840666921deab7e4e0120a041dbe6528b050c04269e0}{none}} }\end{DoxyParamCaption})}
+
+\hypertarget{classHistoricalVaR_ac0b1889d5ba5e3a3efb0d23eaff525a5}{}\label{classHistoricalVaR_ac0b1889d5ba5e3a3efb0d23eaff525a5} 
+\index{Historical\+VaR@{Historical\+VaR}!````~Historical\+VaR@{$\sim$\+Historical\+VaR}}
+\index{````~Historical\+VaR@{$\sim$\+Historical\+VaR}!Historical\+VaR@{Historical\+VaR}}
+\subsubsection{\texorpdfstring{$\sim$\+Historical\+Va\+R()}{~HistoricalVaR()}}
+{\footnotesize\ttfamily virtual Historical\+Va\+R\+::$\sim$\+Historical\+VaR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\hypertarget{classHistoricalVaR_a75f77512a689c5f4826421e354f3053d}{}\label{classHistoricalVaR_a75f77512a689c5f4826421e354f3053d} 
+\index{Historical\+VaR@{Historical\+VaR}!Historical\+VaR@{Historical\+VaR}}
+\index{Historical\+VaR@{Historical\+VaR}!Historical\+VaR@{Historical\+VaR}}
+\subsubsection{\texorpdfstring{Historical\+Va\+R()}{HistoricalVaR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Historical\+Va\+R\+::\+Historical\+VaR (\begin{DoxyParamCaption}\item[{const \hyperlink{classHistoricalVaR}{Historical\+VaR} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classHistoricalVaR_a472b04dc9a4c5989be0e7198bc9c4189}{}\label{classHistoricalVaR_a472b04dc9a4c5989be0e7198bc9c4189} 
+\index{Historical\+VaR@{Historical\+VaR}!operator()@{operator()}}
+\index{operator()@{operator()}!Historical\+VaR@{Historical\+VaR}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily double Historical\+Va\+R\+::operator() (\begin{DoxyParamCaption}\item[{double}]{\+\_\+sigmatminus1,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{returns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classNoneParametricVaR_a958aae1b9bc03a8ef87295df30db76f7}{None\+Parametric\+VaR}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{var__model_8h}{var\+\_\+model.\+h}\end{DoxyCompactItemize}

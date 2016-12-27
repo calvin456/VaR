@@ -1,0 +1,77 @@
+\hypertarget{instrument_8h}{}\section{instrument.\+h File Reference}
+\label{instrument_8h}\index{instrument.\+h@{instrument.\+h}}
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for instrument.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{instrument_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{instrument_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classInstrument}{Instrument}
+\item 
+class \hyperlink{classDeltaOne}{Delta\+One}
+\begin{DoxyCompactList}\small\item\em Sensitivity one for one. FX, index, commodity prices. \end{DoxyCompactList}\item 
+class \hyperlink{classEquity}{Equity}
+\item 
+class \hyperlink{classDerivatives}{Derivatives}
+\item 
+class \hyperlink{classFI}{FI}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ double $>$ \hyperlink{instrument_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0}{duration\+Type} \{ \hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a22e2e72997ac4289587cadae38cc561e}{dc}, 
+\hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a36ba1105c010cff7e410ccae06c47acf}{D\+V01}, 
+\hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a5b712e10c19ce54e703d60069ff27131}{krd}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{instrument_8h_a1eb6a9306ef406d7975f3cbf2e247777}{}\label{instrument_8h_a1eb6a9306ef406d7975f3cbf2e247777} 
+\index{instrument.\+h@{instrument.\+h}!Vec@{Vec}}
+\index{Vec@{Vec}!instrument.\+h@{instrument.\+h}}
+\subsubsection{\texorpdfstring{Vec}{Vec}}
+{\footnotesize\ttfamily typedef std\+::vector$<$double$>$ \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0}{}\label{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0} 
+\index{instrument.\+h@{instrument.\+h}!duration\+Type@{duration\+Type}}
+\index{duration\+Type@{duration\+Type}!instrument.\+h@{instrument.\+h}}
+\subsubsection{\texorpdfstring{duration\+Type}{durationType}}
+{\footnotesize\ttfamily enum \hyperlink{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0}{duration\+Type}}
+
+dc \+: modified duration and convexity (change) D\+V01, P\+V01 \+: dollar value chge per basis point D\+V01 != P\+V01 value not the same !!!!! key rate duration \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dc@{dc}!instrument.\+h@{instrument.\+h}}\index{instrument.\+h@{instrument.\+h}!dc@{dc}}}\hypertarget{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a22e2e72997ac4289587cadae38cc561e}{}\label{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a22e2e72997ac4289587cadae38cc561e} 
+dc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+V01@{D\+V01}!instrument.\+h@{instrument.\+h}}\index{instrument.\+h@{instrument.\+h}!D\+V01@{D\+V01}}}\hypertarget{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a36ba1105c010cff7e410ccae06c47acf}{}\label{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a36ba1105c010cff7e410ccae06c47acf} 
+D\+V01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{krd@{krd}!instrument.\+h@{instrument.\+h}}\index{instrument.\+h@{instrument.\+h}!krd@{krd}}}\hypertarget{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a5b712e10c19ce54e703d60069ff27131}{}\label{instrument_8h_aeef2cd5bd2753709d5c6348c32cbdaa0a5b712e10c19ce54e703d60069ff27131} 
+krd&\\
+\hline
+
+\end{DoxyEnumFields}

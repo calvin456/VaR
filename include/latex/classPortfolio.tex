@@ -1,0 +1,254 @@
+\hypertarget{classPortfolio}{}\section{Portfolio Class Reference}
+\label{classPortfolio}\index{Portfolio@{Portfolio}}
+
+
+{\ttfamily \#include $<$portfolio.\+h$>$}
+
+
+
+Collaboration diagram for Portfolio\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classPortfolio__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPortfolio_a573528cf895e6c963c37f423486aaac9}{Portfolio} (const \hyperlink{portfolio_8h_ab6c2cd0942dd9f72ca64d9dbadb0df64}{Ptf} \&\+\_\+ptf, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&\+\_\+weights, shared\+\_\+ptr$<$ \hyperlink{classComputeReturn}{Compute\+Return} $>$ \&\+\_\+cr, bool \+\_\+is\+FI=false, double \+\_\+gross\+Notional=1.)
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classPortfolio_a51b835c644d10dcad9af190112d89123}{get\+Returns} (size\+\_\+t p=0) const
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classPortfolio_aa235d5de98468ec656ddff1550fe5fbf}{get\+Component\+Returns} (size\+\_\+t p) const
+\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classPortfolio_adc5f7b744cacda38f442277d60ab77a0}{get\+Var\+Cov} () const
+\item 
+double \hyperlink{classPortfolio_a391b4742d7394009c34e9c9e4addc35e}{get\+Mean\+Ptf\+Rn} () const
+\item 
+double \hyperlink{classPortfolio_a4483f32cc7d592016c04acc7500e8217}{get\+Ptf\+Sdev} () const
+\item 
+double \hyperlink{classPortfolio_a165529ad0f08f24081e3bca8b354e217}{getnb\+Assets} () const
+\item 
+double \hyperlink{classPortfolio_aa91be98ef8fdd16bd3ebc9aa66529554}{get\+Gross\+Amt} () const
+\item 
+unsigned int \hyperlink{classPortfolio_a86ea8204e8ba0c9dd69c0fd3ba4abb16}{get\+Period} () const
+\item 
+unsigned int \hyperlink{classPortfolio_a3d2bbcfa8f794d8fefad630abefdce7b}{get\+Window} () const
+\item 
+bool \hyperlink{classPortfolio_acdfc56639cad8ed648780d81f066d760}{is\+Fixed\+Income} () const
+\item 
+\hyperlink{portfolio_8h_ab6c2cd0942dd9f72ca64d9dbadb0df64}{Ptf} \hyperlink{classPortfolio_a28f00509ec2ed08fe781eb684c923348}{get\+Positions} () const
+\item 
+void \hyperlink{classPortfolio_aa00669a3d5caece170ee8b28c0c67a2d}{compute\+Rtn} (unsigned int nb\+Assets)
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classPortfolio_a539d00aaacb83cb6b7ed8862db277a0b}{get\+Compute\+Return\+Std\+Dev} (size\+\_\+t p=0) const
+\begin{DoxyCompactList}\small\item\em Compute rolling std dev for component return p. \end{DoxyCompactList}\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classPortfolio_a336d14aaf3bbf9adfe458df6d6b97ce0}{get\+Rolling\+Mean} (size\+\_\+t p=0) const
+\begin{DoxyCompactList}\small\item\em Compute rolling mean rtnaccording to period ie day, week, month and window. \end{DoxyCompactList}\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classPortfolio_a9833a33a238b2416e7c2c4f19ff7be8e}{get\+Rolling\+Std\+Dev} (size\+\_\+t p=0) const
+\begin{DoxyCompactList}\small\item\em // Compute rolling std dev according to period ie day, week, month and window \end{DoxyCompactList}\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classPortfolio_a93c955e745cf06b58f1ce7c7e6fe41e5}{get\+Weight} () const
+\item 
+void \hyperlink{classPortfolio_a0c05f8c7ae8bd78971524ed06a98deba}{set\+Weight} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&\+\_\+weights)
+\item 
+void \hyperlink{classPortfolio_a9458c66e10d7a6b8c037ad3584a1e70c}{set\+Returns} (const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&\+\_\+m\+Asset\+Returns)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPortfolio_ad2732b083b90ecd08e5bf26fb38a1834}{compute\+Mean\+Ptf\+Rtn} ()
+\begin{DoxyCompactList}\small\item\em w\textquotesingle{} $\ast$ R -\/ Need to account for approx of asset return \+: delta, gamma, etc \end{DoxyCompactList}\item 
+void \hyperlink{classPortfolio_aeaba88f92093501fb98c60c83b600529}{computer\+Ptf\+Sdev} ()
+\begin{DoxyCompactList}\small\item\em w\textquotesingle{} $\ast$ sigma $\ast$ w -\/ Need to account for approx of asset return \+: delta, gamma, etc \end{DoxyCompactList}\item 
+void \hyperlink{classPortfolio_a2824877890ad51d9261935002a6d25c0}{Compute\+Component\+Ptf\+Rtn} ()
+\item 
+void \hyperlink{classPortfolio_a56baf8410ef9a0c450e5fa558ac4254f}{compute\+Var\+Cov} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPortfolio_a6135a57a82e989f986dd94c3175bc07d}{Va\+R\+Ptf\+Compute}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPortfolio_a573528cf895e6c963c37f423486aaac9}{}\label{classPortfolio_a573528cf895e6c963c37f423486aaac9} 
+\index{Portfolio@{Portfolio}!Portfolio@{Portfolio}}
+\index{Portfolio@{Portfolio}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{Portfolio()}{Portfolio()}}
+{\footnotesize\ttfamily Portfolio\+::\+Portfolio (\begin{DoxyParamCaption}\item[{const \hyperlink{portfolio_8h_ab6c2cd0942dd9f72ca64d9dbadb0df64}{Ptf} \&}]{\+\_\+ptf,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{\+\_\+weights,  }\item[{shared\+\_\+ptr$<$ \hyperlink{classComputeReturn}{Compute\+Return} $>$ \&}]{\+\_\+cr,  }\item[{bool}]{\+\_\+is\+FI = {\ttfamily false},  }\item[{double}]{\+\_\+gross\+Notional = {\ttfamily 1.} }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPortfolio_a2824877890ad51d9261935002a6d25c0}{}\label{classPortfolio_a2824877890ad51d9261935002a6d25c0} 
+\index{Portfolio@{Portfolio}!Compute\+Component\+Ptf\+Rtn@{Compute\+Component\+Ptf\+Rtn}}
+\index{Compute\+Component\+Ptf\+Rtn@{Compute\+Component\+Ptf\+Rtn}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{Compute\+Component\+Ptf\+Rtn()}{ComputeComponentPtfRtn()}}
+{\footnotesize\ttfamily void Portfolio\+::\+Compute\+Component\+Ptf\+Rtn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+component ptf return 
+\end{DoxyReturn}
+\hypertarget{classPortfolio_ad2732b083b90ecd08e5bf26fb38a1834}{}\label{classPortfolio_ad2732b083b90ecd08e5bf26fb38a1834} 
+\index{Portfolio@{Portfolio}!compute\+Mean\+Ptf\+Rtn@{compute\+Mean\+Ptf\+Rtn}}
+\index{compute\+Mean\+Ptf\+Rtn@{compute\+Mean\+Ptf\+Rtn}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{compute\+Mean\+Ptf\+Rtn()}{computeMeanPtfRtn()}}
+{\footnotesize\ttfamily void Portfolio\+::compute\+Mean\+Ptf\+Rtn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+w\textquotesingle{} $\ast$ R -\/ Need to account for approx of asset return \+: delta, gamma, etc 
+
+\hypertarget{classPortfolio_aeaba88f92093501fb98c60c83b600529}{}\label{classPortfolio_aeaba88f92093501fb98c60c83b600529} 
+\index{Portfolio@{Portfolio}!computer\+Ptf\+Sdev@{computer\+Ptf\+Sdev}}
+\index{computer\+Ptf\+Sdev@{computer\+Ptf\+Sdev}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{computer\+Ptf\+Sdev()}{computerPtfSdev()}}
+{\footnotesize\ttfamily void Portfolio\+::computer\+Ptf\+Sdev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+w\textquotesingle{} $\ast$ sigma $\ast$ w -\/ Need to account for approx of asset return \+: delta, gamma, etc 
+
+\hypertarget{classPortfolio_aa00669a3d5caece170ee8b28c0c67a2d}{}\label{classPortfolio_aa00669a3d5caece170ee8b28c0c67a2d} 
+\index{Portfolio@{Portfolio}!compute\+Rtn@{compute\+Rtn}}
+\index{compute\+Rtn@{compute\+Rtn}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{compute\+Rtn()}{computeRtn()}}
+{\footnotesize\ttfamily void Portfolio\+::compute\+Rtn (\begin{DoxyParamCaption}\item[{unsigned int}]{nb\+Assets }\end{DoxyParamCaption})}
+
+\hypertarget{classPortfolio_a56baf8410ef9a0c450e5fa558ac4254f}{}\label{classPortfolio_a56baf8410ef9a0c450e5fa558ac4254f} 
+\index{Portfolio@{Portfolio}!compute\+Var\+Cov@{compute\+Var\+Cov}}
+\index{compute\+Var\+Cov@{compute\+Var\+Cov}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{compute\+Var\+Cov()}{computeVarCov()}}
+{\footnotesize\ttfamily void Portfolio\+::compute\+Var\+Cov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\hypertarget{classPortfolio_aa235d5de98468ec656ddff1550fe5fbf}{}\label{classPortfolio_aa235d5de98468ec656ddff1550fe5fbf} 
+\index{Portfolio@{Portfolio}!get\+Component\+Returns@{get\+Component\+Returns}}
+\index{get\+Component\+Returns@{get\+Component\+Returns}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Component\+Returns()}{getComponentReturns()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Portfolio\+::get\+Component\+Returns (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p }\end{DoxyParamCaption}) const}
+
+\hypertarget{classPortfolio_a539d00aaacb83cb6b7ed8862db277a0b}{}\label{classPortfolio_a539d00aaacb83cb6b7ed8862db277a0b} 
+\index{Portfolio@{Portfolio}!get\+Compute\+Return\+Std\+Dev@{get\+Compute\+Return\+Std\+Dev}}
+\index{get\+Compute\+Return\+Std\+Dev@{get\+Compute\+Return\+Std\+Dev}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Compute\+Return\+Std\+Dev()}{getComputeReturnStdDev()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Portfolio\+::get\+Compute\+Return\+Std\+Dev (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Compute rolling std dev for component return p. 
+
+\hypertarget{classPortfolio_aa91be98ef8fdd16bd3ebc9aa66529554}{}\label{classPortfolio_aa91be98ef8fdd16bd3ebc9aa66529554} 
+\index{Portfolio@{Portfolio}!get\+Gross\+Amt@{get\+Gross\+Amt}}
+\index{get\+Gross\+Amt@{get\+Gross\+Amt}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Gross\+Amt()}{getGrossAmt()}}
+{\footnotesize\ttfamily double Portfolio\+::get\+Gross\+Amt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a391b4742d7394009c34e9c9e4addc35e}{}\label{classPortfolio_a391b4742d7394009c34e9c9e4addc35e} 
+\index{Portfolio@{Portfolio}!get\+Mean\+Ptf\+Rn@{get\+Mean\+Ptf\+Rn}}
+\index{get\+Mean\+Ptf\+Rn@{get\+Mean\+Ptf\+Rn}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Mean\+Ptf\+Rn()}{getMeanPtfRn()}}
+{\footnotesize\ttfamily double Portfolio\+::get\+Mean\+Ptf\+Rn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a165529ad0f08f24081e3bca8b354e217}{}\label{classPortfolio_a165529ad0f08f24081e3bca8b354e217} 
+\index{Portfolio@{Portfolio}!getnb\+Assets@{getnb\+Assets}}
+\index{getnb\+Assets@{getnb\+Assets}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{getnb\+Assets()}{getnbAssets()}}
+{\footnotesize\ttfamily double Portfolio\+::getnb\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a86ea8204e8ba0c9dd69c0fd3ba4abb16}{}\label{classPortfolio_a86ea8204e8ba0c9dd69c0fd3ba4abb16} 
+\index{Portfolio@{Portfolio}!get\+Period@{get\+Period}}
+\index{get\+Period@{get\+Period}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Period()}{getPeriod()}}
+{\footnotesize\ttfamily unsigned int Portfolio\+::get\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a28f00509ec2ed08fe781eb684c923348}{}\label{classPortfolio_a28f00509ec2ed08fe781eb684c923348} 
+\index{Portfolio@{Portfolio}!get\+Positions@{get\+Positions}}
+\index{get\+Positions@{get\+Positions}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Positions()}{getPositions()}}
+{\footnotesize\ttfamily \hyperlink{portfolio_8h_ab6c2cd0942dd9f72ca64d9dbadb0df64}{Ptf} Portfolio\+::get\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a4483f32cc7d592016c04acc7500e8217}{}\label{classPortfolio_a4483f32cc7d592016c04acc7500e8217} 
+\index{Portfolio@{Portfolio}!get\+Ptf\+Sdev@{get\+Ptf\+Sdev}}
+\index{get\+Ptf\+Sdev@{get\+Ptf\+Sdev}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Ptf\+Sdev()}{getPtfSdev()}}
+{\footnotesize\ttfamily double Portfolio\+::get\+Ptf\+Sdev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a51b835c644d10dcad9af190112d89123}{}\label{classPortfolio_a51b835c644d10dcad9af190112d89123} 
+\index{Portfolio@{Portfolio}!get\+Returns@{get\+Returns}}
+\index{get\+Returns@{get\+Returns}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Returns()}{getReturns()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Portfolio\+::get\+Returns (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a336d14aaf3bbf9adfe458df6d6b97ce0}{}\label{classPortfolio_a336d14aaf3bbf9adfe458df6d6b97ce0} 
+\index{Portfolio@{Portfolio}!get\+Rolling\+Mean@{get\+Rolling\+Mean}}
+\index{get\+Rolling\+Mean@{get\+Rolling\+Mean}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Rolling\+Mean()}{getRollingMean()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Portfolio\+::get\+Rolling\+Mean (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Compute rolling mean rtnaccording to period ie day, week, month and window. 
+
+\hypertarget{classPortfolio_a9833a33a238b2416e7c2c4f19ff7be8e}{}\label{classPortfolio_a9833a33a238b2416e7c2c4f19ff7be8e} 
+\index{Portfolio@{Portfolio}!get\+Rolling\+Std\+Dev@{get\+Rolling\+Std\+Dev}}
+\index{get\+Rolling\+Std\+Dev@{get\+Rolling\+Std\+Dev}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Rolling\+Std\+Dev()}{getRollingStdDev()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Portfolio\+::get\+Rolling\+Std\+Dev (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+// Compute rolling std dev according to period ie day, week, month and window 
+
+\hypertarget{classPortfolio_adc5f7b744cacda38f442277d60ab77a0}{}\label{classPortfolio_adc5f7b744cacda38f442277d60ab77a0} 
+\index{Portfolio@{Portfolio}!get\+Var\+Cov@{get\+Var\+Cov}}
+\index{get\+Var\+Cov@{get\+Var\+Cov}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Var\+Cov()}{getVarCov()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Portfolio\+::get\+Var\+Cov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a93c955e745cf06b58f1ce7c7e6fe41e5}{}\label{classPortfolio_a93c955e745cf06b58f1ce7c7e6fe41e5} 
+\index{Portfolio@{Portfolio}!get\+Weight@{get\+Weight}}
+\index{get\+Weight@{get\+Weight}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Weight()}{getWeight()}}
+{\footnotesize\ttfamily \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} Portfolio\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a3d2bbcfa8f794d8fefad630abefdce7b}{}\label{classPortfolio_a3d2bbcfa8f794d8fefad630abefdce7b} 
+\index{Portfolio@{Portfolio}!get\+Window@{get\+Window}}
+\index{get\+Window@{get\+Window}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
+{\footnotesize\ttfamily unsigned int Portfolio\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_acdfc56639cad8ed648780d81f066d760}{}\label{classPortfolio_acdfc56639cad8ed648780d81f066d760} 
+\index{Portfolio@{Portfolio}!is\+Fixed\+Income@{is\+Fixed\+Income}}
+\index{is\+Fixed\+Income@{is\+Fixed\+Income}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{is\+Fixed\+Income()}{isFixedIncome()}}
+{\footnotesize\ttfamily bool Portfolio\+::is\+Fixed\+Income (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPortfolio_a9458c66e10d7a6b8c037ad3584a1e70c}{}\label{classPortfolio_a9458c66e10d7a6b8c037ad3584a1e70c} 
+\index{Portfolio@{Portfolio}!set\+Returns@{set\+Returns}}
+\index{set\+Returns@{set\+Returns}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{set\+Returns()}{setReturns()}}
+{\footnotesize\ttfamily void Portfolio\+::set\+Returns (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \&}]{\+\_\+m\+Asset\+Returns }\end{DoxyParamCaption})}
+
+\hypertarget{classPortfolio_a0c05f8c7ae8bd78971524ed06a98deba}{}\label{classPortfolio_a0c05f8c7ae8bd78971524ed06a98deba} 
+\index{Portfolio@{Portfolio}!set\+Weight@{set\+Weight}}
+\index{set\+Weight@{set\+Weight}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{set\+Weight()}{setWeight()}}
+{\footnotesize\ttfamily void Portfolio\+::set\+Weight (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{\+\_\+weights }\end{DoxyParamCaption})}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classPortfolio_a6135a57a82e989f986dd94c3175bc07d}{}\label{classPortfolio_a6135a57a82e989f986dd94c3175bc07d} 
+\index{Portfolio@{Portfolio}!Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}}
+\index{Va\+R\+Ptf\+Compute@{Va\+R\+Ptf\+Compute}!Portfolio@{Portfolio}}
+\subsubsection{\texorpdfstring{Va\+R\+Ptf\+Compute}{VaRPtfCompute}}
+{\footnotesize\ttfamily friend class \hyperlink{classVaRPtfCompute}{Va\+R\+Ptf\+Compute}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{portfolio_8h}{portfolio.\+h}\end{DoxyCompactItemize}

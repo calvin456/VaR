@@ -1,0 +1,85 @@
+\hypertarget{classInstrument}{}\section{Instrument Class Reference}
+\label{classInstrument}\index{Instrument@{Instrument}}
+
+
+{\ttfamily \#include $<$instrument.\+h$>$}
+
+
+
+Inheritance diagram for Instrument\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInstrument__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Instrument\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classInstrument__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInstrument_a1a297b2cbe1e239c8ede2e90185e2880}{Instrument} ()
+\item 
+\hyperlink{classInstrument_a2704ef015e35f22e444f8e15ece24be0}{Instrument} (const \hyperlink{classInstrument}{Instrument} \&other)
+\item 
+virtual \hyperlink{classInstrument_a28512cef5ccbedc9094876866f06f921}{$\sim$\+Instrument} ()
+\item 
+virtual double \hyperlink{classInstrument_a33b6faccaeb494858dee5c547de897b6}{operator()} (double rtn) const =0
+\begin{DoxyCompactList}\small\item\em Compute an approximation on P\&L of instrument following shock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Does not attempt to make full re-\/evaluation on the ptf.
+
+Use approximation approach instead 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classInstrument_a1a297b2cbe1e239c8ede2e90185e2880}{}\label{classInstrument_a1a297b2cbe1e239c8ede2e90185e2880} 
+\index{Instrument@{Instrument}!Instrument@{Instrument}}
+\index{Instrument@{Instrument}!Instrument@{Instrument}}
+\subsubsection{\texorpdfstring{Instrument()}{Instrument()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Instrument\+::\+Instrument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classInstrument_a2704ef015e35f22e444f8e15ece24be0}{}\label{classInstrument_a2704ef015e35f22e444f8e15ece24be0} 
+\index{Instrument@{Instrument}!Instrument@{Instrument}}
+\index{Instrument@{Instrument}!Instrument@{Instrument}}
+\subsubsection{\texorpdfstring{Instrument()}{Instrument()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Instrument\+::\+Instrument (\begin{DoxyParamCaption}\item[{const \hyperlink{classInstrument}{Instrument} \&}]{other }\end{DoxyParamCaption})}
+
+\hypertarget{classInstrument_a28512cef5ccbedc9094876866f06f921}{}\label{classInstrument_a28512cef5ccbedc9094876866f06f921} 
+\index{Instrument@{Instrument}!````~Instrument@{$\sim$\+Instrument}}
+\index{````~Instrument@{$\sim$\+Instrument}!Instrument@{Instrument}}
+\subsubsection{\texorpdfstring{$\sim$\+Instrument()}{~Instrument()}}
+{\footnotesize\ttfamily virtual Instrument\+::$\sim$\+Instrument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classInstrument_a33b6faccaeb494858dee5c547de897b6}{}\label{classInstrument_a33b6faccaeb494858dee5c547de897b6} 
+\index{Instrument@{Instrument}!operator()@{operator()}}
+\index{operator()@{operator()}!Instrument@{Instrument}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual double Instrument\+::operator() (\begin{DoxyParamCaption}\item[{double}]{rtn }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Compute an approximation on P\&L of instrument following shock. 
+
+
+
+Implemented in \hyperlink{classFI_a99ad4380e8178d7fd304597622a2c05c}{FI}, \hyperlink{classDerivatives_a765ecae139ee81fb5143a20462211623}{Derivatives}, \hyperlink{classEquity_a2844b7fa3dd164ce216909d1fe958c9f}{Equity}, and \hyperlink{classDeltaOne_a8dd4b5243412ab399b07c1128262f570}{Delta\+One}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{instrument_8h}{instrument.\+h}\end{DoxyCompactItemize}

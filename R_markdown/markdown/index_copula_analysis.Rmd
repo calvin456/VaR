@@ -1,0 +1,341 @@
+---
+title: "idx_copula"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## DJIA,GSPC,NDX,GDAXI,FCHI,SSEC,SENSEX Analysis
+
+https://github.com/cran/VineCopula - Copula family
+
+```{r}
+
+#library(tseries)
+
+setwd('~/Documents/VaR')
+
+prices <- read.csv('./data/StockIndexData.csv')
+
+library(VineCopula)
+library(copula)
+
+```
+
+
+
+## DJIA,GSPC,NDX,GDAXI,FCHI,SSEC,SENSEX
+
+```{r}
+
+prices.DJIA <- prices[,c('DJIA')]
+
+summary(prices.DJIA)
+
+n <- length(prices.DJIA)
+rtn.DJIA <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.DJIA[i] <- log(prices.DJIA[i+1]/prices.DJIA[i]) * 100.
+}
+
+prices.GSPC <- prices[,c('GSPC')]
+
+summary(prices.GSPC)
+
+n <- length(prices.GSPC)
+rtn.GSPC <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.GSPC[i] <- log(prices.GSPC[i+1]/prices.GSPC[i]) * 100.
+}
+
+prices.NDX <- prices[,c('NDX')]
+
+summary(prices.NDX)
+
+n <- length(prices.NDX)
+rtn.NDX <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.NDX[i] <- log(prices.NDX[i+1]/prices.NDX[i]) * 100.
+}
+
+prices.GDAXI <- prices[,c('GDAXI')]
+
+summary(prices.GDAXI)
+
+n <- length(prices.GDAXI)
+rtn.GDAXI <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.GDAXI[i] <- log(prices.GDAXI[i+1]/prices.GDAXI[i]) * 100.
+}
+
+prices.FCHI <- prices[,c('FCHI')]
+
+summary(prices.FCHI)
+
+n <- length(prices.FCHI)
+rtn.FCHI <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.FCHI[i] <- log(prices.FCHI[i+1]/prices.FCHI[i]) * 100.
+}
+
+prices.SSEC <- prices[,c('SSEC')]
+
+summary(prices.SSEC)
+
+n <- length(prices.SSEC)
+rtn.SSEC <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.SSEC[i] <- log(prices.SSEC[i+1]/prices.SSEC[i]) * 100.
+}
+
+prices.SENSEX <- prices[,c('SENSEX')]
+
+summary(prices.SENSEX)
+
+n <- length(prices.SENSEX)
+rtn.SENSEX <- rep(0,n-1)
+
+for(i in seq(n-1)){
+  rtn.SENSEX[i] <- log(prices.SENSEX[i+1]/prices.SENSEX[i]) * 100.
+}
+
+```
+
+```{r}
+
+rm(prices.DJIA, prices.GSPC, prices.NDX, prices.GDAXI, prices.FCHI,prices.SSEC, prices.SENSEX)
+
+rtns <- cbind(rtn.DJIA,rtn.GSPC,rtn.NDX, rtn.GDAXI, rtn.FCHI, rtn.SSEC, rtn.SENSEX)
+
+rtns <- rtns[!is.na(rtns[,3]),]
+rtns <- rtns[!is.na(rtns[,4]),]
+rtns <- rtns[!is.na(rtns[,5]),]
+rtns <- rtns[!is.na(rtns[,6]),]
+rtns <- rtns[!is.na(rtns[,7]),]
+
+cor(rtns,method='pearson')
+cor(rtns,method='kendall')
+cor(rtns,method='spearman')
+
+pairs(rtns)
+
+g <- rtns[,1]
+h<-hist(g, breaks=10, density=10, col="lightgray", xlab="Accuracy", main="Overall") 
+    xfit<-seq(min(g),max(g),length=40) 
+    yfit<-dnorm(xfit,mean=mean(g),sd=sd(g)) 
+    yfit <- yfit*diff(h$mids[1:2])*length(g) 
+    lines(xfit, yfit, col="black", lwd=2)
+h
+
+g <- rtns[,2]
+h<-hist(g, breaks=10, density=10, col="lightgray", xlab="Accuracy", main="Overall") 
+    xfit<-seq(min(g),max(g),length=40) 
+    yfit<-dnorm(xfit,mean=mean(g),sd=sd(g)) 
+    yfit <- yfit*diff(h$mids[1:2])*length(g) 
+    lines(xfit, yfit, col="black", lwd=2)
+h
+
+g <- rtns[,3]
+h<-hist(g, breaks=10, density=10, col="lightgray", xlab="Accuracy", main="Overall") 
+    xfit<-seq(min(g),max(g),length=40) 
+    yfit<-dnorm(xfit,mean=mean(g),sd=sd(g)) 
+    yfit <- yfit*diff(h$mids[1:2])*length(g) 
+    lines(xfit, yfit, col="black", lwd=2)
+h
+
+g <- rtns[,4]
+h<-hist(g, breaks=10, density=10, col="lightgray", xlab="Accuracy", main="Overall") 
+    xfit<-seq(min(g),max(g),length=40) 
+    yfit<-dnorm(xfit,mean=mean(g),sd=sd(g)) 
+    yfit <- yfit*diff(h$mids[1:2])*length(g) 
+    lines(xfit, yfit, col="black", lwd=2)
+h
+
+g <- rtns[,5]
+h<-hist(g, breaks=10, density=10, col="lightgray", xlab="Accuracy", main="Overall") 
+    xfit<-seq(min(g),max(g),length=40) 
+    yfit<-dnorm(xfit,mean=mean(g),sd=sd(g)) 
+    yfit <- yfit*diff(h$mids[1:2])*length(g) 
+    lines(xfit, yfit, col="black", lwd=2)
+h
+
+g <- rtns[,6]
+h<-hist(g, breaks=10, density=10, col="lightgray", xlab="Accuracy", main="Overall") 
+    xfit<-seq(min(g),max(g),length=40) 
+    yfit<-dnorm(xfit,mean=mean(g),sd=sd(g)) 
+    yfit <- yfit*diff(h$mids[1:2])*length(g) 
+    lines(xfit, yfit, col="black", lwd=2)
+h
+
+g <- rtns[,7]
+h<-hist(g, breaks=10, density=10, col="lightgray", xlab="Accuracy", main="Overall") 
+    xfit<-seq(min(g),max(g),length=40) 
+    yfit<-dnorm(xfit,mean=mean(g),sd=sd(g)) 
+    yfit <- yfit*diff(h$mids[1:2])*length(g) 
+    lines(xfit, yfit, col="black", lwd=2)
+h
+
+```
+## DJIA,NDX
+
+```{r}
+
+plot(rtns[,1],rtns[,3],pch='.')
+abline(lm(rtns[,1]~rtns[,3]),col='red',lwd=1)
+
+```
+
+
+```{r}
+
+u <- pobs(as.matrix(cbind(rtns[,1],rtns[,3])))[,1]
+v <- pobs(as.matrix(cbind(rtns[,1],rtns[,3])))[,2]
+selectedCopula <- BiCopSelect(u,v,familyset=NA)
+
+summary(selectedCopula)
+
+# (Survival) Joe-Clayton (BB7) 	9, 19 	[1, Inf) 	(0, Inf)
+
+```
+
+```{r}
+
+t.cop <- tCopula(dim=2)
+set.seed(500)
+m <- pobs(as.matrix(cbind(rtns[,1],rtns[,3])))
+fit <- fitCopula(t.cop,m,method='ml')
+coef(fit)
+
+rho <- coef(fit)[1]
+df <- coef(fit)[2]
+
+
+
+
+```
+
+```{r}
+
+dj_mu <- mean(rtns[,1])
+dj_sd <- sd(rtns[,1])
+ndx_mu <- mean(rtns[,3])
+ndx_sd <- sd(rtns[,3])
+
+copula_dist <- mvdc(copula=tCopula(rho,dim=2,df=df), margins=c("norm","norm"),
+                    paramMargins=list(list(mean=dj_mu, sd=dj_sd),
+                                      list(mean=ndx_mu, sd=ndx_sd)))
+sim <- rmvdc(copula_dist, 3965)
+
+plot(rtns[,1],rtns[,3],main='Returns')
+points(sim[,1],sim[,2],col='red')
+legend('bottomright',c('Observed','Simulated'),col=c('black','red'),pch=21)
+```
+
+## DJIA,GDAXI
+
+```{r}
+
+plot(rtns[,1],rtns[,4],pch='.')
+abline(lm(rtns[,1]~rtns[,4]),col='red',lwd=1)
+
+```
+
+
+```{r}
+
+u <- pobs(as.matrix(cbind(rtns[,1],rtns[,4])))[,1]
+v <- pobs(as.matrix(cbind(rtns[,1],rtns[,4])))[,2]
+selectedCopula <- BiCopSelect(u,v,familyset=NA)
+
+summary(selectedCopula)
+
+```
+
+```{r}
+
+t.cop <- tCopula(dim=2)
+set.seed(500)
+m <- pobs(as.matrix(cbind(rtns[,1],rtns[,4])))
+fit <- fitCopula(t.cop,m,method='ml')
+coef(fit)
+
+rho <- coef(fit)[1]
+df <- coef(fit)[2]
+
+```
+
+```{r}
+
+dj_mu <- mean(rtns[,1])
+dj_sd <- sd(rtns[,1])
+dax_mu <- mean(rtns[,4])
+dax_sd <- sd(rtns[,4])
+
+copula_dist <- mvdc(copula=tCopula(rho,dim=2,df=df), margins=c("norm","norm"),
+                    paramMargins=list(list(mean=dj_mu, sd=dj_sd),
+                                      list(mean=dax_mu, sd=dax_sd)))
+sim <- rmvdc(copula_dist, 3965)
+
+plot(rtns[,1],rtns[,4],main='Returns')
+points(sim[,1],sim[,2],col='red')
+legend('bottomright',c('Observed','Simulated'),col=c('black','red'),pch=21)
+```
+
+## DJIA,SSEC
+
+```{r}
+
+plot(rtns[,1],rtns[,7],pch='.')
+abline(lm(rtns[,1]~rtns[,7]),col='red',lwd=1)
+
+```
+
+
+```{r}
+
+u <- pobs(as.matrix(cbind(rtns[,1],rtns[,7])))[,1]
+v <- pobs(as.matrix(cbind(rtns[,1],rtns[,7])))[,2]
+selectedCopula <- BiCopSelect(u,v,familyset=NA)
+
+summary(selectedCopula)
+
+```
+
+```{r}
+
+t.cop <- tCopula(dim=2)
+set.seed(500)
+m <- pobs(as.matrix(cbind(rtns[,1],rtns[,7])))
+fit <- fitCopula(t.cop,m,method='ml')
+coef(fit)
+
+rho <- coef(fit)[1]
+df <- coef(fit)[2]
+
+```
+
+```{r}
+
+dj_mu <- mean(rtns[,1])
+dj_sd <- sd(rtns[,1])
+ssec_mu <- mean(rtns[,7])
+ssec_sd <- sd(rtns[,7])
+
+copula_dist <- mvdc(copula=tCopula(rho,dim=2,df=df), margins=c("norm","norm"),
+                    paramMargins=list(list(mean=dj_mu, sd=dj_sd),
+                                      list(mean=ssec_mu, sd=ssec_sd)))
+sim <- rmvdc(copula_dist, 3965)
+
+plot(rtns[,1],rtns[,7],main='Returns')
+points(sim[,1],sim[,2],col='red')
+legend('bottomright',c('Observed','Simulated'),col=c('black','red'),pch=21)
+```
+

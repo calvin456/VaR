@@ -1,0 +1,88 @@
+\hypertarget{classBootstrap}{}\section{Bootstrap$<$ T, U $>$ Class Template Reference}
+\label{classBootstrap}\index{Bootstrap$<$ T, U $>$@{Bootstrap$<$ T, U $>$}}
+
+
+{\ttfamily \#include $<$bootstrap.\+h$>$}
+
+
+
+Collaboration diagram for Bootstrap$<$ T, U $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classBootstrap__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBootstrap_a35eb4a8e35d20976bd01125462192e33}{Bootstrap} ()
+\item 
+\hyperlink{classBootstrap_aabc424eb11af216716a5ce6169953b26}{$\sim$\+Bootstrap} ()
+\item 
+std\+::pair$<$ double, double $>$ \hyperlink{classBootstrap_a2b25d49ce7f6e289974a0d6b3a019581}{compute} (shared\+\_\+ptr$<$ T $>$ \&\+\_\+cr, const U \&model, size\+\_\+t p, double n\+Sim=1e+4)
+\begin{DoxyCompactList}\small\item\em compute mean and standard error of \hyperlink{classVaR}{VaR} estimate through bootstrap \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class U$>$\newline
+class Bootstrap$<$ T, U $>$}
+
+Compute historical \hyperlink{classVaR}{VaR} with bootstrap resampling
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & \hyperlink{classVaR}{VaR} model \\
+\hline
+{\em T} & compute return, portfolio \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBootstrap_a35eb4a8e35d20976bd01125462192e33}{}\label{classBootstrap_a35eb4a8e35d20976bd01125462192e33} 
+\index{Bootstrap@{Bootstrap}!Bootstrap@{Bootstrap}}
+\index{Bootstrap@{Bootstrap}!Bootstrap@{Bootstrap}}
+\subsubsection{\texorpdfstring{Bootstrap()}{Bootstrap()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{classBootstrap}{Bootstrap}$<$ T, U $>$\+::\hyperlink{classBootstrap}{Bootstrap} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classBootstrap_aabc424eb11af216716a5ce6169953b26}{}\label{classBootstrap_aabc424eb11af216716a5ce6169953b26} 
+\index{Bootstrap@{Bootstrap}!````~Bootstrap@{$\sim$\+Bootstrap}}
+\index{````~Bootstrap@{$\sim$\+Bootstrap}!Bootstrap@{Bootstrap}}
+\subsubsection{\texorpdfstring{$\sim$\+Bootstrap()}{~Bootstrap()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{classBootstrap}{Bootstrap}$<$ T, U $>$\+::$\sim$\hyperlink{classBootstrap}{Bootstrap} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBootstrap_a2b25d49ce7f6e289974a0d6b3a019581}{}\label{classBootstrap_a2b25d49ce7f6e289974a0d6b3a019581} 
+\index{Bootstrap@{Bootstrap}!compute@{compute}}
+\index{compute@{compute}!Bootstrap@{Bootstrap}}
+\subsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+std\+::pair$<$double,double$>$ \hyperlink{classBootstrap}{Bootstrap}$<$ T, U $>$\+::compute (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ T $>$ \&}]{\+\_\+cr,  }\item[{const U \&}]{model,  }\item[{size\+\_\+t}]{p,  }\item[{double}]{n\+Sim = {\ttfamily 1e+4} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+compute mean and standard error of \hyperlink{classVaR}{VaR} estimate through bootstrap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+cr} & T class (compute return, portfolio) \\
+\hline
+{\em model} & U class (\hyperlink{classVaR}{VaR} model) \\
+\hline
+{\em n\+Sim} & number of sample drawn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mean and standard error of \hyperlink{classVaR}{VaR} estimate 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{bootstrap_8h}{bootstrap.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,183 @@
+\hypertarget{classGenFromDistr}{}\section{Gen\+From\+Distr$<$ T $>$ Class Template Reference}
+\label{classGenFromDistr}\index{Gen\+From\+Distr$<$ T $>$@{Gen\+From\+Distr$<$ T $>$}}
+
+
+Generate random number according to specified distribution.  
+
+
+
+
+{\ttfamily \#include $<$generate\+\_\+rm\+\_\+from\+\_\+distr.\+h$>$}
+
+
+
+Collaboration diagram for Gen\+From\+Distr$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classGenFromDistr__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGenFromDistr_a9e3401231ba07f8e84c760b892a9eb0a}{Gen\+From\+Distr} (T \&\+\_\+rng)
+\item 
+\hyperlink{classGenFromDistr_a088eb8a16a206ccffbee7406fc840a90}{$\sim$\+Gen\+From\+Distr} ()
+\item 
+double \hyperlink{classGenFromDistr_a759d5f09184069456bb02cf0687c04b8}{operator()} ()
+\item 
+double \hyperlink{classGenFromDistr_a3e32f495d1e6dfa4b152980e8b6c233c}{get\+One\+Uniform} (double a=0., double b=1.)
+\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classGenFromDistr_af37d022161571f1ed61462b999081b8e}{get\+X\+Uniform} (unsigned int x)
+\begin{DoxyCompactList}\small\item\em Generate vector dim x of Uniform random number. \end{DoxyCompactList}\item 
+double \hyperlink{classGenFromDistr_aba586e9d1c4d07a30d622e7f16fc13e4}{get\+One\+Gaussian} ()
+\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classGenFromDistr_a60a61050c09c5f40ad74869a7aa1a6c2}{get\+X\+Gaussian} (unsigned int x)
+\begin{DoxyCompactList}\small\item\em Generate vector dim x of Gaussian random number. \end{DoxyCompactList}\item 
+double \hyperlink{classGenFromDistr_ad9d10783cc324b3376a078808ba1331b}{get\+One\+Chisquare} (double n)
+\item 
+double \hyperlink{classGenFromDistr_a7de451b0e96024d6c5216c57a226de76}{get\+One\+Student} (double n)
+\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classGenFromDistr_a018afaad1a8ea5f4722a412629da610d}{get\+X\+Student} (unsigned int x, double n)
+\begin{DoxyCompactList}\small\item\em Generate vector dim x of Student random number. \end{DoxyCompactList}\item 
+double \hyperlink{classGenFromDistr_ada0a44362ef21afe2926620f3af489fd}{get\+One\+Exp\+Distr} (double l)
+\item 
+double \hyperlink{classGenFromDistr_a163dfedc722d8f808ccaae299523db5a}{get\+One\+Gamma} (double a, double b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Gen\+From\+Distr$<$ T $>$}
+
+Generate random number according to specified distribution. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGenFromDistr_a9e3401231ba07f8e84c760b892a9eb0a}{}\label{classGenFromDistr_a9e3401231ba07f8e84c760b892a9eb0a} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{Gen\+From\+Distr()}{GenFromDistr()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::\hyperlink{classGenFromDistr}{Gen\+From\+Distr} (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+rng }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classGenFromDistr_a088eb8a16a206ccffbee7406fc840a90}{}\label{classGenFromDistr_a088eb8a16a206ccffbee7406fc840a90} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!````~Gen\+From\+Distr@{$\sim$\+Gen\+From\+Distr}}
+\index{````~Gen\+From\+Distr@{$\sim$\+Gen\+From\+Distr}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{$\sim$\+Gen\+From\+Distr()}{~GenFromDistr()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::$\sim$\hyperlink{classGenFromDistr}{Gen\+From\+Distr} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGenFromDistr_ad9d10783cc324b3376a078808ba1331b}{}\label{classGenFromDistr_ad9d10783cc324b3376a078808ba1331b} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+One\+Chisquare@{get\+One\+Chisquare}}
+\index{get\+One\+Chisquare@{get\+One\+Chisquare}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+One\+Chisquare()}{getOneChisquare()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+One\+Chisquare (\begin{DoxyParamCaption}\item[{double}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & degree of freedom \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGenFromDistr_ada0a44362ef21afe2926620f3af489fd}{}\label{classGenFromDistr_ada0a44362ef21afe2926620f3af489fd} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+One\+Exp\+Distr@{get\+One\+Exp\+Distr}}
+\index{get\+One\+Exp\+Distr@{get\+One\+Exp\+Distr}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+One\+Exp\+Distr()}{getOneExpDistr()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+One\+Exp\+Distr (\begin{DoxyParamCaption}\item[{double}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & lambda \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGenFromDistr_a163dfedc722d8f808ccaae299523db5a}{}\label{classGenFromDistr_a163dfedc722d8f808ccaae299523db5a} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+One\+Gamma@{get\+One\+Gamma}}
+\index{get\+One\+Gamma@{get\+One\+Gamma}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+One\+Gamma()}{getOneGamma()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+One\+Gamma (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & $alpha$ \\
+\hline
+{\em b} & $beta$ \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGenFromDistr_aba586e9d1c4d07a30d622e7f16fc13e4}{}\label{classGenFromDistr_aba586e9d1c4d07a30d622e7f16fc13e4} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+One\+Gaussian@{get\+One\+Gaussian}}
+\index{get\+One\+Gaussian@{get\+One\+Gaussian}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+One\+Gaussian()}{getOneGaussian()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+One\+Gaussian (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classGenFromDistr_a7de451b0e96024d6c5216c57a226de76}{}\label{classGenFromDistr_a7de451b0e96024d6c5216c57a226de76} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+One\+Student@{get\+One\+Student}}
+\index{get\+One\+Student@{get\+One\+Student}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+One\+Student()}{getOneStudent()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+One\+Student (\begin{DoxyParamCaption}\item[{double}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & degree of freedom \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGenFromDistr_a3e32f495d1e6dfa4b152980e8b6c233c}{}\label{classGenFromDistr_a3e32f495d1e6dfa4b152980e8b6c233c} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+One\+Uniform@{get\+One\+Uniform}}
+\index{get\+One\+Uniform@{get\+One\+Uniform}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+One\+Uniform()}{getOneUniform()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+One\+Uniform (\begin{DoxyParamCaption}\item[{double}]{a = {\ttfamily 0.},  }\item[{double}]{b = {\ttfamily 1.} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classGenFromDistr_a60a61050c09c5f40ad74869a7aa1a6c2}{}\label{classGenFromDistr_a60a61050c09c5f40ad74869a7aa1a6c2} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+X\+Gaussian@{get\+X\+Gaussian}}
+\index{get\+X\+Gaussian@{get\+X\+Gaussian}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+X\+Gaussian()}{getXGaussian()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+Eigen\+::\+Vector\+Xd \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+X\+Gaussian (\begin{DoxyParamCaption}\item[{unsigned int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generate vector dim x of Gaussian random number. 
+
+\hypertarget{classGenFromDistr_a018afaad1a8ea5f4722a412629da610d}{}\label{classGenFromDistr_a018afaad1a8ea5f4722a412629da610d} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+X\+Student@{get\+X\+Student}}
+\index{get\+X\+Student@{get\+X\+Student}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+X\+Student()}{getXStudent()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+Eigen\+::\+Vector\+Xd \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+X\+Student (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{double}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generate vector dim x of Student random number. 
+
+\hypertarget{classGenFromDistr_af37d022161571f1ed61462b999081b8e}{}\label{classGenFromDistr_af37d022161571f1ed61462b999081b8e} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!get\+X\+Uniform@{get\+X\+Uniform}}
+\index{get\+X\+Uniform@{get\+X\+Uniform}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{get\+X\+Uniform()}{getXUniform()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+Eigen\+::\+Vector\+Xd \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::get\+X\+Uniform (\begin{DoxyParamCaption}\item[{unsigned int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generate vector dim x of Uniform random number. 
+
+\hypertarget{classGenFromDistr_a759d5f09184069456bb02cf0687c04b8}{}\label{classGenFromDistr_a759d5f09184069456bb02cf0687c04b8} 
+\index{Gen\+From\+Distr@{Gen\+From\+Distr}!operator()@{operator()}}
+\index{operator()@{operator()}!Gen\+From\+Distr@{Gen\+From\+Distr}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classGenFromDistr}{Gen\+From\+Distr}$<$ T $>$\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{generate__rm__from__distr_8h}{generate\+\_\+rm\+\_\+from\+\_\+distr.\+h}\end{DoxyCompactItemize}

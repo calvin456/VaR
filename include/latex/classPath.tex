@@ -1,0 +1,88 @@
+\hypertarget{classPath}{}\section{Path Class Reference}
+\label{classPath}\index{Path@{Path}}
+
+
+\hyperlink{classPath}{Path} fait tail, mean-\/reverting, commodity process ...  
+
+
+
+
+{\ttfamily \#include $<$path.\+h$>$}
+
+
+
+Inheritance diagram for Path\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPath__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Path\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classPath__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPath_af26cfab021ddf49af73da3b2beca85ac}{Path} ()
+\item 
+virtual \hyperlink{classPath_a11618e66fc700531d3ad998acfdb88a3}{$\sim$\+Path} ()
+\item 
+virtual double \hyperlink{classPath_a6e75e5a329c48cafecd03a355f90b694}{do\+One\+Sim} (const double \&u, const double \&Sigmat, const double \&Returnt, const double \&Returntminus1) const =0
+\item 
+virtual Eigen\+::\+Vector\+Xd \hyperlink{classPath_a8917612a585bce52dbd52b1b643a517a}{do\+Sim} (const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&u, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&Sigmat, const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&Returnt) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classPath}{Path} fait tail, mean-\/reverting, commodity process ... 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPath_af26cfab021ddf49af73da3b2beca85ac}{}\label{classPath_af26cfab021ddf49af73da3b2beca85ac} 
+\index{Path@{Path}!Path@{Path}}
+\index{Path@{Path}!Path@{Path}}
+\subsubsection{\texorpdfstring{Path()}{Path()}}
+{\footnotesize\ttfamily Path\+::\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classPath_a11618e66fc700531d3ad998acfdb88a3}{}\label{classPath_a11618e66fc700531d3ad998acfdb88a3} 
+\index{Path@{Path}!````~Path@{$\sim$\+Path}}
+\index{````~Path@{$\sim$\+Path}!Path@{Path}}
+\subsubsection{\texorpdfstring{$\sim$\+Path()}{~Path()}}
+{\footnotesize\ttfamily virtual Path\+::$\sim$\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPath_a6e75e5a329c48cafecd03a355f90b694}{}\label{classPath_a6e75e5a329c48cafecd03a355f90b694} 
+\index{Path@{Path}!do\+One\+Sim@{do\+One\+Sim}}
+\index{do\+One\+Sim@{do\+One\+Sim}!Path@{Path}}
+\subsubsection{\texorpdfstring{do\+One\+Sim()}{doOneSim()}}
+{\footnotesize\ttfamily virtual double Path\+::do\+One\+Sim (\begin{DoxyParamCaption}\item[{const double \&}]{u,  }\item[{const double \&}]{Sigmat,  }\item[{const double \&}]{Returnt,  }\item[{const double \&}]{Returntminus1 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classGARCH11_a8f6e87b2b85a91e02416d4d02bf7b9ff}{G\+A\+R\+C\+H11}, \hyperlink{classAR1xGARCH11_ac30812d6e8339c48abcd5c0ce8ea0081}{A\+R1x\+G\+A\+R\+C\+H11}, and \hyperlink{classPath1x1_a522e73958cc571997153baa179b451cd}{Path1x1}.
+
+\hypertarget{classPath_a8917612a585bce52dbd52b1b643a517a}{}\label{classPath_a8917612a585bce52dbd52b1b643a517a} 
+\index{Path@{Path}!do\+Sim@{do\+Sim}}
+\index{do\+Sim@{do\+Sim}!Path@{Path}}
+\subsubsection{\texorpdfstring{do\+Sim()}{doSim()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Vector\+Xd Path\+::do\+Sim (\begin{DoxyParamCaption}\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{u,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{Sigmat,  }\item[{const \hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \&}]{Returnt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classGARCH11_a202ee361532058114cfc036c27bef601}{G\+A\+R\+C\+H11}, \hyperlink{classAR1xGARCH11_ac97f026cefd0e8bca4bbc31100f945d7}{A\+R1x\+G\+A\+R\+C\+H11}, and \hyperlink{classPath1x1_abd21c19e5283035ebe2ca01711134e4c}{Path1x1}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{path_8h}{path.\+h}\end{DoxyCompactItemize}

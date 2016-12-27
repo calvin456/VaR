@@ -1,0 +1,203 @@
+\hypertarget{classVaRCopulaCompute}{}\section{Va\+R\+Copula\+Compute$<$ T, U, V $>$ Class Template Reference}
+\label{classVaRCopulaCompute}\index{Va\+R\+Copula\+Compute$<$ T, U, V $>$@{Va\+R\+Copula\+Compute$<$ T, U, V $>$}}
+
+
+Compute \hyperlink{classVaR}{VaR} using Monte Carlo \& Copula.  
+
+
+
+
+{\ttfamily \#include $<$compute\+\_\+var.\+h$>$}
+
+
+
+Inheritance diagram for Va\+R\+Copula\+Compute$<$ T, U, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classVaRCopulaCompute__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Va\+R\+Copula\+Compute$<$ T, U, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classVaRCopulaCompute__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classCopulaEngine}{Copula\+Engine}$<$ \hyperlink{classrng}{rng}, V $>$ \hyperlink{classVaRCopulaCompute_a72e41ad9fcb5880aac35affa027f2e3d}{engine}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVaRCopulaCompute_a5e9c7b93130a65cbf5006fccb861c235}{Va\+R\+Copula\+Compute} (shared\+\_\+ptr$<$ T $>$ \&\+\_\+cr, const U \&\+\_\+model, const std\+::vector$<$ V $>$ \&\+\_\+processes, \hyperlink{classrng}{rng} \&\+\_\+rng\+\_\+, const Eigen\+::\+Matrix\+Xd \&\+\_\+C, const double \&\+\_\+n=1.e+05)
+\item 
+virtual \hyperlink{classVaRCopulaCompute_a3f31ae6973366895926f6b3ae11ef473}{$\sim$\+Va\+R\+Copula\+Compute} ()
+\item 
+void \hyperlink{classVaRCopulaCompute_a8263b7ec27286cee0a65019c9a90f51d}{set\+Correl\+Mat} (const Eigen\+::\+Matrix\+Xd \&\+\_\+C)
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classVaRCopulaCompute_a367ca6f0e63ef6bb493d732435fc9b8d}{\+\_\+compute\+VaR} (double dof=3., double gamma=1., \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type} ct=\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}, \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process} ud=\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian}, size\+\_\+t a=0, size\+\_\+t b=1)
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using Monte Carlo simulation from either Gaussian or Student\textquotesingle{}s t distr. \end{DoxyCompactList}\item 
+double \hyperlink{classVaRCopulaCompute_a526b139c60a9f014b0e03eeae9d0f098}{\+\_\+compute\+Va\+R\+Single} (size\+\_\+t p=0, double dof=3., double gamma=1., \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type} ct=\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}, \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process} ud=\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian}, size\+\_\+t a=0, size\+\_\+t b=1)
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} using Monte Carlo simulation from either Gaussian or Student\textquotesingle{}s t distr. \end{DoxyCompactList}\item 
+double \hyperlink{classVaRCopulaCompute_a5f2a4f1eab16cd600683309d49800e89}{compute\+VaR} (size\+\_\+t p=0)
+\begin{DoxyCompactList}\small\item\em Compute for security, index, etc p. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classVaRCopulaCompute_a6c2501fcfd848a07a91859f2bcdc6516}{compute\+Va\+R\+Whole\+Path} (size\+\_\+t p=0)
+\begin{DoxyCompactList}\small\item\em Compute \hyperlink{classVaR}{VaR} over whole path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class U, class V$>$\newline
+class Va\+R\+Copula\+Compute$<$ T, U, V $>$}
+
+Compute \hyperlink{classVaR}{VaR} using Monte Carlo \& Copula. 
+
+compute \hyperlink{classVaR}{VaR} using sim returns and histogram method 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classVaRCopulaCompute_a72e41ad9fcb5880aac35affa027f2e3d}{}\label{classVaRCopulaCompute_a72e41ad9fcb5880aac35affa027f2e3d} 
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!engine@{engine}}
+\index{engine@{engine}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\subsubsection{\texorpdfstring{engine}{engine}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+typedef \hyperlink{classCopulaEngine}{Copula\+Engine}$<$\hyperlink{classrng}{rng},V$>$ \hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute}$<$ T, U, V $>$\+::\hyperlink{classVaRCopulaCompute_a72e41ad9fcb5880aac35affa027f2e3d}{engine}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVaRCopulaCompute_a5e9c7b93130a65cbf5006fccb861c235}{}\label{classVaRCopulaCompute_a5e9c7b93130a65cbf5006fccb861c235} 
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\subsubsection{\texorpdfstring{Va\+R\+Copula\+Compute()}{VaRCopulaCompute()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+\hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute}$<$ T, U, V $>$\+::\hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute} (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ T $>$ \&}]{\+\_\+cr,  }\item[{const U \&}]{\+\_\+model,  }\item[{const std\+::vector$<$ V $>$ \&}]{\+\_\+processes,  }\item[{\hyperlink{classrng}{rng} \&}]{\+\_\+rng\+\_\+,  }\item[{const Eigen\+::\+Matrix\+Xd \&}]{\+\_\+C,  }\item[{const double \&}]{\+\_\+n = {\ttfamily 1.e+05} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+cr} & compute return class \\
+\hline
+{\em \+\_\+model} & \hyperlink{classVaR}{VaR} model \\
+\hline
+{\em \+\_\+process} & underlying process \\
+\hline
+{\em C} & correlation matrix of standardized residuals \\
+\hline
+{\em n} & \# of simulation draws \\
+\hline
+\end{DoxyParams}
+\hypertarget{classVaRCopulaCompute_a3f31ae6973366895926f6b3ae11ef473}{}\label{classVaRCopulaCompute_a3f31ae6973366895926f6b3ae11ef473} 
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!````~Va\+R\+Copula\+Compute@{$\sim$\+Va\+R\+Copula\+Compute}}
+\index{````~Va\+R\+Copula\+Compute@{$\sim$\+Va\+R\+Copula\+Compute}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\subsubsection{\texorpdfstring{$\sim$\+Va\+R\+Copula\+Compute()}{~VaRCopulaCompute()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+virtual \hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute}$<$ T, U, V $>$\+::$\sim$\hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVaRCopulaCompute_a367ca6f0e63ef6bb493d732435fc9b8d}{}\label{classVaRCopulaCompute_a367ca6f0e63ef6bb493d732435fc9b8d} 
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!\+\_\+compute\+VaR@{\+\_\+compute\+VaR}}
+\index{\+\_\+compute\+VaR@{\+\_\+compute\+VaR}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\subsubsection{\texorpdfstring{\+\_\+compute\+Va\+R()}{\_computeVaR()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute}$<$ T, U, V $>$\+::\+\_\+compute\+VaR (\begin{DoxyParamCaption}\item[{double}]{dof = {\ttfamily 3.},  }\item[{double}]{gamma = {\ttfamily 1.},  }\item[{\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type}}]{ct = {\ttfamily \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}},  }\item[{\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process}}]{ud = {\ttfamily \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian}},  }\item[{size\+\_\+t}]{a = {\ttfamily 0},  }\item[{size\+\_\+t}]{b = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute \hyperlink{classVaR}{VaR} using Monte Carlo simulation from either Gaussian or Student\textquotesingle{}s t distr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dof} & degree of freedom \\
+\hline
+{\em copula\+Type} & Gaussian, Student\textquotesingle{}s t, Clayton, Gumbel \\
+\hline
+{\em underlying\+Mar} & Gaussian, Student\textquotesingle{}s t \\
+\hline
+{\em a} & param time t-\/1. Default 0 \\
+\hline
+{\em b} & param time t. Default 1\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return vectors of Va\+Rs of dimension d 
+\end{DoxyReturn}
+\hypertarget{classVaRCopulaCompute_a526b139c60a9f014b0e03eeae9d0f098}{}\label{classVaRCopulaCompute_a526b139c60a9f014b0e03eeae9d0f098} 
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!\+\_\+compute\+Va\+R\+Single@{\+\_\+compute\+Va\+R\+Single}}
+\index{\+\_\+compute\+Va\+R\+Single@{\+\_\+compute\+Va\+R\+Single}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\subsubsection{\texorpdfstring{\+\_\+compute\+Va\+R\+Single()}{\_computeVaRSingle()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+double \hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute}$<$ T, U, V $>$\+::\+\_\+compute\+Va\+R\+Single (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0},  }\item[{double}]{dof = {\ttfamily 3.},  }\item[{double}]{gamma = {\ttfamily 1.},  }\item[{\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type}}]{ct = {\ttfamily \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}},  }\item[{\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process}}]{ud = {\ttfamily \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian}},  }\item[{size\+\_\+t}]{a = {\ttfamily 0},  }\item[{size\+\_\+t}]{b = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute \hyperlink{classVaR}{VaR} using Monte Carlo simulation from either Gaussian or Student\textquotesingle{}s t distr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & procees p. Default 0 \\
+\hline
+{\em dof} & degree of freedom \\
+\hline
+{\em copula\+Type} & Gaussian, Student\textquotesingle{}s t, Clayton, Gumbel \\
+\hline
+{\em underlying\+Mar} & Gaussian, Student\textquotesingle{}s t \\
+\hline
+{\em a} & param time t-\/1. Default 0 \\
+\hline
+{\em b} & param time t. Default 1\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Va\+Rs for process p 
+\end{DoxyReturn}
+\hypertarget{classVaRCopulaCompute_a5f2a4f1eab16cd600683309d49800e89}{}\label{classVaRCopulaCompute_a5f2a4f1eab16cd600683309d49800e89} 
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!compute\+VaR@{compute\+VaR}}
+\index{compute\+VaR@{compute\+VaR}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R()}{computeVaR()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+double \hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute}$<$ T, U, V $>$\+::compute\+VaR (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Compute for security, index, etc p. 
+
+Assume t-\/copula with 3 degrees of freedom 
+
+Implements \hyperlink{classVaRCompute_a0465221010d248238fe1052958776984}{Va\+R\+Compute$<$ T, U $>$}.
+
+\hypertarget{classVaRCopulaCompute_a6c2501fcfd848a07a91859f2bcdc6516}{}\label{classVaRCopulaCompute_a6c2501fcfd848a07a91859f2bcdc6516} 
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!compute\+Va\+R\+Whole\+Path@{compute\+Va\+R\+Whole\+Path}}
+\index{compute\+Va\+R\+Whole\+Path@{compute\+Va\+R\+Whole\+Path}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\subsubsection{\texorpdfstring{compute\+Va\+R\+Whole\+Path()}{computeVaRWholePath()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+std\+::vector$<$double$>$ \hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute}$<$ T, U, V $>$\+::compute\+Va\+R\+Whole\+Path (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Compute \hyperlink{classVaR}{VaR} over whole path. 
+
+Assume t-\/copula with 3 degrees of freedom. Reduce n to 1e+04 
+
+Implements \hyperlink{classVaRCompute_ad5ec9feb42ea2f99f2c91e793d18fe1b}{Va\+R\+Compute$<$ T, U $>$}.
+
+\hypertarget{classVaRCopulaCompute_a8263b7ec27286cee0a65019c9a90f51d}{}\label{classVaRCopulaCompute_a8263b7ec27286cee0a65019c9a90f51d} 
+\index{Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}!set\+Correl\+Mat@{set\+Correl\+Mat}}
+\index{set\+Correl\+Mat@{set\+Correl\+Mat}!Va\+R\+Copula\+Compute@{Va\+R\+Copula\+Compute}}
+\subsubsection{\texorpdfstring{set\+Correl\+Mat()}{setCorrelMat()}}
+{\footnotesize\ttfamily template$<$class T , class U , class V $>$ \\
+void \hyperlink{classVaRCopulaCompute}{Va\+R\+Copula\+Compute}$<$ T, U, V $>$\+::set\+Correl\+Mat (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{\+\_\+C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{compute__var_8h}{compute\+\_\+var.\+h}\end{DoxyCompactItemize}

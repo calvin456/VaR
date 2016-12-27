@@ -1,0 +1,157 @@
+\hypertarget{classCopulaEngine}{}\section{Copula\+Engine$<$ T, U $>$ Class Template Reference}
+\label{classCopulaEngine}\index{Copula\+Engine$<$ T, U $>$@{Copula\+Engine$<$ T, U $>$}}
+
+
+T rng, U path.  
+
+
+
+
+{\ttfamily \#include $<$mc\+\_\+engine.\+h$>$}
+
+
+
+Inheritance diagram for Copula\+Engine$<$ T, U $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classCopulaEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Copula\+Engine$<$ T, U $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classCopulaEngine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ U $>$ \hyperlink{classCopulaEngine_a75e30032c9b2290243a83ea7d343a62c}{paths}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCopulaEngine_af3eb5649a8e86dd99de690cac3e843f1}{Copula\+Engine} (T \&\+\_\+rng\+\_\+, const \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \&\+\_\+paths, const Eigen\+::\+Matrix\+Xd \+\_\+C)
+\item 
+\hyperlink{classCopulaEngine_a26fa5d1a9a5cb3fe2f406a63049fe4e9}{Copula\+Engine} (T \&\+\_\+rng\+\_\+, const \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \&\+\_\+paths)
+\item 
+\hyperlink{classCopulaEngine_a2f0ff634cdaaa44f21f2ccd3c583d918}{Copula\+Engine} (const \hyperlink{classCopulaEngine}{Copula\+Engine} \&other)
+\item 
+virtual \hyperlink{classCopulaEngine_aadcd0c2890899853db28a2269be09745}{$\sim$\+Copula\+Engine} ()
+\item 
+void \hyperlink{classCopulaEngine_a0a330b7405b9cfcb205aaf6db1d954c3}{set\+Correl\+Mat} (const Eigen\+::\+Matrix\+Xd \&\+\_\+C)
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classCopulaEngine_ac14e86c4f0025bcc82e680896e1c7e3a}{Do\+Simulation} (size\+\_\+t p=0, double n=1.e+05, double dof=3., double gamma=1., \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type} ct=\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}, \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process} ud=\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian})
+\item 
+\hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \hyperlink{classCopulaEngine_a7074287ea29264912673d2d12d38bcdc}{Do\+Multi\+Simulation} (double n=1.e+05, double dof=3., double gamma=1., \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type} ct=\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}, \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process} ud=\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classCopulaEngine_a9e74792c12cbe443f77221466b851aec}{\+\_\+generate\+Draws} (\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type} ct=\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}, double dof=3., double gamma=1.)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class U$>$\newline
+class Copula\+Engine$<$ T, U $>$}
+
+T rng, U path. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classCopulaEngine_a75e30032c9b2290243a83ea7d343a62c}{}\label{classCopulaEngine_a75e30032c9b2290243a83ea7d343a62c} 
+\index{Copula\+Engine@{Copula\+Engine}!paths@{paths}}
+\index{paths@{paths}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{paths}{paths}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+typedef std\+::vector$<$U$>$ \hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::\hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCopulaEngine_af3eb5649a8e86dd99de690cac3e843f1}{}\label{classCopulaEngine_af3eb5649a8e86dd99de690cac3e843f1} 
+\index{Copula\+Engine@{Copula\+Engine}!Copula\+Engine@{Copula\+Engine}}
+\index{Copula\+Engine@{Copula\+Engine}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{Copula\+Engine()}{CopulaEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::\hyperlink{classCopulaEngine}{Copula\+Engine} (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+rng\+\_\+,  }\item[{const \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \&}]{\+\_\+paths,  }\item[{const Eigen\+::\+Matrix\+Xd}]{\+\_\+C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 1x overload
+
+multiple assets
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+rng} & pseudo random number generator \\
+\hline
+{\em \+\_\+paths} & paths vector \\
+\hline
+{\em \+\_\+C} & correlation matrix \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCopulaEngine_a26fa5d1a9a5cb3fe2f406a63049fe4e9}{}\label{classCopulaEngine_a26fa5d1a9a5cb3fe2f406a63049fe4e9} 
+\index{Copula\+Engine@{Copula\+Engine}!Copula\+Engine@{Copula\+Engine}}
+\index{Copula\+Engine@{Copula\+Engine}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{Copula\+Engine()}{CopulaEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::\hyperlink{classCopulaEngine}{Copula\+Engine} (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+rng\+\_\+,  }\item[{const \hyperlink{classMCEngine_a977f1048508a1467c496c2c47231d1d3}{paths} \&}]{\+\_\+paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classCopulaEngine_a2f0ff634cdaaa44f21f2ccd3c583d918}{}\label{classCopulaEngine_a2f0ff634cdaaa44f21f2ccd3c583d918} 
+\index{Copula\+Engine@{Copula\+Engine}!Copula\+Engine@{Copula\+Engine}}
+\index{Copula\+Engine@{Copula\+Engine}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{Copula\+Engine()}{CopulaEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::\hyperlink{classCopulaEngine}{Copula\+Engine} (\begin{DoxyParamCaption}\item[{const \hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$ \&}]{other }\end{DoxyParamCaption})}
+
+\hypertarget{classCopulaEngine_aadcd0c2890899853db28a2269be09745}{}\label{classCopulaEngine_aadcd0c2890899853db28a2269be09745} 
+\index{Copula\+Engine@{Copula\+Engine}!````~Copula\+Engine@{$\sim$\+Copula\+Engine}}
+\index{````~Copula\+Engine@{$\sim$\+Copula\+Engine}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{$\sim$\+Copula\+Engine()}{~CopulaEngine()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+virtual \hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::$\sim$\hyperlink{classCopulaEngine}{Copula\+Engine} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCopulaEngine_a9e74792c12cbe443f77221466b851aec}{}\label{classCopulaEngine_a9e74792c12cbe443f77221466b851aec} 
+\index{Copula\+Engine@{Copula\+Engine}!\+\_\+generate\+Draws@{\+\_\+generate\+Draws}}
+\index{\+\_\+generate\+Draws@{\+\_\+generate\+Draws}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{\+\_\+generate\+Draws()}{\_generateDraws()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::\+\_\+generate\+Draws (\begin{DoxyParamCaption}\item[{\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type}}]{ct = {\ttfamily \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}},  }\item[{double}]{dof = {\ttfamily 3.},  }\item[{double}]{gamma = {\ttfamily 1.} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\hypertarget{classCopulaEngine_a7074287ea29264912673d2d12d38bcdc}{}\label{classCopulaEngine_a7074287ea29264912673d2d12d38bcdc} 
+\index{Copula\+Engine@{Copula\+Engine}!Do\+Multi\+Simulation@{Do\+Multi\+Simulation}}
+\index{Do\+Multi\+Simulation@{Do\+Multi\+Simulation}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{Do\+Multi\+Simulation()}{DoMultiSimulation()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{compute__returns__eigen_8h_ae14dd28696f743e067dbd2594616bad6}{Mat} \hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::Do\+Multi\+Simulation (\begin{DoxyParamCaption}\item[{double}]{n = {\ttfamily 1.e+05},  }\item[{double}]{dof = {\ttfamily 3.},  }\item[{double}]{gamma = {\ttfamily 1.},  }\item[{\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type}}]{ct = {\ttfamily \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}},  }\item[{\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process}}]{ud = {\ttfamily \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+multiple indep rtn with Cholesky decomposition to produce correl rtns
+
+mutliple indep rtn with principal component \hypertarget{classCopulaEngine_ac14e86c4f0025bcc82e680896e1c7e3a}{}\label{classCopulaEngine_ac14e86c4f0025bcc82e680896e1c7e3a} 
+\index{Copula\+Engine@{Copula\+Engine}!Do\+Simulation@{Do\+Simulation}}
+\index{Do\+Simulation@{Do\+Simulation}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{Do\+Simulation()}{DoSimulation()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\hyperlink{compute__returns__eigen_8h_a1eb6a9306ef406d7975f3cbf2e247777}{Vec} \hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::Do\+Simulation (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p = {\ttfamily 0},  }\item[{double}]{n = {\ttfamily 1.e+05},  }\item[{double}]{dof = {\ttfamily 3.},  }\item[{double}]{gamma = {\ttfamily 1.},  }\item[{\hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25}{copula\+Type}}]{ct = {\ttfamily \hyperlink{rng_8h_aff2c6be1fded3d6d996b850e2eb87c25ab15a7891aa5223439e4692a1048cb220}{Gauss}},  }\item[{\hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198}{underlying\+Process}}]{ud = {\ttfamily \hyperlink{mc__engine_8h_aeb3b337d49b67199ac031f705d206198aa11844f44df96808eb4e519ba04f088c}{Gaussian}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{classCopulaEngine_a0a330b7405b9cfcb205aaf6db1d954c3}{}\label{classCopulaEngine_a0a330b7405b9cfcb205aaf6db1d954c3} 
+\index{Copula\+Engine@{Copula\+Engine}!set\+Correl\+Mat@{set\+Correl\+Mat}}
+\index{set\+Correl\+Mat@{set\+Correl\+Mat}!Copula\+Engine@{Copula\+Engine}}
+\subsubsection{\texorpdfstring{set\+Correl\+Mat()}{setCorrelMat()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+void \hyperlink{classCopulaEngine}{Copula\+Engine}$<$ T, U $>$\+::set\+Correl\+Mat (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{\+\_\+C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mc__engine_8h}{mc\+\_\+engine.\+h}\end{DoxyCompactItemize}
