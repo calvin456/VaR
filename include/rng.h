@@ -20,28 +20,10 @@ typedef std::vector<double> Vec;
 static std::uniform_real_distribution<double> udist(0., 1.);
 
 //! Mersenne-Twister pseudo random number generator
-class rng{
-
-public:
-    rng(){
-    //set seed
-        generator.seed(seed_val);
-    }
-    ~rng(){}
-	//! Go to next number in pseudo-sequence
-    double operator()(){
-
-        return generator();
-    }
-
-    inline uint32_t min();
-    inline uint32_t max();
-
-private:
-    std::mt19937 generator;
-    uint32_t seed_val=12411;
-
+struct rng : std::mt19937 {
+    explicit rng ( std::mt19937::result_type val = 12411 ){ seed(val); }
 };
+
 
 /*!
     \param Clayton lower tail
@@ -95,10 +77,6 @@ private:
 	shared_ptr<GenFromDistr<rng>> _rng;
 };
 
-inline uint32_t rng::min(){return generator.min();}
-
-inline uint32_t rng::max(){return generator.max();}
-
 /*! Simulate one stable distr value
 
 	The stable distribution family is also sometimes referred to as the Lévy alpha-stable distribution.
@@ -119,7 +97,7 @@ double getOneStableDist(T& _rng_, double alpha, double beta, double gamma = 1., 
 	if(alpha != 1.){
 
         double tmp(cos(alpha * theta0 + (alpha - 1.)*theta)/W);
-        double sgn; signbit(tmp) == 1 ? sgn = -1. : sgn = 1.;
+        double sgn; std::ignbit(tmp) == 1 ? sgn = -1. : sgn = 1.;
 
 		Z = (sin(alpha*(theta0 + theta))/pow(cos(alpha* theta0)*cos(theta), 1./alpha)) *
 				sgn * pow(abs(tmp), (1. - alpha)/alpha);
